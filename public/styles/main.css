@@ -1,0 +1,1875 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(63, 62, 62);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #eef0f1;
+}
+body .sectionContainer {
+  width: 1200px;
+  height: 815px;
+  position: relative;
+  margin-top: 50px;
+  border: 3px solid #666;
+  border-radius: 3px;
+  display: flex;
+}
+body .sectionContainer .mainGuide {
+  width: 350px;
+  height: 100%;
+  background-color: rgb(201, 206, 206);
+}
+body .sectionContainer .mainGuide .guideLogoBlock {
+  width: 100%;
+  color: rgb(63, 62, 62);
+  height: 90px;
+}
+body .sectionContainer .mainGuide .guideLogoBlock .guideLogoContainer {
+  padding-top: 25px;
+  display: flex;
+}
+body .sectionContainer .mainGuide .guideLogoBlock .guideLogoContainer .guideIconContainer {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(63, 62, 62);
+  border-radius: 60px;
+}
+body .sectionContainer .mainGuide .guideLogoBlock .guideLogoContainer .guideIconContainer i {
+  font-size: 40px;
+}
+body .sectionContainer .mainGuide .guideLogoBlock .guideLogoContainer .guideSloganContainer {
+  height: 60px;
+  margin-left: 48px;
+  font-size: 45px;
+  font-weight: 1000;
+  text-align: center;
+  line-height: 60px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock {
+  width: 100%;
+  height: 715px;
+  color: rgb(63, 62, 62);
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuWrite {
+  margin-top: 10px;
+  height: 80px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuWrite .writeContainer {
+  display: flex;
+  width: 180px;
+  height: 80px;
+  margin-left: 32px;
+  background-color: rgb(211, 240, 252);
+  border-radius: 20px 20px 20px 20px;
+  border: 3px solid rgb(179, 227, 248);
+  cursor: pointer;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuWrite .writeContainer .writeIcon {
+  width: 70px;
+  height: 80px;
+  text-align: center;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuWrite .writeContainer .writeIcon i {
+  font-size: 38px;
+  line-height: 80px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuWrite .writeContainer .writeTitle {
+  width: 110px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 28px;
+  font-weight: 600;
+  padding-left: 3px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuWrite .writeContainer:hover {
+  opacity: 0.7;
+  color: black;
+  background-color: rgb(166, 223, 248);
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuProcessing {
+  margin-top: 20px;
+  height: 60px;
+  width: 85%;
+  color: rgb(63, 62, 62);
+  background-color: rgb(181, 227, 247);
+  border-radius: 0px 30px 30px 0px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuProcessing .processingContainer {
+  display: flex;
+  width: 100% px;
+  height: 60px;
+  border-radius: 0px 30px 30px 0px;
+  cursor: pointer;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuProcessing .processingContainer .processingIcon {
+  width: 60px;
+  height: 60px;
+  margin-left: 36px;
+  text-align: center;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuProcessing .processingContainer .processingIcon i {
+  font-size: 35px;
+  line-height: 60px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuProcessing .processingContainer .processingTitle {
+  height: 60px;
+  line-height: 60px;
+  font-size: 28px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuProcessing .processingContainer:hover {
+  opacity: 0.7;
+  color: black;
+  border-radius: 0px 30px 30px 0px;
+  background-color: rgb(166, 223, 248);
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuHistory {
+  height: 60px;
+  width: 85%;
+  color: rgb(63, 62, 62);
+  border-radius: 0px 30px 30px 0px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuHistory .historyContainer {
+  display: flex;
+  width: 100% px;
+  height: 60px;
+  cursor: pointer;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuHistory .historyContainer .historyIcon {
+  width: 60px;
+  height: 60px;
+  margin-left: 36px;
+  text-align: center;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuHistory .historyContainer .historyIcon i {
+  font-size: 35px;
+  line-height: 60px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuHistory .historyContainer .historyTitle {
+  height: 60px;
+  line-height: 60px;
+  font-size: 28px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuHistory .historyContainer:hover {
+  opacity: 0.7;
+  color: black;
+  border-radius: 0px 30px 30px 0px;
+  background-color: rgb(166, 223, 248);
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuManager {
+  height: 60px;
+  width: 85%;
+  border-radius: 0px 30px 30px 0px;
+  color: rgb(63, 62, 62);
+  display: none;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuManager .menuManagerContainer {
+  display: flex;
+  width: 100% px;
+  height: 60px;
+  cursor: pointer;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuManager .menuManagerContainer .menuManagerIcon {
+  width: 60px;
+  height: 60px;
+  margin-left: 36px;
+  text-align: center;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuManager .menuManagerContainer .menuManagerIcon i {
+  font-size: 30px;
+  line-height: 60px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuManager .menuManagerContainer .menuManagerTitle {
+  height: 60px;
+  line-height: 60px;
+  font-size: 28px;
+  font-weight: 600;
+  padding-left: 10px;
+}
+body .sectionContainer .mainGuide .guideWriteBlock .menuManager .menuManagerContainer:hover {
+  opacity: 0.7;
+  color: black;
+  border-radius: 0px 30px 30px 0px;
+  background-color: rgb(166, 223, 248);
+}
+body .sectionContainer .mainText {
+  width: 850px;
+  height: 900px;
+}
+body .sectionContainer .mainText .NavBlock {
+  width: 100%;
+  display: flex;
+}
+body .sectionContainer .mainText .NavBlock .searchBlock {
+  width: 60%;
+  margin-left: 5px;
+}
+body .sectionContainer .mainText .NavBlock .searchBlock .searchInput {
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 80%;
+  height: 80%;
+  border-radius: 5px;
+}
+body .sectionContainer .mainText .NavBlock .helloBlock {
+  width: 40%;
+  line-height: 60px;
+}
+body .sectionContainer .mainText .NavBlock .helloBlock .helloContent {
+  font-size: 23px;
+  font-weight: 600;
+  text-align: right;
+  padding-right: 20px;
+}
+body .sectionContainer .mainText .NavBlock .helloBlock .helloContent .helloName {
+  margin-right: 10px;
+  font-size: 25px;
+  font-weight: 1000;
+}
+body .sectionContainer .mainText .NavBlock .helloBlock .helloContent .signOutButton {
+  cursor: pointer;
+}
+body .sectionContainer .mainText .generalSlogan {
+  display: block;
+  font-size: 26px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 15px;
+  color: rgb(129, 135, 135);
+}
+body .sectionContainer .mainText .signatureMenu {
+  display: none;
+  width: 824px;
+  height: 123px;
+  overflow: auto;
+}
+body .sectionContainer .mainText .signatureMenu .signatureMenuNavContainer {
+  display: flex;
+  height: 40px;
+  width: 802px;
+  margin-left: 5px;
+  font-size: 28px;
+  font-weight: 600;
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgb(222, 229, 241);
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+}
+body .sectionContainer .mainText .signatureMenu .signatureMenuNavContainer .initiatorNameNav {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .signatureMenu .signatureMenuNavContainer .signatureTitleNav {
+  height: 40px;
+  width: 50%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .signatureMenu .signatureMenuNavContainer .signatureStartTimeNav {
+  height: 40px;
+  width: 30%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .signatureMenu .menuSignatureBlock {
+  font-size: 26px;
+  font-weight: 600;
+  width: 802px;
+  height: 42px;
+  margin-left: 5px;
+  border-style: solid;
+  border-width: 2px;
+  background-color: rgb(222, 229, 241);
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+  cursor: pointer;
+}
+body .sectionContainer .mainText .signatureMenu .menuSignatureBlock .menuContainer {
+  height: 40px;
+  display: flex;
+}
+body .sectionContainer .mainText .signatureMenu .menuSignatureBlock .menuContainer .menuInitiator {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .signatureMenu .menuSignatureBlock .menuContainer .menuTitle {
+  height: 40px;
+  width: 50%;
+  padding-left: 16px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .signatureMenu .menuSignatureBlock .menuContainer .menuStartTime {
+  height: 40px;
+  width: 30%;
+  padding-left: 16px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .signatureMenu .asingleSignatureBlock:hover {
+  border: 1px solid rgb(149, 154, 154);
+}
+body .sectionContainer .mainText .textBlock {
+  width: 100%;
+  margin-top: 5px;
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock {
+  position: absolute;
+  top: 195px;
+  width: 820px;
+  height: 300px;
+  overflow-y: auto;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: rgb(193, 212, 221);
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .yourturnNavBlock {
+  font-size: 28px;
+  font-weight: 600;
+  height: 40px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .yourturnNavBlock .yourturnSlogan {
+  padding-left: 10px;
+  color: rgb(127, 133, 133);
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .yourturnNavBlock .yourturnIconContainer {
+  margin-left: 5px;
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .yourturnNavBlock .yourturnIconContainer i {
+  margin-right: 27px;
+  line-height: 40px;
+  color: rgb(127, 133, 133);
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlockNav {
+  font-size: 28px;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlockNav .signatureContainerNav {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlockNav .signatureContainerNav .initiatorNameNav {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlockNav .signatureContainerNav .signatureTitleNav {
+  height: 40px;
+  width: 50%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlockNav .signatureContainerNav .signatureStartTimeNav {
+  height: 40px;
+  width: 30%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlock {
+  font-size: 26px;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+  cursor: pointer;
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlock .signatureContainer {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlock .signatureContainer .initiatorName {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlock .signatureContainer .signatureTitle {
+  height: 40px;
+  width: 50%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  background-color: rgb(197, 231, 231);
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlock .signatureContainer .signatureStartTime {
+  height: 40px;
+  width: 30%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .textBlock .yourturnBlock .singleSignatureBlock:hover {
+  border: 1px solid rgb(149, 154, 154);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock {
+  position: absolute;
+  top: 500px;
+  width: 820px;
+  height: 300px;
+  overflow-y: auto;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: rgb(193, 212, 221);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .otheroneNavBlock {
+  font-size: 28px;
+  font-weight: 600;
+  height: 40px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+  background-color: rgb(193, 212, 221);
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .otheroneNavBlock .otheroneSlogan {
+  padding-left: 10px;
+  color: rgb(127, 133, 133);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .otheroneNavBlock .otheroneIconContainer {
+  margin-left: 5px;
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .otheroneNavBlock .otheroneIconContainer i {
+  margin-right: 27px;
+  line-height: 40px;
+  color: rgb(127, 133, 133);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlockNav {
+  font-size: 28px;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+  background-color: rgb(193, 212, 221);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlockNav .signatureContainerNav {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlockNav .signatureContainerNav .initiatorNameNav {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlockNav .signatureContainerNav .signatureTitleNav {
+  height: 40px;
+  width: 50%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlockNav .signatureContainerNav .signatureStartTimeNav {
+  height: 40px;
+  width: 30%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlock {
+  font-size: 26px;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-width: 2px;
+  background-color: rgb(193, 212, 221);
+  border-color: rgb(149, 154, 154);
+  cursor: pointer;
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlock .signatureContainer {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlock .signatureContainer .initiatorName {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlock .signatureContainer .signatureTitle {
+  height: 40px;
+  width: 50%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  background-color: rgb(197, 231, 231);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlock .signatureContainer .signatureStartTime {
+  height: 40px;
+  width: 30%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlock .signatureContainer .signatureDeadTime {
+  height: 40px;
+  width: 17%;
+  text-align: center;
+  line-height: 40px;
+  background-color: rgb(197, 231, 231);
+}
+body .sectionContainer .mainText .textBlock .otheroneBlock .singleSignatureBlock:hover {
+  border: 1px solid rgb(149, 154, 154);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock {
+  position: absolute;
+  top: 195px;
+  width: 820px;
+  height: 300px;
+  overflow-y: auto;
+  display: none;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: rgb(193, 212, 221);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historyYoursNavBlock {
+  font-size: 28px;
+  font-weight: 600;
+  height: 40px;
+  width: 100%;
+  padding-left: 10px;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-radius: 10px 10px 0px 0px;
+  border-color: rgb(149, 154, 154);
+  background-color: rgb(193, 212, 221);
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historyYoursNavBlock .historyYoursSlogan {
+  color: rgb(127, 133, 133);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historyYoursNavBlock .historyYoursIconContainer {
+  margin-left: 5px;
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historyYoursNavBlock .historyYoursIconContainer i {
+  margin-right: 27px;
+  line-height: 40px;
+  color: rgb(127, 133, 133);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlockNav {
+  font-size: 28px;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+  background-color: rgb(193, 212, 221);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlockNav .historySignatureContainerNav {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlockNav .historySignatureContainerNav .historyInitiatorNameNav {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlockNav .historySignatureContainerNav .historySignatureTitleNav {
+  height: 40px;
+  width: 46%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlockNav .historySignatureContainerNav .historySignatureStartTimeNav {
+  height: 40px;
+  width: 17%;
+  padding-left: 5px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlockNav .historySignatureContainerNav .historySignatureProcessingTimeNav {
+  height: 40px;
+  width: 17%;
+  padding-left: 5px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlock {
+  font-size: 26px;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-width: 2px;
+  background-color: rgb(193, 212, 221);
+  border-color: rgb(149, 154, 154);
+  cursor: pointer;
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlock .historySignatureContainer {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlock .historySignatureContainer .historyInitiatorName {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlock .historySignatureContainer .historySignatureTitle {
+  height: 40px;
+  width: 46%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  background-color: rgb(197, 231, 231);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlock .historySignatureContainer .historySignatureStartTime {
+  height: 40px;
+  width: 17%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlock .historySignatureContainer .historySignatureProcessingTime {
+  height: 40px;
+  width: 17%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  background-color: rgb(197, 231, 231);
+}
+body .sectionContainer .mainText .textBlock .historyYoursBlock .historySingleSignatureBlock:hover {
+  border: 1px solid rgb(149, 154, 154);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock {
+  position: absolute;
+  top: 500px;
+  width: 820px;
+  height: 300px;
+  overflow-y: auto;
+  display: none;
+  margin-top: 5px;
+  margin-left: 5px;
+  background-color: rgb(193, 212, 221);
+  border-radius: 5px 5px 5px 5px;
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historyOthersNavBlock {
+  font-size: 28px;
+  font-weight: 600;
+  height: 40px;
+  width: 100%;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+  background-color: rgb(193, 212, 221);
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historyOthersNavBlock .historyOthersSlogan {
+  padding-left: 10px;
+  color: rgb(127, 133, 133);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historyOthersNavBlock .historyOthersIconContainer {
+  margin-left: 5px;
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historyOthersNavBlock .historyOthersIconContainer i {
+  margin-right: 27px;
+  line-height: 40px;
+  color: rgb(127, 133, 133);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlockNav {
+  font-size: 28px;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(149, 154, 154);
+  background-color: rgb(193, 212, 221);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlockNav .historySignatureContainerNav {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlockNav .historySignatureContainerNav .historyInitiatorNameNav {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlockNav .historySignatureContainerNav .historySignatureTitleNav {
+  height: 40px;
+  width: 46%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlockNav .historySignatureContainerNav .historySignatureStartTimeNav {
+  height: 40px;
+  width: 17%;
+  padding-left: 5px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlockNav .historySignatureContainerNav .historySignatureProcessingTimeNav {
+  height: 40px;
+  width: 17%;
+  padding-left: 5px;
+  text-align: left;
+  line-height: 40px;
+  color: rgb(81, 84, 84);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlock {
+  font-size: 26px;
+  font-weight: 600;
+  border-bottom-style: solid;
+  border-width: 2px;
+  background-color: rgb(193, 212, 221);
+  border-color: rgb(149, 154, 154);
+  cursor: pointer;
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlock .historySignatureContainer {
+  height: 40px;
+  width: 100%;
+  display: flex;
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlock .historySignatureContainer .historyInitiatorName {
+  height: 40px;
+  width: 20%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlock .historySignatureContainer .historySignatureTitle {
+  height: 40px;
+  width: 46%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  background-color: rgb(197, 231, 231);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlock .historySignatureContainer .historySignatureStartTime {
+  height: 40px;
+  width: 17%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlock .historySignatureContainer .historySignatureProcessingTime {
+  height: 40px;
+  width: 17%;
+  padding-left: 10px;
+  text-align: left;
+  line-height: 40px;
+  background-color: rgb(197, 231, 231);
+}
+body .sectionContainer .mainText .textBlock .historyOthersBlock .historySingleSignatureBlock:hover {
+  border: 1px solid rgb(149, 154, 154);
+}
+body .sectionContainer .mainText .managerSlogan {
+  display: none;
+  font-size: 27px;
+  font-weight: 600;
+  margin-left: 50px;
+  margin-top: 38px;
+}
+body .sectionContainer .mainText .managerImgBlock {
+  width: 740px;
+  height: 450px;
+  margin-left: 50px;
+  display: none;
+  margin-top: 30px;
+}
+body .trackByIDSetion {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+body .trackByIDSetion .trackByIDBlock {
+  width: 1000px;
+  height: 85vh;
+  border-radius: 20px;
+  border: 3px solid #666;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDNav {
+  width: 100%;
+  height: 60px;
+  background-color: #666;
+  border-radius: 16px 16px 0px 0px;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDNav .trackByIDNavLeft {
+  width: 50%;
+  height: 60px;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDNav .trackByIDNavLeft .trackByIDNavLeftTitle {
+  width: 190px;
+  line-height: 60px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #eef0f1;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDNav .trackByIDNavLeft .trackByIDNavLeftContent {
+  line-height: 60px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #eef0f1;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDNav .trackByIDNavRight {
+  width: 50%;
+  height: 60px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDNav .trackByIDNavRight .trackByIDNavRightTitle {
+  line-height: 60px;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: #eef0f1;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDNav .trackByIDNavRight .trackByIDNavRightTitle .trackByIdSetionCross {
+  color: #eef0f1;
+  width: 40px;
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDSubjectContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDSubjectContainer .trackByIDSubjectTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDSubjectContainer .trackByIDSubjectContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDInitiatorAndStarttimeContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDInitiatorAndStarttimeContainer .trackByIDInitiatorBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDInitiatorAndStarttimeContainer .trackByIDInitiatorBlock .trackByIDInitiatorTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(199, 199, 238);
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDInitiatorAndStarttimeContainer .trackByIDInitiatorBlock .trackByIDInitiatorContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDInitiatorAndStarttimeContainer .trackByIDStarttimeBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDInitiatorAndStarttimeContainer .trackByIDStarttimeBlock .trackByIDStarttimeTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(199, 199, 238);
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDInitiatorAndStarttimeContainer .trackByIDStarttimeBlock .trackByIDStarttimeContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDRecordAndDoubleConfirmbuttonContainer {
+  width: 100%;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDRecordAndDoubleConfirmbuttonContainer .trackByIDRecordBlock {
+  width: 84.5%;
+  height: 58px;
+  display: flex;
+  border-bottom: 2px solid #b2b4b4;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDRecordAndDoubleConfirmbuttonContainer .trackByIDRecordBlock .trackByIDRecordTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(228, 153, 153);
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDRecordAndDoubleConfirmbuttonContainer .trackByIDRecordBlock .trackByIDRecordContainer {
+  height: 58px;
+  width: 650px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDRecordAndDoubleConfirmbuttonContainer .trackByIDRecordBlock .trackByIDRecordContainer .trackByIDRecordInput {
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDRecordAndDoubleConfirmbuttonContainer .trackByIDRecordBlock .trackByIDRecordContainer .trackByIDRecordText {
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  display: none;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDRecordAndDoubleConfirmbuttonContainer .trackByIDDoubleConfirmbuttonBlock {
+  width: 15.5%;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(228, 153, 153);
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer .trackByIDMapBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer .trackByIDMapBlock .trackByIDMapTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer .trackByIDMapBlock .trackByIDMapContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer .trackByIDMapBlock .trackByIDMapContent .trackByIDMapContentIcon {
+  width: 22px;
+  margin-left: 5px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer .trackByIDClickbuttonBlock {
+  width: 50%;
+  height: 58px;
+  display: none;
+  justify-content: space-between;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer .trackByIDClickbuttonBlock .trackByIDSendbackbutton {
+  width: 190px;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer .trackByIDClickbuttonBlock .trackByIDAgreeAndDisagreebuttonBlock {
+  height: 58px;
+  width: 62%;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer .trackByIDClickbuttonBlock .trackByIDAgreeAndDisagreebuttonBlock .trackByIDAgreebutton {
+  background-color: rgb(190, 176, 176);
+  width: 50%;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapAndClickbuttonContainer .trackByIDClickbuttonBlock .trackByIDAgreeAndDisagreebuttonBlock .trackByIDDisagreebutton {
+  background-color: rgb(203, 198, 198);
+  width: 50%;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer {
+  width: 100%;
+  border-bottom: 2px solid #b2b4b4;
+  display: none;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDAttachmentBlock {
+  width: 50%;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDAttachmentBlock .trackByIDAttachmentTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDAttachmentBlock .trackByIDAttachmentContainer {
+  width: 310px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDAttachmentBlock .trackByIDAttachmentContainer .trackByIDDownloadAttachment {
+  display: block;
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDAttachmentBlock .trackByIDAttachmentContainer .trackByIDDownloadAttachment .trackByIDAttachmentContentIcon {
+  width: 22px;
+  margin-left: 5px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDAttachmentBlock .trackByIDAttachmentContainer .trackByIDUploadAttachment {
+  display: none;
+  line-height: 58px;
+  font-size: 22px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDInitiatorMethodsBlock {
+  width: 50%;
+  display: none;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDInitiatorMethodsBlock .trackByIDInitiatorResubmit {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(166, 150, 150);
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDInitiatorMethodsBlock .trackByIDMethodsContainer {
+  height: 58px;
+  width: 62%;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDInitiatorMethodsBlock .trackByIDMethodsContainer .trackByIDMethodsChangeAttachment {
+  background-color: rgb(190, 176, 176);
+  width: 50%;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDAttachmentAndInitiatorMethodsContainer .trackByIDInitiatorMethodsBlock .trackByIDMethodsContainer .trackByIDMethodsChangeText {
+  background-color: rgb(203, 198, 198);
+  width: 50%;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  cursor: pointer;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer {
+  width: 100%;
+  border-bottom: 2px solid #b2b4b4;
+  display: none;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateTitleBlock {
+  width: 190px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateContentBlock {
+  width: 800px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  display: flex;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateContentBlock .trackByIDMapParticipateSingleAll {
+  height: 75px;
+  background-color: #d2d4d4;
+  margin: 2px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateContentBlock .trackByIDMapParticipateSingleAll .trackByIDMapParticipateSingleTop {
+  height: 50px;
+  line-height: 50px;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 5px;
+  background-color: rgb(197, 231, 231);
+  border-radius: 5px;
+  border: 1px solid #666;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateContentBlock .trackByIDMapParticipateSingleAll .trackByIDMapParticipateSingleTop .trackByIDMapParticipateSingleTopCheck {
+  width: 20px;
+  margin-left: 10px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateContentBlock .trackByIDMapParticipateSingleAll .trackByIDMapParticipateSingleDownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateContentBlock .trackByIDMapParticipateSingleAll .trackByIDMapParticipateSingleDownContainer .trackByIDMapParticipateSingleDown {
+  display: inline-flex;
+  margin: 1px;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 19px;
+  font-weight: 400;
+  background-color: #d2d4d4;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMessageBoardContainer {
+  width: 100%;
+  height: 450px;
+}
+body .trackByIDSetion .trackByIDBlock .trackByIDMessageBoardContainer .trackByIDMessageBlock {
+  height: 100%;
+  width: 100%;
+  font-weight: 600;
+  font-size: 28px;
+  padding-left: 20px;
+  padding-top: 20px;
+  overflow: auto;
+}
+body .writeSetion {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+body .writeSetion .writeBlock {
+  width: 1000px;
+  border-radius: 20px;
+  border: 3px solid #666;
+}
+body .writeSetion .writeBlock .writeBlockNav {
+  width: 100%;
+  height: 60px;
+  background-color: #666;
+  border-radius: 16px 16px 0px 0px;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockNav .writeBlockNavLeft {
+  width: 50%;
+  height: 60px;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockNav .writeBlockNavLeft .writeBlockNavLeftTitle {
+  width: 190px;
+  line-height: 60px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #eef0f1;
+}
+body .writeSetion .writeBlock .writeBlockNav .writeBlockNavLeft .writeBlockNavLeftContent {
+  line-height: 60px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #eef0f1;
+}
+body .writeSetion .writeBlock .writeBlockNav .writeBlockNavRight {
+  width: 50%;
+  height: 60px;
+}
+body .writeSetion .writeBlock .writeBlockNav .writeBlockNavRight .writeBlockNavRightTitle {
+  line-height: 60px;
+  text-align: right;
+  margin-top: 10px;
+  margin-right: 10px;
+  color: #eef0f1;
+}
+body .writeSetion .writeBlock .writeBlockNav .writeBlockNavRight .writeBlockNavRightTitle .writeSetionCross {
+  color: #eef0f1;
+  width: 40px;
+  cursor: pointer;
+}
+body .writeSetion .writeBlock .writeBlockReceiverContainer {
+  width: 100%;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockReceiverContainer .writeBlockReceiverTitleBlock {
+  width: 190px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .writeSetion .writeBlock .writeBlockReceiverContainer .writeBlockReceiverContentBlock {
+  width: 800px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .writeSetion .writeBlock .writeBlockReceiverContainer .writeBlockReceiverContentBlock .writeBlockReceiverSingle {
+  display: inline-flex;
+  height: 50px;
+  margin: 2px;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 5px;
+  background-color: rgb(197, 197, 248);
+  border-radius: 5px;
+  border: 1px solid #666;
+}
+body .writeSetion .writeBlock .writeBlockReceiverContainer .writeBlockReceiverContentBlock .writeBlockReceiverSingle .writeBlockReceiverSingleCancel {
+  width: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .writeBlockChoiceBlock {
+  height: 58px;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .writeBlockChoiceBlock .writeBlockChoiceBlockTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(199, 199, 238);
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_department_block {
+  margin-top: 4px;
+  width: 190px;
+  height: 50px;
+  margin-left: 2px;
+  font-weight: 600;
+  font-size: 26px;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_department_block .menu_department_container {
+  width: 190px;
+  opacity: 0.9;
+  background-color: rgb(135, 141, 141);
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_department_block .menu_department_container .menu_department_title {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_department_block .menu_department_container .menu_department_title .button_department_icon {
+  cursor: pointer;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_department_block .menu_department_container .menu_department_body {
+  display: none;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_department_block .menu_department_container .menu_department_body div {
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_department_block .menu_department_container .menu_department_body div:hover {
+  background-color: red;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_block {
+  display: none;
+  margin-top: 4px;
+  width: 190px;
+  height: 50px;
+  margin-left: 2px;
+  font-weight: 600;
+  font-size: 26px;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_block .menu_container {
+  width: 190px;
+  opacity: 0.9;
+  background-color: rgb(135, 141, 141);
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_block .menu_container .menu_title {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_block .menu_container .menu_title .button_icon {
+  cursor: pointer;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_block .menu_container .menu_body div {
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .writeSetion .writeBlock .writeBlockChoiceContainer .menu_block .menu_container .menu_body div:hover {
+  background-color: red;
+}
+body .writeSetion .writeBlock .writeBlockSubjectContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockSubjectContainer .writeBlockSubjectBlock {
+  height: 58px;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockSubjectContainer .writeBlockSubjectBlock .writeBlockSubjectTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .writeSetion .writeBlock .writeBlockSubjectContainer .writeBlockSubjectBlock .writeBlockSubjectContentBlock {
+  width: 803px;
+  height: 58px;
+  line-height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .writeSetion .writeBlock .writeBlockSubjectContainer .writeBlockSubjectBlock .writeBlockSubjectContentBlock .writeBlockSubjectContentInput {
+  width: 803px;
+  height: 58px;
+  font-weight: 600;
+  font-size: 28px;
+  padding-left: 15px;
+}
+body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockDeadtimeBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockDeadtimeBlock .writeBlockDeadtimeBlockTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockDeadtimeBlock .writeBlockDeadtimeBlockContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockConfirmBottonBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockConfirmBottonBlock .writeBlockConfirmBotton {
+  width: 160px;
+  height: 58px;
+  line-height: 58px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(203, 198, 198);
+  cursor: pointer;
+}
+body .writeSetion .writeBlock .writeBlockTextContentContainer {
+  width: 100%;
+  height: 490px;
+}
+body .writeSetion .writeBlock .writeBlockTextContentContainer .writeBlockText {
+  padding: 20px;
+  font-size: 26px;
+  width: 100%;
+  height: 100%;
+  word-wrap: break-word;
+  border-radius: 0px 0px 16px 16px;
+}
+body .historyTrackByIDSetion {
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock {
+  width: 1000px;
+  height: 85vh;
+  border-radius: 20px;
+  border: 3px solid #666;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDNav {
+  width: 100%;
+  height: 60px;
+  background-color: #666;
+  border-radius: 16px 16px 0px 0px;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDNav .historyTrackByIDNavLeft {
+  width: 50%;
+  height: 60px;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDNav .historyTrackByIDNavLeft .historyTrackByIDNavLeftTitle {
+  width: 190px;
+  line-height: 60px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #eef0f1;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDNav .historyTrackByIDNavLeft .historyTrackByIDNavLeftContent {
+  line-height: 60px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #eef0f1;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDNav .historyTrackByIDNavRight {
+  width: 50%;
+  height: 60px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDNav .historyTrackByIDNavRight .historyTrackByIDNavRightTitle {
+  line-height: 60px;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: #eef0f1;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDNav .historyTrackByIDNavRight .historyTrackByIDNavRightTitle .historyTrackByIdSetionCross {
+  color: #eef0f1;
+  width: 40px;
+  cursor: pointer;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDSubjectContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDSubjectContainer .historyTrackByIDSubjectTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDSubjectContainer .historyTrackByIDSubjectContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDInitiatorAndStarttimeContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDInitiatorAndStarttimeContainer .historyTrackByIDInitiatorBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDInitiatorAndStarttimeContainer .historyTrackByIDInitiatorBlock .historyTrackByIDInitiatorTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(199, 199, 238);
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDInitiatorAndStarttimeContainer .historyTrackByIDInitiatorBlock .historyTrackByIDInitiatorContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDInitiatorAndStarttimeContainer .historyTrackByIDStarttimeBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDInitiatorAndStarttimeContainer .historyTrackByIDStarttimeBlock .historyTrackByIDStarttimeTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(199, 199, 238);
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDInitiatorAndStarttimeContainer .historyTrackByIDStarttimeBlock .historyTrackByIDStarttimeContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDFinalStateAndProcessingContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDFinalStateAndProcessingContainer .historyTrackByIDFinalStateBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDFinalStateAndProcessingContainer .historyTrackByIDFinalStateBlock .historyTrackByIDFinalStateTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDFinalStateAndProcessingContainer .historyTrackByIDFinalStateBlock .historyTrackByIDFinalStateContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDFinalStateAndProcessingContainer .historyTrackByIDProcessingBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDFinalStateAndProcessingContainer .historyTrackByIDProcessingBlock .historyTrackByIDProcessingTitle {
+  background-color: rgb(197, 231, 231);
+  width: 190px;
+  line-height: 58px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDFinalStateAndProcessingContainer .historyTrackByIDProcessingBlock .historyTrackByIDProcessingContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDResponseContainer {
+  width: 100%;
+  display: block;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDResponseContainer .historyTrackByIDResponseBlock {
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDResponseContainer .historyTrackByIDResponseBlock .historyTrackByIDResponseTitle {
+  width: 190px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(241, 192, 192);
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDResponseContainer .historyTrackByIDResponseBlock .historyTrackByIDResponseContent {
+  width: 800px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDResponseContainer .historyTrackByIDResponseBlock .historyTrackByIDResponseContent .historyTrackByIDResponseText {
+  width: 800px;
+  line-height: 35px;
+  text-align: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 25px;
+  overflow-x: auto;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer .historyTrackByIDMapBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer .historyTrackByIDMapBlock .historyTrackByIDMapTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(199, 199, 238);
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer .historyTrackByIDMapBlock .historyTrackByIDMapContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  cursor: pointer;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer .historyTrackByIDMapBlock .historyTrackByIDMapContent .historyTrackByIDMapContentIcon {
+  width: 22px;
+  margin-left: 5px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer .historyTrackByIDDownloadFileBlock {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer .historyTrackByIDDownloadFileBlock .historyTrackByIDDownloadFileTitle {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(199, 199, 238);
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer .historyTrackByIDDownloadFileBlock .historyTrackByIDDownloadFileContent {
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  cursor: pointer;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer .historyTrackByIDDownloadFileBlock .historyTrackByIDDownloadFileContent .historyTrackByIDDownloadFileContentWord {
+  font-weight: 600;
+  font-size: 28px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer .historyTrackByIDDownloadFileBlock .historyTrackByIDDownloadFileContent .historyTrackByIDDownloadFileContentIcon {
+  width: 22px;
+  margin-left: 5px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapParticipateContainer {
+  width: 100%;
+  border-bottom: 2px solid #b2b4b4;
+  display: none;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapParticipateContainer .historyTrackByIDMapParticipateTitleBlock {
+  width: 190px;
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(197, 231, 231);
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapParticipateContainer .historyTrackByIDMapParticipateContentBlock {
+  width: 800px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  display: flex;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapParticipateContainer .historyTrackByIDMapParticipateContentBlock .historyTrackByIDMapParticipateSingleAll {
+  height: 75px;
+  margin: 2px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapParticipateContainer .historyTrackByIDMapParticipateContentBlock .historyTrackByIDMapParticipateSingleAll .historyTrackByIDMapParticipateSingleTop {
+  height: 50px;
+  line-height: 50px;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 20px;
+  padding-right: 5px;
+  background-color: rgb(197, 231, 231);
+  border-radius: 5px;
+  border: 1px solid #666;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapParticipateContainer .historyTrackByIDMapParticipateContentBlock .historyTrackByIDMapParticipateSingleAll .historyTrackByIDMapParticipateSingleTop .historyTrackByIDMapParticipateSingleTopCheck {
+  width: 20px;
+  margin-left: 10px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapParticipateContainer .historyTrackByIDMapParticipateContentBlock .historyTrackByIDMapParticipateSingleAll .historyTrackByIDMapParticipateSingleDownContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapParticipateContainer .historyTrackByIDMapParticipateContentBlock .historyTrackByIDMapParticipateSingleAll .historyTrackByIDMapParticipateSingleDownContainer .historyTrackByIDMapParticipateSingleDown {
+  display: inline-flex;
+  margin: 1px;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 19px;
+  font-weight: 400;
+  background-color: #d2d4d4;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMessageBoardContainer {
+  width: 100%;
+  height: 420px;
+}
+body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMessageBoardContainer .historyTrackByIDMessageBlock {
+  height: 400px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 28px;
+  padding-left: 20px;
+  padding-top: 20px;
+  overflow: auto;
+}/*# sourceMappingURL=main.css.map */

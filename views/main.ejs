@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'></link>
+    <title>Esignature</title>
+</head>
+<body>
+    <section class="sectionContainer">
+        <section class="mainGuide">
+            <div class="guideLogoBlock">
+                <div class="guideLogoContainer">
+                    <!-- <div class="guideIconContainer"><i class="fa fa-bars" class="guideIcon"></i></div> -->
+                    <div class="guideSloganContainer">E-signature</div>
+                </div>
+            </div>
+            <div class="guideWriteBlock">
+                <div class="menuWrite">
+                    <div class="writeContainer">
+                        <div class="writeIcon"><i class="fa fa-edit"></i></div>
+                        <div class="writeTitle">撰寫</div>
+                    </div>
+                </div>
+                <div class="menuProcessing">
+                    <div class="processingContainer">
+                        <div class="processingIcon"><i class="fa fa-briefcase"></i></div>
+                        <div class="processingTitle">簽呈進行中</div>
+                    </div>
+                </div>
+                <div class="menuHistory">
+                    <div class="historyContainer">
+                        <div class="historyIcon"><i class="fa fa-h-square"></i></div>
+                        <div class="historyTitle">歷史紀錄</div>
+                    </div>
+                </div>
+                <div class="menuManager">
+                    <div class="menuManagerContainer">
+                        <div class="menuManagerIcon"><i class="fa fa-users"></i></div>
+                        <div class="menuManagerTitle">管理者權限</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mainText">
+            <div class="NavBlock">
+                <div class="searchBlock">
+                    <input class="searchInput" type="text" name="text" placeholder="請輸入您要搜尋的主旨關鍵字...">
+                </div>
+                <div class="helloBlock">
+                    <p class="helloContent">您好  <span class="helloName"></span><span class="signOutButton">點此登出</span></p>
+                </div>
+            </div>
+            <div class="generalSlogan">您所想要看到的簽呈，僅有與您相關的 —</div>
+
+
+
+            <div class="signatureMenu">
+                <div class="signatureMenuNavContainer">
+                    <div class="initiatorNameNav">發起人</div>
+                    <div class="signatureTitleNav">主旨</div>
+                    <div class="signatureStartTimeNav">發起時間</div>
+                </div>
+                <!-- <div class="menuSignatureBlock">
+                    <div class="menuContainer">
+                        <div class="menuInitiator">冰塊</div>
+                        <div class="menuTitle">買麥當勞</div>
+                        <div class="menuStartTime">2023-02-26 21:54</div>
+                    </div>
+                </div> -->
+                <!-- <div class="menuSignatureBlock">
+                    <div class="menuContainer">
+                        <div class="menuInitiator">冰塊</div>
+                        <div class="menuTitle">買麥當勞</div>
+                        <div class="menuStartTime">2023-02-26 21:54</div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="textBlock">
+                <div class="yourturnBlock">
+                    <div class="yourturnNavBlock">
+                        <div class="yourturnSlogan">輪到您簽</div>
+                        <div class="yourturnIconContainer">
+                                <i class="fa fa-angle-double-down"></i>
+                                <!-- <i class="fa fa-refresh"></i> -->
+                        </div>
+                    </div>
+
+                    <div class="singleSignatureBlockNav">
+                        <div class="signatureContainerNav">
+                            <div class="initiatorNameNav">發起人</div>
+                            <div class="signatureTitleNav">主旨</div>
+                            <div class="signatureStartTimeNav">發起時間</div>
+                            <!-- <div class="signatureDeadTimeNav">截止時間</div> -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="otheroneBlock">
+                    <div class="otheroneNavBlock">
+                        <div class="otheroneSlogan">其他人在簽</div>
+                        <div class="otheroneIconContainer">
+                                <i class="fa fa-angle-double-down"></i>
+                                <!-- <i class="fa fa-refresh"></i> -->
+                        </div>
+                    </div>
+
+                    <div class="singleSignatureBlockNav">
+                        <div class="signatureContainerNav">
+                            <div class="initiatorNameNav">發起人</div>
+                            <div class="signatureTitleNav">主旨</div>
+                            <div class="signatureStartTimeNav">發起時間</div>
+                            <!-- <div class="signatureDeadTimeNav">截止時間</div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="historyYoursBlock">
+                    <div class="historyYoursNavBlock">
+                        <div class="historyYoursSlogan">你發起的</div>
+                        <div class="historyYoursIconContainer">
+                                <i class="fa fa-angle-double-down"></i>
+                                <!-- <i class="fa fa-refresh"></i> -->
+                        </div>
+                    </div>
+
+                    <div class="historySingleSignatureBlockNav">
+                        <div class="historySignatureContainerNav">
+                            <div class="historyInitiatorNameNav">發起人</div>
+                            <div class="historySignatureTitleNav">主旨</div>
+                            <div class="historySignatureStartTimeNav">發起日期</div>
+                            <div class="historySignatureProcessingTimeNav">結束日期</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="historyOthersBlock">
+                    <div class="historyOthersNavBlock">
+                        <div class="historyOthersSlogan">別人發起的</div>
+                        <div class="historyOthersIconContainer">
+                                <i class="fa fa-angle-double-down"></i>
+                                <!-- <i class="fa fa-refresh"></i> -->
+                        </div>
+                    </div>
+
+                    <div class="historySingleSignatureBlockNav">
+                        <div class="historySignatureContainerNav">
+                            <div class="historyInitiatorNameNav">發起人</div>
+                            <div class="historySignatureTitleNav">主旨</div>
+                            <div class="historySignatureStartTimeNav">發起日期</div>
+                            <div class="historySignatureProcessingTimeNav">結束日期</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="managerSlogan">首先創建管理您的公司及部門人員，讓彼此的簽核E起來~</div>
+            <img class="managerImgBlock" src="/styles/team.jpg"></img>
+        </section>
+        
+
+
+    </section>
+
+    <section class="trackByIDSetion">
+        <div class="trackByIDBlock">
+            <div class="trackByIDNav">
+                <div class="trackByIDNavLeft">
+                    <div class="trackByIDNavLeftTitle">簽呈編號 : </div>
+                    <div class="trackByIDNavLeftContent"></div>
+                </div>
+                <div class="trackByIDNavRight">
+                    <div class="trackByIDNavRightTitle"><img src="/styles/cross-small.png" class="trackByIdSetionCross"/></div>
+                </div>
+            </div>
+
+            <div class="trackByIDSubjectContainer">
+                <div class="trackByIDSubjectTitle">主旨 : </div>
+                <div class="trackByIDSubjectContent"></div>
+            </div>
+
+            <div class="trackByIDInitiatorAndStarttimeContainer">
+                <div class="trackByIDInitiatorBlock">
+                    <div class="trackByIDInitiatorTitle">發起人 : </div>
+                    <div class="trackByIDInitiatorContent"></div>
+                </div>
+                <div class="trackByIDStarttimeBlock">
+                    <div class="trackByIDStarttimeTitle">發起時間 : </div>
+                    <div class="trackByIDStarttimeContent"></div>
+                </div>
+            </div>
+
+            <div class="trackByIDRecordAndDoubleConfirmbuttonContainer">
+                <!-- <div class="trackByIDRecordBlock">
+                    <div class="trackByIDRecordTitle">不通過原因 : </div>
+                    <div class="trackByIDRecordContainer">
+                        <input class="trackByIDRecordInput" type="text">
+                        <div class="trackByIDRecordText">寫太好別人怎麼混</div>
+                    </div>
+                </div>
+                <div class="trackByIDDoubleConfirmbuttonBlock">確認送出</div> -->
+            </div>
+
+            
+
+
+            <div class="trackByIDMapAndClickbuttonContainer">
+                <div class="trackByIDMapBlock">
+                    <div class="trackByIDMapTitle">簽呈流程 : </div>
+                    <div class="trackByIDMapContent">點擊查看即時動態<img src="/styles/select.png" class="trackByIDMapContentIcon"/></div>
+                </div>
+                <div class="trackByIDClickbuttonBlock">
+                    <div class="trackByIDSendbackbutton"><!--退回重新修改--></div>
+                    <div class="trackByIDAgreeAndDisagreebuttonBlock">
+                        <div class="trackByIDAgreebutton">同意鈕</div>
+                        <div class="trackByIDDisagreebutton">不同意鈕</div>
+                    </div>
+                </div>
+            </div>
+
+            
+
+
+
+
+            <div class="trackByIDAttachmentAndInitiatorMethodsContainer">
+                <div class="trackByIDAttachmentBlock">
+                    <div class="trackByIDAttachmentTitle">附件檔案 : </div>
+                    <div class="trackByIDAttachmentContainer">
+                        <div class="trackByIDDownloadAttachment">點擊下載附件檔案<img src="/styles/select.png" class="trackByIDAttachmentContentIcon"/></div>
+                        <input class="trackByIDUploadAttachment" type="file"></input>
+                    </div>
+                </div>
+
+
+                <!-- <div class="trackByIDInitiatorMethodsBlock">
+                    <div class="trackByIDInitiatorResubmit">重新送出</div>
+                    <div class="trackByIDMethodsContainer">
+                        <div class="trackByIDMethodsChangeAttachment">修改附件</div>
+                        <div class="trackByIDMethodsChangeText">修改內文</div>
+                    </div>
+                </div> -->
+            </div>
+
+
+            
+            <div class="trackByIDMapParticipateContainer">
+                <div class="trackByIDMapParticipateTitleBlock">依序簽核者 : </div>
+                <div class="trackByIDMapParticipateContentBlock">
+                    <!-- <div class="trackByIDMapParticipateSingleAll">
+                        <div class="trackByIDMapParticipateSingleTop">阿一<img src="/styles/check.png" class="trackByIDMapParticipateSingleTopCheck"/></div>
+                        <div class="trackByIDMapParticipateSingleDown"></div>
+                    </div> -->
+                                      
+                </div>
+            </div>
+            
+
+            <div class="trackByIDMessageBoardContainer">
+                <div class="trackByIDMessageBlock"></div>
+                <!-- <textarea type="textarea" class="writeBlockText"></textarea> -->
+                <!-- <div class="trackByIDIMGBlock"> -->
+                    
+                    
+                    <!-- //下載功能 -->
+                    <!-- <button id="downloadImage"> Download Image </button> -->
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="writeSetion">
+        <div class="writeBlock">
+            <div class="writeBlockNav">
+                <div class="writeBlockNavLeft">
+                    <div class="writeBlockNavLeftTitle">發起新簽呈 </div>
+                    <div class="writeBlockNavLeftContent"></div>
+                </div>
+                <div class="writeBlockNavRight">
+                    <div class="writeBlockNavRightTitle"><img src="/styles/cross-small.png" class="writeSetionCross"/></div>
+                </div>
+            </div>
+
+            <div class="writeBlockReceiverContainer">
+                <div class="writeBlockReceiverTitleBlock">依序參與者 : </div>
+                <div class="writeBlockReceiverContentBlock">
+                    <!-- <div class="writeBlockReceiverSingle">阿一<img src="/styles/cancel.png" class="writeBlockReceiverSingleCancel"/></div> -->                    
+                </div>
+            </div>
+
+            <div class="writeBlockChoiceContainer">
+                <div class="writeBlockChoiceBlock">
+                    <div class="writeBlockChoiceBlockTitle">選擇參與者 : </div>
+                    <!-- <div class="writeBlockChoiceBlockContent"></div> -->
+                </div>
+
+                <div class="menu_department_block">
+                    <div class ="menu_department_container">
+                        <div class="menu_department_title">下拉點選部門<span class="button_department_icon"><i class="fa fa-angle-double-down" id="writeReceiverdepartmentDoubleDown"></i></span></div>
+                        <div class="menu_department_body">
+                            <!-- <div>123</div> -->
+
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="menu_block">
+                    <div class ="menu_container">
+                        <div class="menu_title">點選下方人員<!-- <span class="button_icon"><i class="fa fa-angle-double-down" id="writeReceiverCustomerDoubleDown"></i></span> --></div>
+                        <div class="menu_body">
+                            <!-- <div>123</div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="writeBlockSubjectContainer">
+                <div class="writeBlockSubjectBlock">
+                    <div class="writeBlockSubjectTitle">簽呈主旨 : </div>
+                    <div class="writeBlockSubjectContentBlock">
+                        <input type="text" class="writeBlockSubjectContentInput">
+                    </div>
+                </div>
+            </div>
+
+            <div class="writeBlockDeadtimeAndConfirmBottonContainer">
+                <div class="writeBlockDeadtimeBlock">
+                    <!-- <div class="writeBlockDeadtimeBlockTitle">截止時間 : </div>
+                    <div class="writeBlockDeadtimeBlockContent"><input type="date" class="writeBlockDeadtime"/></div> -->
+                </div>
+                <div class="writeBlockConfirmBottonBlock">
+                    <div class="writeBlockConfirmBotton">確認送出</div>
+                </div>
+            </div>
+            <div class="writeBlockTextContentContainer">
+                <textarea type="textarea" class="writeBlockText"></textarea>
+                <!-- <div class="writeBlockDeadtimeBlock">
+                    <div class="writeBlockDeadtimeBlockTitle">截止時間 : </div>
+                    <div class="writeBlockDeadtimeBlockContent"><input type="date" class="writeBlockDeadtime"/></div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+
+    <section class="historyTrackByIDSetion">
+        <div class="historyTrackByIDBlock">
+            <div class="historyTrackByIDNav">
+                <div class="historyTrackByIDNavLeft">
+                    <div class="historyTrackByIDNavLeftTitle">簽呈編號 : </div>
+                    <div class="historyTrackByIDNavLeftContent"></div>
+                </div>
+                <div class="historyTrackByIDNavRight">
+                    <div class="historyTrackByIDNavRightTitle"><img src="/styles/cross-small.png" class="historyTrackByIdSetionCross"/></div>
+                </div>
+            </div>
+
+            <div class="historyTrackByIDSubjectContainer">
+                <div class="historyTrackByIDSubjectTitle">主旨 : </div>
+                <div class="historyTrackByIDSubjectContent"></div>
+            </div>
+
+            <div class="historyTrackByIDInitiatorAndStarttimeContainer">
+                <div class="historyTrackByIDInitiatorBlock">
+                    <div class="historyTrackByIDInitiatorTitle">發起人 : </div>
+                    <div class="historyTrackByIDInitiatorContent"></div>
+                </div>
+                <div class="historyTrackByIDStarttimeBlock">
+                    <div class="historyTrackByIDStarttimeTitle">發起時間 : </div>
+                    <div class="historyTrackByIDStarttimeContent"></div>
+                </div>
+            </div>
+
+
+            <div class="historyTrackByIDFinalStateAndProcessingContainer">
+                <div class="historyTrackByIDFinalStateBlock">
+                    <div class="historyTrackByIDFinalStateTitle">最終狀態 : </div>
+                    <div class="historyTrackByIDFinalStateContent"></div>
+                </div>
+                <div class="historyTrackByIDProcessingBlock">
+                    <div class="historyTrackByIDProcessingTitle">結束時間 : </div>
+                    <div class="historyTrackByIDProcessingContent"></div>
+                </div>
+            </div>
+
+
+            <div class="historyTrackByIDResponseContainer">
+                <!-- <div class="historyTrackByIDResponseBlock">
+                    <div class="historyTrackByIDResponseTitle">不通過原因 : </div>
+                    <div class="historyTrackByIDResponseContent">
+                        <div class="historyTrackByIDResponseText">寫太好別人怎麼混寫太好別人怎麼混寫太好別人怎麼混寫太好別人怎麼混寫太好別人怎麼混寫太好別人怎麼混別人怎麼混寫太好別人怎麼混寫太好別人怎麼混寫太好別人怎麼混寫太好別人怎麼混寫太好別人怎麼混</div>
+                    </div>
+                </div> -->
+            </div>
+
+
+
+
+
+            <div class="historyTrackByIDMapAndDownloadFileContainer">
+                <div class="historyTrackByIDMapBlock">
+                    <div class="historyTrackByIDMapTitle">簽呈流程 : </div>
+                    <div class="historyTrackByIDMapContent">點擊查看簽呈紀錄<img src="/styles/select.png" class="historyTrackByIDMapContentIcon"/></div>
+                </div>
+                <div class="historyTrackByIDDownloadFileBlock">
+                    <!-- <div class="historyTrackByIDDownloadFileTitle">附件檔案 : </div>
+                    <div class="historyTrackByIDDownloadFileContent"><span class="historyTrackByIDDownloadFileContentWord">點擊下載附件檔案</span><img src="/styles/select.png" class="historyTrackByIDDownloadFileContentIcon"/></div> -->
+                </div>
+            </div>
+
+            <div class="historyTrackByIDMapParticipateContainer">
+                <div class="historyTrackByIDMapParticipateTitleBlock">依序簽核者 : </div>
+                <div class="historyTrackByIDMapParticipateContentBlock">
+                    <!-- <div class="historyTrackByIDMapParticipateSingleAll">
+                        <div class="historyTrackByIDMapParticipateSingleTop">阿一<img src="/styles/check.png" class="historyTrackByIDMapParticipateSingleTopCheck"/></div>
+                        <div class="historyTrackByIDMapParticipateSingleDown"></div>
+                    </div> -->
+                                      
+                </div>
+            </div>
+            <div class="historyTrackByIDMessageBoardContainer">
+                <div class="historyTrackByIDMessageBlock"></div>
+                <div class="historyTrackByIDIMGBlock"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="/main.js" ></script>
+</body>
+</html>

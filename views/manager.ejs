@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/manager.css">
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet'></link>
+    <title>Esignature</title>
+</head>
+<body>
+
+
+    <section class="manager_setion">
+        <div class="manager_interface_block">
+            <div class="manager_interface_nav">
+                <div class="manager_interface_nav_left">
+                    <div class="manager_interface_nav_left_title">管理者權限頁面 </div>
+                    <div class="manager_interface_nav_left_content"></div>
+                </div>
+                <div class="manager_interface_nav_right">
+                    <div class="manager_interface_nav_title"><img src="/styles/cross-small.png" class="manager_interface_cross"/></div>
+                </div>
+            </div>
+
+            <div class="manager_interface_p1">
+                <p class="manager_p1_content">1. 創建新公司，或點選已建立的公司進行規劃。</p>
+            </div>
+
+            <div class="create_company_name_and_button_container">
+                <div class="create_company_block">
+                    <div class="create_company_title">公司名稱 : </div>
+                    <div class="create_company_content"><input class="create_company_input"></input></div>
+                </div>
+                <div class="create_company_button_block">
+                    <div class="create_company_button">創建公司</div>
+                    <div class="trackByIDStarttimeContent"></div>
+                </div>
+                <div class="menu_company_block">
+                    <div class ="menu_company_container">
+                        <div class="menu_company_title">下拉點選公司<span class="button_company_icon"><i class="fa fa-angle-double-down" id="button_company_DoubleDown"></i></span></div>
+                        <div class="menu_company_body">
+                            <!-- <div>123</div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create_company_message_block">
+                <p class="create_company_message_content">此公司名稱已經被註冊過了</p>
+            </div>
+
+            <div class="manager_interface_p2">
+                <p class="manager_p2_content">2. 選擇 <span class="manager_company_name">公司</span> ，創建部門，或點選已建立的部門進行規劃。</p>
+                
+            </div>
+
+
+
+            <div class="create_department_name_and_button_container">
+                <div class="create_department_block">
+                    <div class="create_department_title">部門名稱 : </div>
+                    <div class="create_department_content"><input class="create_department_input"></input></div>
+                </div>
+                <div class="create_department_button_block">
+                    <div class="create_department_button">創建部門</div>
+                    <div class="trackByIDStarttimeContent"></div>
+                </div>
+                <div class="menu_department_block">
+                    <div class ="menu_department_container">
+                        <div class="menu_department_title">下拉點選部門<span class="button_department_icon"><i class="fa fa-angle-double-down" id="button_department_DoubleDown"></i></span></div>
+                        <div class="menu_department_body">
+                            <!-- <div>123</div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="create_department_message_block">
+                <p class="create_department_message_content">此部門名稱已經被註冊過了</p>
+            </div>
+
+            <div class="manager_interface_p3">
+                <p class="manager_p3_content">3. 選擇 <span class="manager_department_name">部門</span> ，創建人員或查看人員。</p>
+                <div class="menu_user_block">
+                    <div class ="menu_user_container">
+                        <div class="menu_user_title">下拉查看部門人員<span class="button_user_icon"><i class="fa fa-angle-double-down" id="button_user_DoubleDown"></i></span></div>
+                        <div class="menu_user_body">
+                            <!-- <div>123</div> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="create_user_message_block">
+                <p class="create_user_message_content">此人員已經被註冊過了</p>
+            </div>
+            <div class="manager_create_user_block">
+                <div class="create_user_block_left">
+                    <div class="user_name_container">
+                        <div class="user_name_title">新建人員姓名 : </div>
+                        <input class="user_name_input"></input>
+                    </div>
+                    <div class="user_account_container">
+                        <div class="user_account_title">新建人員帳號 : </div>
+                        <input class="user_account_input"></input>
+                    </div>
+                    <div class="user_password_container">
+                        <div class="user_password_title">新建人員密碼 : </div>
+                        <input class="user_password_input"></input>
+                    </div>
+
+                    <div class="user_email_container">
+                        <div class="user_email_title">新建人員信箱 : </div>
+                        <input class="user_email_input"></input>
+                        <div class="create_user_button">創建人員</div>
+                    </div>
+                </div>
+                <div class="create_user_block_right"></div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+    
+
+    
+
+
+
+    <script src="/manager.js" ></script>
+</body>
+</html>

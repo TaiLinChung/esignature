@@ -1,0 +1,624 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(63, 62, 62);
+}
+body{
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    width:100%;
+    height: 100vh;
+    background-color: #eef0f1;
+    
+
+    .manager_setion{
+        width:100%;
+        height:100%;
+        // background-color: #fff8f0;
+        // display: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .manager_interface_block{
+            width: 1000px;;
+            // height:85vh;
+            // background-color: rgb(201, 206, 206);
+            border-radius: 20px;
+            border:  3px solid #666;
+            .manager_interface_nav{
+                width:100%;
+                height:60px;
+                background-color: #666;
+                border-radius: 16px 16px 0px 0px;
+                display: flex;
+                .manager_interface_nav_left{
+                    width:50%;
+                    height:60px;
+                    display: flex;
+                    // background-color: rgb(246, 77, 77);
+                    .manager_interface_nav_left_title{
+                        width:250px;
+                        line-height: 60px;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        color:#eef0f1;
+                        // background-color: rgb(225, 151, 151);
+                    }
+                    .manager_interface_nav_left_content{
+                        line-height: 60px;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        color:#eef0f1;
+                        // background-color: rgb(243, 89, 89);
+                    }
+                }
+                .manager_interface_nav_right{
+                    width:50%;
+                    height:60px;
+                    // background-color: rgb(225, 151, 151);
+                    .manager_interface_nav_title{
+                        line-height: 60px;
+                        text-align: right;
+                        margin-right: 10px;
+                        margin-top: 10px;
+                        color:#eef0f1;
+                        // font-size: 32px;
+                        .manager_interface_cross{
+                            color:#eef0f1;
+                            width:40px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .manager_interface_p1{
+                width:100%;
+                height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(197, 231, 231);
+                display: flex;
+                .manager_p1_content{
+                    width:100%;
+                    height:58px;
+                    line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    // background-color:rgb(197, 231, 231);
+
+                }
+            }
+
+            .create_company_name_and_button_container{
+                width:100%;
+                height:60px;
+                // background-color: rgb(238, 158, 158);
+                border-bottom: 2px solid #b2b4b4;
+                display: flex;
+                .create_company_block{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .create_company_title{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(199, 199, 238);
+    
+                    }
+                    .create_company_content{
+                        width:306px;
+                        height:58px;
+                        // line-height: 58px;
+                        // text-align: left;
+                        // padding-left: 20px;
+                        // font-weight: 600;
+                        // font-size: 28px;
+                        background-color:rgb(82, 82, 243);
+                        .create_company_input{
+                            width:100%;
+                            height:100%;
+                            line-height: 58px;
+                            text-align: left;
+                            padding-left: 20px;
+                            font-weight: 600;
+                            font-size: 25px;
+                        }
+                    
+                    }
+                }
+                
+                
+                .create_company_button_block{
+                    width:190px;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .create_company_button{
+                        width:130px;
+                        height:40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 600;
+                        font-size: 28px;
+                        margin-left: 10px;
+                        background-color:rgb(244, 198, 166);
+                        border-radius: 5px;
+                        border-style:solid;
+                        border-width:1px;
+                        margin-top: 8px;
+                        cursor: pointer;
+                    }
+                    
+                }
+                //===================================== drop menue
+                //==================    writeReceiverDepartment
+                .menu_company_block{
+                    margin-top: 4px;
+                    width:300px;
+                    height:50px;
+                    margin-left: 2px;
+                    z-index: 10;
+                    // background-color: #f1c18a;
+                    // position: relative;
+                    font-weight: 600;
+                    font-size: 26px;
+                    .menu_company_container{
+                    //   position:absolute;
+                      width:300px;
+                      opacity: 0.9;
+                      background-color: rgb(135, 141, 141);
+                      .menu_company_title{
+                        text-align: center;
+                        line-height: 50px;
+                        height: 50px;
+                        // background-color: rgb(176, 176, 207);
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        .button_company_icon{
+                          cursor: pointer;
+                        }
+                      }
+                      .menu_company_body{
+                        display: none;
+                        div{
+                          cursor: pointer;
+                          text-align: center;
+                          line-height: 50px;
+                          height: 50px;
+                          border: 1px solid black;
+                          border-radius: 5px;
+                        }
+                        div:hover{
+                          background-color:red;
+                        }
+                      }
+                      
+                    }
+                }
+                
+            }
+
+            .create_company_message_block{
+                width:100%;
+                
+                // background-color: rgb(197, 231, 231);
+                display: flex;
+                .create_company_message_content{
+                    width:100%;
+                    height:45px;
+                    display: none;
+                    line-height: 45px;
+                    text-align: left;
+                    padding-left: 218px;
+                    // font-weight: 600;
+                    font-size: 22px;
+                    border-bottom: 2px solid #b2b4b4;
+                    // background-color:rgb(197, 231, 231);
+
+                }
+            }
+
+            .manager_interface_p2{
+                width:100%;
+                height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(197, 231, 231);
+                display: flex;
+                .manager_p2_content{
+                    width:100%;
+                    height:58px;
+                    line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    // background-color:rgb(197, 231, 231);
+                    .manager_company_name{
+                        color: rgb(85, 85, 192);
+                        font-size: 28px;
+                    }
+                }
+                
+            }
+
+            .create_department_name_and_button_container{
+                width:100%;
+                height:60px;
+                // background-color: rgb(238, 158, 158);
+                border-bottom: 2px solid #b2b4b4;
+                display: flex;
+                .create_department_block{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .create_department_title{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(199, 199, 238);
+    
+                    }
+                    .create_department_content{
+                        width:306px;
+                        height:58px;
+                        // line-height: 58px;
+                        // text-align: left;
+                        // padding-left: 20px;
+                        // font-weight: 600;
+                        // font-size: 28px;
+                        background-color:rgb(82, 82, 243);
+                        .create_department_input{
+                            width:100%;
+                            height:100%;
+                            line-height: 58px;
+                            text-align: left;
+                            padding-left: 20px;
+                            font-weight: 600;
+                            font-size: 25px;
+                        }
+                    
+                    }
+                }
+                
+                
+                .create_department_button_block{
+                    width:190px;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .create_department_button{
+                        width:130px;
+                        height:40px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 600;
+                        font-size: 28px;
+                        margin-left: 10px;
+                        background-color:rgb(244, 198, 166);
+                        border-radius: 5px;
+                        border-style:solid;
+                        border-width:1px;
+                        margin-top: 8px;
+                        cursor: pointer;
+                    }
+                    
+                }
+                //===================================== drop menue
+                //==================    writeReceiverDepartment
+                .menu_department_block{
+                    margin-top: 4px;
+                    width:300px;
+                    height:50px;
+                    margin-left: 2px;
+                    z-index: 5;
+                    // background-color: #f1c18a;
+                    // position: relative;
+                    font-weight: 600;
+                    font-size: 26px;
+                    .menu_department_container{
+                    //   position:absolute;
+                      width:300px;
+                      opacity: 0.9;
+                      background-color: rgb(135, 141, 141);
+                      .menu_department_title{
+                        text-align: center;
+                        line-height: 50px;
+                        height: 50px;
+                        // background-color: rgb(176, 176, 207);
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        .button_department_icon{
+                          cursor: pointer;
+                        }
+                      }
+                      .menu_department_body{
+                        display: none;
+                        // background-color: green;
+                        div{
+                          cursor: pointer;
+                          text-align: center;
+                          line-height: 50px;
+                          height: 50px;
+                          border: 1px solid black;
+                          border-radius: 5px;
+                        }
+                        div:hover{
+                          background-color:red;
+                        }
+                      }
+                      
+                    }
+                }
+                
+            }
+
+            .create_department_message_block{
+                width:100%;
+                
+                // background-color: rgb(197, 231, 231);
+                display: flex;
+                .create_department_message_content{
+                    width:100%;
+                    height:45px;
+                    display: none;
+                    line-height: 45px;
+                    text-align: left;
+                    padding-left: 218px;
+                    // font-weight: 600;
+                    font-size: 22px;
+                    border-bottom: 2px solid #b2b4b4;
+                    // background-color:rgb(197, 231, 231);
+
+                }
+            }
+
+
+            .manager_interface_p3{
+                width:100%;
+                height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(197, 231, 231);
+                display: flex;
+                .manager_p3_content{
+                    width:687px;
+                    height:58px;
+                    line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    // background-color:rgb(197, 231, 231);
+                    .manager_department_name{
+                        color: rgb(85, 85, 192);
+                        font-size: 28px;
+                    }
+                }
+
+                //===================================== drop menue
+                //==================    writeReceiverDepartment
+                .menu_user_block{
+                    margin-top: 4px;
+                    width:300px;
+                    height:50px;
+                    margin-left: 2px;
+                    // background-color: #f1c18a;
+                    // position: relative;
+                    font-weight: 600;
+                    font-size: 26px;
+                    .menu_user_container{
+                    //   position:absolute;
+                      width:300px;
+                      opacity: 0.9;
+                      background-color: rgb(135, 141, 141);
+                      .menu_user_title{
+                        text-align: center;
+                        line-height: 50px;
+                        height: 50px;
+                        // background-color: rgb(176, 176, 207);
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        .button_user_icon{
+                          cursor: pointer;
+                        }
+                      }
+                      .menu_user_body{
+                        display: none;
+                        // background-color: green;
+                        div{
+                          cursor: pointer;
+                          text-align: center;
+                          line-height: 50px;
+                          height: 50px;
+                          border: 1px solid black;
+                          border-radius: 5px;
+                        }
+                        div:hover{
+                          background-color:red;
+                        }
+                      }
+                      
+                    }
+                }
+                
+            }
+
+
+
+
+            .create_user_message_block{
+                width:100%;
+                display: block;
+                .create_user_message_content{
+                    width:100%;
+                    height:45px;
+                    display: none;
+                    line-height: 45px;
+                    text-align: left;
+                    padding-left: 218px;
+                    // font-weight: 600;
+                    font-size: 22px;
+                    border-bottom: 2px solid #b2b4b4;
+                    // background-color:rgb(197, 231, 231);
+
+                }
+            }
+
+            .manager_create_user_block{
+                width:100%;
+                // height: 250px;
+                margin-bottom: 30px;
+                // background-color: aquamarine;
+                margin-top: 15px;
+                display: flex;
+                .create_user_block_left{
+                    height: 100%;
+                    width:50%;
+                    // background-color: #666;
+                    font-size: 22px;
+                    // font-weight: 600;
+                    .user_name_container{
+                        height: 45px;
+                        width:100%;
+                        display: flex;
+                        align-items: center;
+
+                        .user_name_title{
+                            width:170px;
+                            // background-color: #b2b4b4;
+                            text-align: left;
+                            padding-left: 20px;
+                            line-height: 50px;
+                        }
+                        .user_name_input{
+                            width:165px;
+                            height: 40px;
+                            font-size: 23px;
+                            padding-left: 10px;
+                            border-radius: 5px;
+                            // background-color: #54b6b6;
+                        }                        
+                    }
+
+                    .user_account_container{
+                        height: 45px;
+                        width:100%;
+                        margin-top: 5px;
+                        display: flex;
+                        align-items: center;
+
+                        .user_account_title{
+                            width:170px;
+                            // background-color: #b2b4b4;
+                            text-align: left;
+                            padding-left: 20px;
+                            line-height: 50px;
+                        }
+                        .user_account_input{
+                            width:165px;
+                            height: 40px;
+                            font-size: 23px;
+                            padding-left: 10px;
+                            border-radius: 5px;
+                            // background-color: #54b6b6;
+                        }                        
+                    }
+
+                    .user_password_container{
+                        height: 45px;
+                        width:100%;
+                        margin-top: 5px;
+                        display: flex;
+                        align-items: center;
+
+                        .user_password_title{
+                            width:170px;
+                            // background-color: #b2b4b4;
+                            text-align: left;
+                            padding-left: 20px;
+                            line-height: 50px;
+                        }
+                        .user_password_input{
+                            width:165px;
+                            height: 40px;
+                            font-size: 23px;
+                            padding-left: 10px;
+                            border-radius: 5px;
+                            // background-color: #54b6b6;
+                        }                        
+                    }
+
+
+
+                    .user_email_container{
+                        height: 45px;
+                        width:100%;
+                        margin-top: 5px;
+                        display: flex;
+                        align-items: center;
+
+                        .user_email_title{
+                            width:170px;
+                            // background-color: #b2b4b4;
+                            text-align: left;
+                            padding-left: 20px;
+                            line-height: 50px;
+                        }
+                        .user_email_input{
+                            width:165px;
+                            height: 40px;
+                            font-size: 23px;
+                            padding-left: 10px;
+                            border-radius: 5px;
+                            // background-color: #54b6b6;
+                        }
+                        .create_user_button{
+                            width:150px;
+                            background-color: rgb(244, 198, 166);
+                            height:40px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-weight: 600;
+                            font-size: 23px;
+                            margin-left: 10px;
+                            border-radius: 5px;
+                            border-style:solid;
+                            border-width:1px;
+                            cursor: pointer;
+                            }
+                    }
+                }
+                .create_user_block_right{
+                    height: 100%;
+                    width:50%;
+                    // background-color: #d04a4a;
+                    
+                }
+            }
+        }
+    }
+
+
+    
+    
+
+
+}

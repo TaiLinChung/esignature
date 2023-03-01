@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #eef0f1;
+  position: relative;
+}
+body .mainBlock {
+  position: absolute;
+  top: 10vh;
+  width: 450px;
+  border: 5px solid #666;
+  border-radius: 10px;
+  background-color: #fff8f0;
+}
+body .mainBlock .Nav {
+  height: 60px;
+  width: 100%;
+  background-color: rgb(149, 154, 154);
+  position: relative;
+}
+body .mainBlock .Nav .choiceBlock {
+  height: 40px;
+  width: 230px;
+  position: absolute;
+  border: 3px solid #666;
+  border-radius: 3px;
+  right: 12px;
+  top: 12px;
+  display: flex;
+}
+body .mainBlock .Nav .choiceBlock div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+body .mainBlock .Nav .choiceBlock .general {
+  width: 50%;
+  height: 100%;
+  color: #666;
+  background-color: #eef0f1;
+  cursor: pointer;
+}
+body .mainBlock .Nav .choiceBlock .general:hover {
+  opacity: 0.5;
+  color: black;
+  background-color: rgb(166, 223, 248);
+}
+body .mainBlock .Nav .choiceBlock .profession {
+  width: 50%;
+  height: 100%;
+  color: #eef0f1;
+  background-color: #666;
+  cursor: pointer;
+}
+body .mainBlock .Nav .choiceBlock .profession:hover {
+  opacity: 0.5;
+  color: black;
+  background-color: rgb(166, 223, 248);
+}
+body .mainBlock .pictureBlock {
+  height: 230px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .pictureBlock .picture {
+  width: 180px;
+  height: 180px;
+}
+body .mainBlock .sloganBlock {
+  height: 100px;
+  width: 100%;
+}
+body .mainBlock .sloganBlock div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .sloganBlock .title {
+  font-size: 50px;
+  font-weight: 1000;
+  height: 50%;
+  color: rgb(63, 62, 62);
+}
+body .mainBlock .sloganBlock .subtitle {
+  font-size: 25px;
+  font-weight: 800;
+  height: 50%;
+  color: rgb(63, 62, 62);
+}
+body .mainBlock .loginBlock {
+  margin-top: 5px;
+  height: 200px;
+  width: 100%;
+}
+body .mainBlock .loginBlock div {
+  height: 50px;
+}
+body .mainBlock .loginBlock .loginAccountBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .loginBlock .loginAccountBlock .loginAccountContainer {
+  width: 280px;
+  display: flex;
+}
+body .mainBlock .loginBlock .loginAccountBlock .loginAccountContainer .loginAccountIcon {
+  width: 50px;
+  text-align: center;
+  border: 3px solid #666;
+  border-radius: 50px;
+}
+body .mainBlock .loginBlock .loginAccountBlock .loginAccountContainer .loginAccountIcon i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #666;
+}
+body .mainBlock .loginBlock .loginAccountBlock .loginAccountContainer .loginAccountTitle {
+  width: 86px;
+  padding-left: 5px;
+  font-weight: 600;
+  font-size: 27px;
+  text-align: center;
+  line-height: 50px;
+  color: #666;
+}
+body .mainBlock .loginBlock .loginAccountBlock .loginAccountContainer .loginAccountInputContainer {
+  width: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .loginBlock .loginAccountBlock .loginAccountContainer .loginAccountInputContainer .loginAccountInput {
+  width: 95%;
+  height: 40px;
+  border: 3px solid #666;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+body .mainBlock .loginBlock .loginPasswordBlock {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+body .mainBlock .loginBlock .loginPasswordBlock .loginPasswordContainer {
+  width: 280px;
+  display: flex;
+}
+body .mainBlock .loginBlock .loginPasswordBlock .loginPasswordContainer .loginPasswordIcon {
+  width: 50px;
+  text-align: center;
+  border: 3px solid #666;
+  border-radius: 50px;
+}
+body .mainBlock .loginBlock .loginPasswordBlock .loginPasswordContainer .loginPasswordIcon i {
+  font-size: 30px;
+  line-height: 50px;
+}
+body .mainBlock .loginBlock .loginPasswordBlock .loginPasswordContainer .loginPasswordTitle {
+  width: 86px;
+  padding-left: 5px;
+  font-weight: 600;
+  font-size: 27px;
+  text-align: center;
+  line-height: 50px;
+}
+body .mainBlock .loginBlock .loginPasswordBlock .loginPasswordContainer .loginPasswordInputContainer {
+  width: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .loginBlock .loginPasswordBlock .loginPasswordContainer .loginPasswordInputContainer .loginPasswordInput {
+  width: 95%;
+  height: 40px;
+  border: 3px solid #666;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+body .mainBlock .loginBlock .loginMessageBlock {
+  height: 30px;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .loginBlock .loginMessageBlock .loginMessage {
+  width: 280px;
+  height: 100%;
+  margin-left: 90px;
+  display: flex;
+  align-items: center;
+}
+body .mainBlock .loginBlock .loginButtonBlock {
+  margin-top: 3px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .loginBlock .loginButtonBlock .loginButtonContainer {
+  width: 280px;
+  height: 40px;
+}
+body .mainBlock .loginBlock .loginButtonBlock .loginButtonContainer .loginLoginButton {
+  margin-right: 2px;
+  height: 40px;
+  border: 3px solid #666;
+  border-radius: 10px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 600;
+  cursor: pointer;
+}
+body .mainBlock .loginBlock .loginButtonBlock .loginButtonContainer .loginLoginButton:hover {
+  opacity: 0.5;
+  color: black;
+  background-color: rgb(166, 223, 248);
+}
+body .mainBlock .registerBlock {
+  margin-top: 5px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+body .mainBlock .registerBlock div {
+  height: 50px;
+}
+body .mainBlock .registerBlock .registerAccountBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+body .mainBlock .registerBlock .registerAccountBlock .registerAccountContainer {
+  width: 280px;
+  display: flex;
+}
+body .mainBlock .registerBlock .registerAccountBlock .registerAccountContainer .registerAccountIcon {
+  width: 50px;
+  text-align: center;
+  border: 3px solid #666;
+  border-radius: 50px;
+}
+body .mainBlock .registerBlock .registerAccountBlock .registerAccountContainer .registerAccountIcon i {
+  font-size: 30px;
+  line-height: 50px;
+  color: #666;
+}
+body .mainBlock .registerBlock .registerAccountBlock .registerAccountContainer .registerAccountTitle {
+  width: 86px;
+  padding-left: 5px;
+  font-weight: 600;
+  font-size: 27px;
+  text-align: center;
+  line-height: 50px;
+  color: #666;
+}
+body .mainBlock .registerBlock .registerAccountBlock .registerAccountContainer .registerAccountInputContainer {
+  width: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .registerBlock .registerAccountBlock .registerAccountContainer .registerAccountInputContainer .registerAccountInput {
+  width: 95%;
+  height: 40px;
+  border: 3px solid #666;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+body .mainBlock .registerBlock .registerPasswordBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  margin-bottom: 5px;
+}
+body .mainBlock .registerBlock .registerPasswordBlock .registerPasswordContainer {
+  width: 280px;
+  display: flex;
+}
+body .mainBlock .registerBlock .registerPasswordBlock .registerPasswordContainer .registerPasswordIcon {
+  width: 50px;
+  text-align: center;
+  border: 3px solid #666;
+  border-radius: 50px;
+}
+body .mainBlock .registerBlock .registerPasswordBlock .registerPasswordContainer .registerPasswordIcon i {
+  font-size: 30px;
+  line-height: 50px;
+}
+body .mainBlock .registerBlock .registerPasswordBlock .registerPasswordContainer .registerPasswordTitle {
+  width: 86px;
+  padding-left: 5px;
+  font-weight: 600;
+  font-size: 27px;
+  text-align: center;
+  line-height: 50px;
+}
+body .mainBlock .registerBlock .registerPasswordBlock .registerPasswordContainer .registerPasswordInputContainer {
+  width: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .registerBlock .registerPasswordBlock .registerPasswordContainer .registerPasswordInputContainer .registerPasswordInput {
+  width: 95%;
+  height: 40px;
+  border: 3px solid #666;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+body .mainBlock .registerBlock .registerEmailBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+body .mainBlock .registerBlock .registerEmailBlock .registerEmailContainer {
+  width: 280px;
+  display: flex;
+}
+body .mainBlock .registerBlock .registerEmailBlock .registerEmailContainer .registerEmailIcon {
+  width: 50px;
+  text-align: center;
+  border: 3px solid #666;
+  border-radius: 50px;
+}
+body .mainBlock .registerBlock .registerEmailBlock .registerEmailContainer .registerEmailIcon i {
+  font-size: 30px;
+  line-height: 50px;
+}
+body .mainBlock .registerBlock .registerEmailBlock .registerEmailContainer .registerEmailTitle {
+  width: 86px;
+  padding-left: 5px;
+  font-weight: 600;
+  font-size: 27px;
+  text-align: center;
+  line-height: 50px;
+}
+body .mainBlock .registerBlock .registerEmailBlock .registerEmailContainer .registerEmailInputContainer {
+  width: 144px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .registerBlock .registerEmailBlock .registerEmailContainer .registerEmailInputContainer .registerEmailInput {
+  width: 95%;
+  height: 40px;
+  border: 3px solid #666;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+body .mainBlock .registerBlock .registerMessageBlock {
+  height: 30px;
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .registerBlock .registerMessageBlock .registerMessage {
+  width: 280px;
+  height: 100%;
+  font-size: 18px;
+  margin-left: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .registerBlock .registerButtonBlock {
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .registerBlock .registerButtonBlock .registerButtonContainer {
+  width: 280px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .mainBlock .registerBlock .registerButtonBlock .registerButtonContainer .registerRegisterButton {
+  width: 100%;
+  margin-left: 2px;
+  height: 40px;
+  border: 3px solid #666;
+  border-radius: 10px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 27px;
+  font-weight: 600;
+  cursor: pointer;
+}
+body .mainBlock .registerBlock .registerButtonBlock .registerButtonContainer .registerRegisterButton:hover {
+  opacity: 0.5;
+  color: black;
+  background-color: rgb(166, 223, 248);
+}/*# sourceMappingURL=login.css.map */

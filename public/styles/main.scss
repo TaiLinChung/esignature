@@ -1,0 +1,2435 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(63, 62, 62);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    height: 100%;
+    background-color: #eef0f1;
+    .sectionContainer{
+        width:1200px;
+        height:815px;
+        position: relative;
+        margin-top: 50px;
+        // background-color: #fff8f0;
+        border:  3px solid #666;
+        border-radius: 3px;
+        display: flex;
+        .mainGuide{
+            width:350px;
+            height: 100%;
+            background-color: rgb(201, 206, 206);
+            .guideLogoBlock{
+                width:100%;
+                // height:12%;
+                color: rgb(63, 62, 62);
+                height:90px;
+                // background-color: aquamarine;
+                // display: flex;
+                // justify-content: center;
+                .guideLogoContainer{
+                    padding-top: 25px;
+                    display: flex;
+                    
+                    // width: 80%;
+                    // background-color: cadetblue;
+                    .guideIconContainer{
+                        width:60px;
+                        height: 60px;
+                        // background-color: rgb(131, 126, 126);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border:  3px solid rgb(63, 62, 62);;
+                        border-radius: 60px;
+                        // cursor: pointer;
+                        i{
+                            font-size: 40px;
+                        }
+                    }
+                    // .guideIconContainer:hover{
+                    //     opacity:0.5;
+                    //     color: black;
+                    //     background-color: rgb(166, 223, 248);
+                    // }
+                    .guideSloganContainer{
+                        // width:200px;
+                        height: 60px;
+                        margin-left: 48px;
+                        // background-color: rgb(234, 237, 165);
+                        font-size: 45px;
+                        font-weight: 1000;
+                        text-align: center;
+                        line-height: 60px;
+                        // cursor: pointer;
+                    }
+
+                }
+            }
+            .guideWriteBlock{
+                width:100%;
+                height:715px;
+                color: rgb(63, 62, 62);
+                .menuWrite{
+                    margin-top: 10px;
+                    height: 80px;
+                    // background-color: antiquewhite;
+                    .writeContainer{
+                        display: flex;
+                        width: 180px;
+                        height: 80px;
+                        margin-left: 32px;
+                        background-color: rgb(211, 240, 252);
+                        border-radius: 20px 20px 20px 20px;
+                        border: 3px solid rgb(179, 227, 248);
+                        cursor: pointer;
+                        .writeIcon{
+                            width: 70px;
+                            height: 80px;
+                            // background-color: #666;
+                            text-align: center;
+                            i{
+                                font-size: 38px;
+                                line-height: 80px;
+                            }
+                        }
+                        .writeTitle{
+                            width: 110px;
+                            height: 80px;
+                            // text-align: center;
+                            line-height: 80px;
+                            font-size: 28px;
+                            font-weight: 600;
+                            padding-left: 3px;
+                            // background-color: rgb(210, 125, 125);
+                        }
+                    }
+                    .writeContainer:hover{
+                        opacity:0.7;
+                        color: black;
+                        background-color: rgb(166, 223, 248);
+                    }
+                }
+                .menuProcessing{
+                    margin-top: 20px;
+                    height: 60px;
+                    width:85%;
+                    color: rgb(63, 62, 62);
+                    background-color: rgb(181, 227, 247);;
+                    border-radius: 0px 30px 30px 0px;
+                    // border: 3px solid rgb(168, 168, 168);
+                    .processingContainer{
+                        display: flex;
+                        width: 100%px;
+                        height: 60px;
+                        border-radius: 0px 30px 30px 0px;
+                        // background-color: rgb(181, 227, 247);
+                        cursor: pointer;
+                        .processingIcon{
+                            width: 60px;
+                            height: 60px;
+                            margin-left: 36px;
+                            text-align: center;
+                            i{
+                                font-size: 35px;
+                                line-height: 60px;
+                            }
+                        }
+                        .processingTitle{
+                            height: 60px;
+                            line-height: 60px;
+                            font-size: 28px;
+                            font-weight: 600;
+                            padding-left: 10px;
+                        }
+                    }
+                    .processingContainer:hover{
+                        opacity:0.7;
+                        color: black;
+                        border-radius: 0px 30px 30px 0px;
+                        background-color: rgb(166, 223, 248);
+                    }
+    
+                }
+                .menuHistory{
+                    height: 60px;
+                    width:85%;
+                    color: rgb(63, 62, 62);
+                    // background-color: antiquewhite;
+                    border-radius: 0px 30px 30px 0px;
+                    // border: 3px solid #666;
+                    .historyContainer{
+                        display: flex;
+                        width: 100%px;
+                        height: 60px;
+                        cursor: pointer;
+                        .historyIcon{
+                            width: 60px;
+                            height: 60px;
+                            margin-left: 36px;
+                            text-align: center;
+                            i{
+                                font-size: 35px;
+                                line-height: 60px;
+                            }
+                        }
+                        .historyTitle{
+                            height: 60px;
+                            line-height: 60px;
+                            font-size: 28px;
+                            font-weight: 600;
+                            padding-left: 10px;
+                        }
+                    }
+                    .historyContainer:hover{
+                        opacity:0.7;
+                        color: black;
+                        border-radius: 0px 30px 30px 0px;
+                        background-color: rgb(166, 223, 248);
+                    }
+    
+                }
+    
+                .menuManager{
+                    height: 60px;
+                    width:85%;
+                    // background-color: antiquewhite;
+                    border-radius: 0px 30px 30px 0px;
+                    color: rgb(63, 62, 62);
+                    display: none;
+                    .menuManagerContainer{
+                        display: flex;
+                        width: 100%px;
+                        height: 60px;
+                        cursor: pointer;
+                        .menuManagerIcon{
+                            width: 60px;
+                            height: 60px;
+                            margin-left: 36px;
+                            text-align: center;
+                            i{
+                                font-size: 30px;
+                                line-height: 60px;
+                            }
+                        }
+                        .menuManagerTitle{
+                            height: 60px;
+                            line-height: 60px;
+                            font-size: 28px;
+                            font-weight: 600;
+                            padding-left: 10px;
+                        }
+                    }
+                    .menuManagerContainer:hover{
+                        opacity:0.7;
+                        color: black;
+                        border-radius: 0px 30px 30px 0px;
+                        background-color: rgb(166, 223, 248);
+                    }
+    
+                }           
+    
+            }
+    
+        }
+        .mainText{
+            width:850px;
+            height: 900px;
+            // background-color: rgb(252, 190, 115);
+            .NavBlock{
+                width:100%;
+                // height: 60px;
+                display: flex;
+                // background-color: rgb(149, 154, 154);
+                .searchBlock{
+                    width:60%;
+                    margin-left: 5px;       
+                    // background-color: red;
+                    .searchInput{
+                        margin-top: 10px;
+                        padding-left: 10px;
+                        width:80%;
+                        height: 80%;
+                        border-radius: 5px;
+                    }
+                }
+                .helloBlock{
+                    width:40%;
+                    // background-color: rgb(150, 150, 223);
+                    line-height: 60px;
+                    .helloContent{
+                        font-size: 23px;
+                        font-weight: 600;
+                        text-align: right;
+                        padding-right: 20px;
+                        .helloName{
+                            margin-right: 10px;
+                            font-size: 25px;
+                            font-weight: 1000;
+                        }
+                        .signOutButton{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+            .generalSlogan{
+                display: block;
+                font-size: 26px;
+                font-weight: 600;
+                margin-top: 10px;
+                margin-left: 15px;
+                color: rgb(129, 135, 135);;
+            }
+
+            .signatureMenu{
+                display: none;
+                width:824px;
+                height: 123px;
+                overflow: auto;
+                // border-color: rgb(149, 154, 154); 
+                .signatureMenuNavContainer{
+                    display: flex;
+                    height:40px;
+                    width: 802px;
+                    margin-left: 5px;
+                    font-size: 28px;
+                    font-weight: 600;
+                    border-style: solid;
+                    border-width: 2px;
+                    // background-color: rgb(237, 248, 244);
+                    background-color: rgb(222, 229, 241);
+                    border-bottom-style:solid;
+                    border-width: 2px; 
+                    border-color: rgb(149, 154, 154);
+                    // background-color: rgb(2, 84, 51); 
+                    .initiatorNameNav{
+                        height: 40px;
+                        width: 20%;
+                        padding-left: 10px;
+                        text-align: left;
+                        line-height: 40px;
+                        color:rgb(81, 84, 84);
+                        // background-color: rgb(197, 231, 231);
+                    }
+                    .signatureTitleNav{
+                        height: 40px;
+                        width: 50%;
+                        padding-left: 10px;
+                        text-align: left;
+                        line-height: 40px;
+                        color:rgb(81, 84, 84);
+                        // background-color: rgb(82, 152, 152);
+                    }
+                    .signatureStartTimeNav{
+                        height: 40px;
+                        width: 30%;
+                        padding-left: 10px;
+                        text-align: left;
+                        line-height: 40px;
+                        color:rgb(81, 84, 84);
+                        // background-color: rgb(129, 222, 222);
+                    }
+                }
+
+                .menuSignatureBlock{
+                    font-size: 26px;
+                    font-weight: 600;
+                    width: 802px;
+                    height: 42px;
+                    margin-left: 5px;
+                    // background-color: yellow;
+                    // border-top-style: solid;
+                    border-style: solid;
+                    border-width: 2px;
+                    background-color: rgb(222, 229, 241);
+                    border-bottom-style:solid;
+                    border-width: 2px; 
+                    border-color: rgb(149, 154, 154);
+                    cursor: pointer;
+                    .menuContainer{
+                        height: 40px;
+                        // width: 99%;                       
+                        display: flex;
+                        .menuInitiator{
+                            height: 40px;
+                            width: 20%;
+                            padding-left: 10px;
+                            text-align: left;
+                            line-height: 40px;
+                            // background-color: rgb(197, 231, 231);
+                        }
+                        .menuTitle{
+                            height: 40px;
+                            width: 50%;
+                            padding-left: 16px;
+                            text-align: left;
+                            line-height: 40px;
+                            // background-color: rgb(197, 231, 231);
+                        }
+                        .menuStartTime{
+                            height: 40px;
+                            width: 30%;
+                            padding-left: 16px;
+                            text-align: left;
+                            line-height: 40px;
+                            // background-color: rgb(237, 243, 243);
+                        }
+
+                    }
+                }
+                .asingleSignatureBlock:hover{
+                    border:1px solid rgb(149, 154, 154);
+                }
+            }
+
+            .textBlock{
+                // overflow: auto;  
+                // overflow-y:200px; 
+                width:100%;
+                // height:840px;
+                margin-top: 5px;
+                // background-color: rgb(125, 130, 128); 
+                .yourturnBlock{
+                    position:absolute;
+                    top:195px;
+                    width:820px;
+                    height: 300px;
+                    overflow-y:auto;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    border-radius: 5px 5px 5px 5px;
+                    background-color: rgb(193, 212, 221);
+                    .yourturnNavBlock{
+                        font-size: 28px;
+                        font-weight: 600;
+                        height: 40px;
+                        width: 100%;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        // border-radius: 10px 10px 0px 0px;
+                        border-color: rgb(149, 154, 154);
+                        // background-color: rgb(193, 212, 221);
+                        display: flex;
+                        .yourturnSlogan{
+                            padding-left: 10px;
+                            color:rgb(127, 133, 133);
+                        }
+                        .yourturnIconContainer{                            
+                            margin-left: 5px;
+                            i{
+                                margin-right:27px;
+                                line-height: 40px;
+                                color:rgb(127, 133, 133);
+                                // cursor: pointer;
+                            }
+                        }
+                        
+                    }
+                    .singleSignatureBlockNav{
+                        font-size: 28px;
+                        font-weight: 600;
+                        // background-color: rgb(193, 212, 221);
+                        // border-top-style: solid;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        border-color: rgb(149, 154, 154);
+                        // background-color: rgb(124, 121, 121);
+                        .signatureContainerNav{
+                            height: 40px;
+                            width: 100%;
+                            // background-color: #a47540;
+                            display: flex;
+                            .initiatorNameNav{
+                                height: 40px;
+                                width: 20%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .signatureTitleNav{
+                                height: 40px;
+                                width: 50%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(82, 152, 152);
+                            }
+                            .signatureStartTimeNav{
+                                height: 40px;
+                                width: 30%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(129, 222, 222);
+                            }
+                        }
+                    }
+                    .singleSignatureBlock{
+                        font-size: 26px;
+                        font-weight: 600;
+                        // border-top-style: solid;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        // background-color: rgb(193, 212, 221);
+                        border-color: rgb(149, 154, 154);
+                        cursor: pointer;
+                        .signatureContainer{
+                            height: 40px;
+                            width: 100%;
+                            // background-color: #a47540;
+                            
+                            display: flex;
+                            .initiatorName{
+                                height: 40px;
+                                width: 20%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .signatureTitle{
+                                height: 40px;
+                                width: 50%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                background-color: rgb(197, 231, 231);
+                            }
+                            .signatureStartTime{
+                                height: 40px;
+                                width: 30%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                // background-color: rgb(237, 243, 243);
+                            }
+
+                        }
+                    }
+                    .singleSignatureBlock:hover{
+                        border:1px solid rgb(149, 154, 154);
+                    }
+                }
+                
+
+
+
+                .otheroneBlock{
+                    position:absolute;
+                    top:500px;
+                    width:820px;
+                    height: 300px;
+                    overflow-y:auto;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    border-radius: 5px 5px 5px 5px;
+                    background-color: rgb(193, 212, 221);
+                    .otheroneNavBlock{
+                        font-size: 28px;
+                        font-weight: 600;
+                        height: 40px;
+                        width: 100%;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        // border-radius: 10px 10px 0px 0px;
+                        border-color: rgb(149, 154, 154);
+                        background-color: rgb(193, 212, 221);
+                        display: flex;
+                        .otheroneSlogan{
+                            padding-left: 10px;
+                            color:rgb(127, 133, 133);
+                        }
+                        .otheroneIconContainer{                            
+                            margin-left: 5px;
+                            i{
+                                margin-right:27px;
+                                line-height: 40px;
+                                color:rgb(127, 133, 133);
+                                // cursor: pointer;
+                            }
+                        }
+                        
+                    }
+                    .singleSignatureBlockNav{
+                        font-size: 28px;
+                        font-weight: 600;
+                        // border-top-style: solid;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        border-color: rgb(149, 154, 154);
+                        background-color: rgb(193, 212, 221);
+                        .signatureContainerNav{
+                            height: 40px;
+                            width: 100%;
+                            // background-color: #a47540;
+                            display: flex;
+                            .initiatorNameNav{
+                                height: 40px;
+                                width: 20%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .signatureTitleNav{
+                                height: 40px;
+                                width: 50%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(82, 152, 152);
+                            }
+                            .signatureStartTimeNav{
+                                height: 40px;
+                                width: 30%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(129, 222, 222);
+                            }
+                        }
+                    }
+                    .singleSignatureBlock{
+                        font-size: 26px;
+                        font-weight: 600;
+                        // border-top-style: solid;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        background-color: rgb(193, 212, 221);
+                        border-color: rgb(149, 154, 154);
+                        cursor: pointer;
+                        .signatureContainer{
+                            height: 40px;
+                            width: 100%;                           
+                            display: flex;
+                            .initiatorName{
+                                height: 40px;
+                                width: 20%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .signatureTitle{
+                                height: 40px;
+                                width: 50%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                background-color: rgb(197, 231, 231);
+                            }
+                            .signatureStartTime{
+                                height: 40px;
+                                width: 30%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .signatureDeadTime{
+                                height: 40px;
+                                width: 17%;
+                                text-align: center;
+                                line-height: 40px;
+                                background-color: rgb(197, 231, 231);
+                            }
+                        }
+                    }
+                    .singleSignatureBlock:hover{
+                        border:1px solid rgb(149, 154, 154);
+                    }
+                }
+
+                .historyYoursBlock{
+                    position:absolute;
+                    top:195px;
+                    width:820px;
+                    height: 300px;
+                    overflow-y:auto;
+                    display: none;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    border-radius: 5px 5px 5px 5px;
+                    background-color: rgb(193, 212, 221);
+                    .historyYoursNavBlock{
+                        font-size: 28px;
+                        font-weight: 600;
+                        height: 40px;
+                        width: 100%;
+                        padding-left: 10px;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        border-radius: 10px 10px 0px 0px;
+                        border-color: rgb(149, 154, 154);
+                        background-color: rgb(193, 212, 221);
+                        display: flex;
+                        .historyYoursSlogan{
+                            color:rgb(127, 133, 133);
+                        }
+                        .historyYoursIconContainer{                            
+                            margin-left: 5px;
+                            i{
+                                margin-right:27px;
+                                line-height: 40px;
+                                color:rgb(127, 133, 133);
+                                // cursor: pointer;
+                            }
+                        }
+                        
+                    }//*****************這裡開始改
+                    .historySingleSignatureBlockNav{
+                        font-size: 28px;
+                        font-weight: 600;
+                        // border-top-style: solid;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        border-color: rgb(149, 154, 154);
+                        background-color: rgb(193, 212, 221);
+                        .historySignatureContainerNav{
+                            height: 40px;
+                            width: 100%;
+                            // background-color: #a47540;
+                            
+                            
+                            display: flex;
+                            .historyInitiatorNameNav{
+                                height: 40px;
+                                width: 20%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .historySignatureTitleNav{
+                                height: 40px;
+                                width: 46%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(82, 152, 152);
+                            }
+                            .historySignatureStartTimeNav{
+                                height: 40px;
+                                width: 17%;
+                                padding-left: 5px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(129, 222, 222);
+                            }
+                            .historySignatureProcessingTimeNav{
+                                height: 40px;
+                                width: 17%;
+                                padding-left: 5px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(103, 108, 108);
+                            }
+                        }
+                    }
+                    .historySingleSignatureBlock{
+                        font-size: 26px;
+                        font-weight: 600;
+                        // border-top-style: solid;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        background-color: rgb(193, 212, 221);
+                        border-color: rgb(149, 154, 154);
+                        cursor: pointer;
+                        .historySignatureContainer{
+                            height: 40px;
+                            width: 100%;
+                            // background-color: #a47540;
+                            
+                            display: flex;
+                            .historyInitiatorName{
+                                height: 40px;
+                                width: 20%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .historySignatureTitle{
+                                height: 40px;
+                                width: 46%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                background-color: rgb(197, 231, 231);
+                            }
+                            .historySignatureStartTime{
+                                height: 40px;
+                                width: 17%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .historySignatureProcessingTime{
+                                height: 40px;
+                                width: 17%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                background-color: rgb(197, 231, 231);
+                            }
+                        }
+                    }
+                    .historySingleSignatureBlock:hover{
+                        border:1px solid rgb(149, 154, 154);
+                    }
+                }
+
+                .historyOthersBlock{
+                    position:absolute;
+                    top:500px;
+                    width:820px;
+                    height: 300px;
+                    overflow-y:auto;
+                    display: none;
+                    margin-top: 5px;
+                    margin-left: 5px;
+                    background-color: rgb(193, 212, 221);
+                    border-radius: 5px 5px 5px 5px;
+                    .historyOthersNavBlock{
+                        font-size: 28px;
+                        font-weight: 600;
+                        height: 40px;
+                        width: 100%;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        // border-radius: 10px 10px 0px 0px;
+                        border-color: rgb(149, 154, 154);
+                        background-color: rgb(193, 212, 221);
+                        display: flex;
+                        .historyOthersSlogan{
+                            padding-left: 10px;
+                            color:rgb(127, 133, 133);
+                        }
+                        .historyOthersIconContainer{                            
+                            margin-left: 5px;
+                            i{
+                                margin-right:27px;
+                                line-height: 40px;
+                                color:rgb(127, 133, 133);
+                                // cursor: pointer;
+                            }
+                        }
+                        
+                    }
+                    .historySingleSignatureBlockNav{
+                        font-size: 28px;
+                        font-weight: 600;
+                        // border-top-style: solid;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        border-color: rgb(149, 154, 154);
+                        background-color: rgb(193, 212, 221);
+                        .historySignatureContainerNav{
+                            height: 40px;
+                            width: 100%;
+                            // background-color: #a47540;
+                            
+                            
+                            display: flex;
+                            .historyInitiatorNameNav{
+                                height: 40px;
+                                width: 20%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .historySignatureTitleNav{
+                                height: 40px;
+                                width: 46%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(82, 152, 152);
+                            }
+                            .historySignatureStartTimeNav{
+                                height: 40px;
+                                width: 17%;
+                                padding-left: 5px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(129, 222, 222);
+                            }
+                            .historySignatureProcessingTimeNav{
+                                height: 40px;
+                                width: 17%;
+                                padding-left: 5px;
+                                text-align: left;
+                                line-height: 40px;
+                                color:rgb(81, 84, 84);
+                                // background-color: rgb(103, 108, 108);
+                            }
+                        }
+                    }
+                    .historySingleSignatureBlock{
+                        font-size: 26px;
+                        font-weight: 600;
+                        // border-top-style: solid;
+                        border-bottom-style:solid;
+                        border-width: 2px; 
+                        background-color: rgb(193, 212, 221);
+                        border-color: rgb(149, 154, 154);
+                        cursor: pointer;
+                        .historySignatureContainer{
+                            height: 40px;
+                            width: 100%;
+                            // background-color: #a47540;
+                            
+                            display: flex;
+                            .historyInitiatorName{
+                                height: 40px;
+                                width: 20%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .historySignatureTitle{
+                                height: 40px;
+                                width: 46%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                background-color: rgb(197, 231, 231);
+                            }
+                            .historySignatureStartTime{
+                                height: 40px;
+                                width: 17%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                // background-color: rgb(197, 231, 231);
+                            }
+                            .historySignatureProcessingTime{
+                                height: 40px;
+                                width: 17%;
+                                padding-left: 10px;
+                                text-align: left;
+                                line-height: 40px;
+                                background-color: rgb(197, 231, 231);
+                            }
+                        }
+                    }
+                    .historySingleSignatureBlock:hover{
+                        border:1px solid rgb(149, 154, 154);
+                    }
+                }
+
+
+
+
+            }
+            .managerSlogan{
+                display: none;
+                font-size: 27px;
+                font-weight: 600;
+                margin-left: 50px;
+                margin-top: 38px;
+            }
+            .managerImgBlock{ 
+                width:740px;
+                height:450px;
+                margin-left: 50px;
+                display: none;
+                // background-color: #666;
+                margin-top: 30px;
+            }
+            
+        }
+
+    }
+
+    .trackByIDSetion{
+        width:100%;
+        height:100%;
+        margin-top: 50px;
+        // background-color: #fff8f0;
+        display: none;
+        // display: flex;
+        justify-content: center;
+        align-items: center;
+        .trackByIDBlock{
+            width: 1000px;;
+            height:85vh;
+            // background-color: rgb(201, 206, 206);
+            border-radius: 20px;
+            border:  3px solid #666;
+            .trackByIDNav{
+                width:100%;
+                height:60px;
+                background-color: #666;
+                border-radius: 16px 16px 0px 0px;
+                display: flex;
+                .trackByIDNavLeft{
+                    width:50%;
+                    height:60px;
+                    display: flex;
+                    // background-color: rgb(246, 77, 77);
+                    .trackByIDNavLeftTitle{
+                        width:190px;
+                        line-height: 60px;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        color:#eef0f1;
+                        // background-color: rgb(225, 151, 151);
+                    }
+                    .trackByIDNavLeftContent{
+                        line-height: 60px;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        color:#eef0f1;
+                        // background-color: rgb(243, 89, 89);
+                    }
+                }
+                .trackByIDNavRight{
+                    width:50%;
+                    height:60px;
+                    // background-color: rgb(225, 151, 151);
+                    .trackByIDNavRightTitle{
+                        line-height: 60px;
+                        text-align: right;
+                        margin-right: 10px;
+                        margin-top: 10px;
+                        color:#eef0f1;
+                        // font-size: 32px;
+                        .trackByIdSetionCross{
+                            color:#eef0f1;
+                            width:40px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .trackByIDSubjectContainer{
+                width:100%;
+                height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(197, 231, 231);
+                display: flex;
+                .trackByIDSubjectTitle{
+                    width:190px;
+                    height:58px;
+                    line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    background-color:rgb(197, 231, 231);
+
+                }
+                .trackByIDSubjectContent{
+                    // width:15%;
+                    height:58px;
+                    line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    // background-color:rgb(82, 82, 243);
+
+                }
+            }
+
+            .trackByIDInitiatorAndStarttimeContainer{
+                width:100%;
+                height:60px;
+                // background-color: rgb(238, 158, 158);
+                border-bottom: 2px solid #b2b4b4;
+                display: flex;
+                .trackByIDInitiatorBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .trackByIDInitiatorTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(199, 199, 238);
+    
+                    }
+                    .trackByIDInitiatorContent{
+                        // width:15%;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        // background-color:rgb(82, 82, 243);
+    
+                    }
+                }
+                
+                
+                .trackByIDStarttimeBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .trackByIDStarttimeTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(199, 199, 238);
+    
+                    }
+                    .trackByIDStarttimeContent{
+                        // width:15%;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        // background-color:rgb(82, 82, 243);
+    
+                    }
+                }
+                
+            }
+
+            
+            .trackByIDRecordAndDoubleConfirmbuttonContainer{
+                width:100%;
+                // height:60px;
+                
+                display: flex;
+                // display: none;
+                .trackByIDRecordBlock{
+                    width:84.5%;
+                    height:58px;
+                    display: flex;
+                    border-bottom: 2px solid #b2b4b4;
+                    .trackByIDRecordTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(228, 153, 153);
+    
+                    }
+                    .trackByIDRecordContainer{
+                        height:58px;
+                        width:650px;
+                        // background-color:rgb(82, 82, 243);
+                        .trackByIDRecordInput{
+                            width:100%;
+                            height:58px;
+                            line-height: 58px;
+                            text-align: left;
+                            padding-left: 20px;
+                            font-weight: 600;
+                            font-size: 28px;
+                        }
+                        .trackByIDRecordText{
+                            width:100%;
+                            height:58px;
+                            line-height: 58px;
+                            text-align: left;
+                            padding-left: 20px;
+                            font-weight: 600;
+                            font-size: 28px;
+                            display: none;
+                        }
+    
+                    }
+                }
+                .trackByIDDoubleConfirmbuttonBlock{
+                    width:15.5%;
+                    height:58px;
+                    line-height: 58px;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 28px;
+                    background-color: rgb(228, 153, 153);
+                    cursor: pointer;
+                }                
+            }
+
+            
+
+
+            
+            .trackByIDMapAndClickbuttonContainer{
+                width:100%;
+                height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(238, 158, 158);
+                display: flex;
+                .trackByIDMapBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .trackByIDMapTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(197, 231, 231);
+    
+                    }
+                    .trackByIDMapContent{
+                        // width:15%;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        cursor: pointer;
+                        // background-color:rgb(82, 82, 243);
+                        .trackByIDMapContentIcon{
+                            width: 22px;
+                            margin-left: 5px;
+                            
+                        }
+                    }
+                }
+                
+                .trackByIDClickbuttonBlock{
+                    width:50%;
+                    height:58px;
+                    // display: flex;
+                    display: none;
+                    justify-content: space-between;
+                    // background-color: rgb(236, 103, 103);
+                    .trackByIDSendbackbutton{
+                        // background-color: rgb(166, 150, 150);
+                        width:190px;
+                        line-height: 58px;
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 28px;
+                        cursor: pointer;
+                    }
+                    .trackByIDAgreeAndDisagreebuttonBlock{
+                        // background-color: rgb(195, 176, 176);
+                        height: 58px;
+                        width:62%;
+                        display: flex;
+                        .trackByIDAgreebutton{
+                            background-color:rgb(190, 176, 176) ;
+                            width:50%;
+                            line-height: 58px;
+                            text-align: center;
+                            font-weight: 600;
+                            font-size: 28px;
+                            cursor: pointer;
+                        }
+                        .trackByIDDisagreebutton{
+                            background-color: rgb(203, 198, 198);
+                            width:50%;
+                            line-height: 58px;
+                            text-align: center;
+                            font-weight: 600;
+                            font-size: 28px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+
+            
+
+
+            
+
+            .trackByIDAttachmentAndInitiatorMethodsContainer{
+                width:100%;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(238, 158, 158);
+                display: none;
+                // display: flex;
+                .trackByIDAttachmentBlock{
+                    width:50%;
+                    // height:58px;
+                    display: flex;
+                    
+                    // background-color: rgb(236, 103, 103);
+                    .trackByIDAttachmentTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(197, 231, 231);
+    
+                    }
+                    .trackByIDAttachmentContainer{
+                        width:310px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        
+                        // background-color: #666;
+                        .trackByIDDownloadAttachment{
+                            display: block;
+                            // display:none;
+                            cursor: pointer;
+                            .trackByIDAttachmentContentIcon{
+                                width: 22px;
+                                margin-left: 5px;
+                                
+                            }
+                        }
+                        .trackByIDUploadAttachment{
+                            // display: block;
+                            display:none;
+                            line-height: 58px;
+                            font-size: 22px;
+                        }
+                        
+                    }
+                }
+                
+                .trackByIDInitiatorMethodsBlock{
+                    width:50%;
+                    // height:58px;
+                    // display: flex;
+                    display: none;
+                    // background-color: rgb(236, 103, 103);
+                    .trackByIDInitiatorResubmit{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: center;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(166, 150, 150);
+                        cursor: pointer;
+                    }
+                    .trackByIDMethodsContainer{
+                        height: 58px;
+                        width:62%;
+                        display: flex;
+                        // background-color:rgb(82, 82, 243);
+                        .trackByIDMethodsChangeAttachment{
+                            background-color:rgb(190, 176, 176) ;
+                            width:50%;
+                            line-height: 58px;
+                            text-align: center;
+                            font-weight: 600;
+                            font-size: 28px;
+                            cursor: pointer;
+                        }
+                        .trackByIDMethodsChangeText{
+                            background-color: rgb(203, 198, 198);
+                            width:50%;
+                            line-height: 58px;
+                            text-align: center;
+                            font-weight: 600;
+                            font-size: 28px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                
+            }
+
+            .trackByIDMapParticipateContainer{
+                width:100%;
+                border-bottom: 2px solid #b2b4b4;
+                // display: flex;
+                display: none;
+                .trackByIDMapParticipateTitleBlock{
+                    width:190px;
+                    // height:58px;
+                    display: flex;
+                    align-items: center;
+                    // line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    background-color:rgb(197, 231, 231);
+
+                }
+                .trackByIDMapParticipateContentBlock{
+                    width:800px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    // background-color:rgb(82, 82, 243);
+                    display: flex;
+                    .trackByIDMapParticipateSingleAll{
+                        height:75px;
+                        background-color: #d2d4d4;
+                        margin: 2px;
+                        .trackByIDMapParticipateSingleTop{
+                            height:50px;
+                            line-height: 50px;
+                            justify-content: center;
+                            align-items: center;
+                            width:fit-content;
+                            padding-left: 20px;
+                            padding-right: 5px;
+                            background-color:rgb(197, 231, 231);
+                            border-radius: 5px;
+                            border:  1px solid #666;
+                            
+                            .trackByIDMapParticipateSingleTopCheck{
+                                width: 20px;
+                                margin-left: 10px;
+                            }
+                        }
+                        .trackByIDMapParticipateSingleDownContainer{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .trackByIDMapParticipateSingleDown{
+                                display: inline-flex;
+                                margin: 1px;
+                                // justify-content: center;
+                                align-items: center;
+                                width:fit-content;
+                                // padding-left: 20px;
+                                // padding-right: 5px;
+                                font-size: 19px;
+                                font-weight: 400;
+                                background-color: #d2d4d4;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+
+
+
+            // .trackByIDMapParticipateContainer{
+            //     width:100%;
+            //     border-bottom: 2px solid #b2b4b4;
+            //     // display: flex;
+            //     display: none;
+
+            //     .trackByIDMapParticipateTitleBlock{
+            //         width:190px;
+            //         // height:58px;
+            //         line-height: 58px;
+            //         text-align: left;
+            //         padding-left: 20px;
+            //         font-weight: 600;
+            //         font-size: 28px;
+            //         background-color:rgb(197, 231, 231);
+
+            //     }
+            //     .trackByIDMapParticipateContentBlock{
+            //         width:800px;
+            //         // height:58px;
+            //         // line-height: 58px;
+            //         text-align: left;
+            //         padding-left: 20px;
+            //         font-weight: 600;
+            //         font-size: 28px;
+            //         // background-color:rgb(82, 82, 243);
+                    
+            //         // max-width: 500px;
+            //         .trackByIDMapParticipateSingle{
+            //             display: inline-flex;
+            //             // position: relative;
+            //             height:50px;
+            //             // display: iflex;
+            //             margin: 2px;
+            //             justify-content: center;
+            //             align-items: center;
+            //             width:fit-content;
+            //             // padding: 10px;
+            //             padding-left: 20px;
+            //             padding-right: 5px;
+            //             background-color:rgb(197, 231, 231);
+            //             border-radius: 5px;
+            //             border:  1px solid #666;
+                        
+            //             .trackByIDMapParticipateSingleCheck{
+            //                 width: 20px;
+            //                 margin-left: 10px;
+            //             }
+            //         }
+            //     }
+            // }
+
+
+
+            
+            .trackByIDMessageBoardContainer{
+                // background-color: #666;
+                width:100%;
+                height:450px;
+                .trackByIDMessageBlock{
+                    height:100%;
+                    width:100%;
+                    font-weight: 600;
+                    font-size: 28px;
+                    padding-left: 20px;
+                    padding-top:20px;
+                    overflow:auto;
+                    // background:#f98383;
+                }
+            }
+        }
+    }
+
+
+    ///-------------------------------------
+    .writeSetion{
+        margin-top: 50px;
+        width:100%;
+        height:100%;
+        // background-color: #fff8f0;
+        display: none;
+        // display: flex;
+        justify-content: center;
+        align-items: center;
+        .writeBlock{
+            width: 1000px;;
+            // height:85vh;
+            // background-color: rgb(201, 206, 206);
+            border-radius: 20px;
+            border:  3px solid #666;
+            .writeBlockNav{
+                width:100%;
+                height:60px;
+                background-color: #666;
+                border-radius: 16px 16px 0px 0px;
+                display: flex;
+                .writeBlockNavLeft{
+                    width:50%;
+                    height:60px;
+                    display: flex;
+                    // background-color: rgb(246, 77, 77);
+                    .writeBlockNavLeftTitle{
+                        width:190px;
+                        line-height: 60px;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        color:#eef0f1;
+                        // background-color: rgb(225, 151, 151);
+                    }
+                    .writeBlockNavLeftContent{
+                        line-height: 60px;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        color:#eef0f1;
+                        // background-color: rgb(243, 89, 89);
+                    }
+                }
+                .writeBlockNavRight{
+                    width:50%;
+                    height:60px;
+                    // background-color: rgb(225, 151, 151);
+                    .writeBlockNavRightTitle{
+                        line-height: 60px;
+                        text-align: right;
+                        margin-top: 10px;
+                        margin-right: 10px;
+                        color:#eef0f1;
+                        // font-size: 32px;
+                        .writeSetionCross{
+                            color:#eef0f1;
+                            width:40px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .writeBlockReceiverContainer{
+                width:100%;
+                // height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(197, 231, 231);
+                display: flex;
+                .writeBlockReceiverTitleBlock{
+                    width:190px;
+                    // height:58px;
+                    line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    background-color:rgb(197, 231, 231);
+
+                }
+                .writeBlockReceiverContentBlock{
+                    width:800px;
+                    // height:58px;
+                    // line-height: 58px;
+                    text-align: left;
+                    // padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    // background-color:rgb(82, 82, 243);
+                    
+                    // max-width: 500px;
+                    .writeBlockReceiverSingle{
+                        display: inline-flex;
+                        // position: relative;
+                        height:50px;
+                        // display: iflex;
+                        margin: 2px;
+                        justify-content: center;
+                        align-items: center;
+                        width:fit-content;
+                        // padding: 10px;
+                        padding-left: 20px;
+                        padding-right: 5px;
+                        background-color:rgb(197, 197, 248);
+                        border-radius: 5px;
+                        border:  1px solid #666;
+                        
+                        .writeBlockReceiverSingleCancel{
+                            width: 20px;
+                            margin-left: 10px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .writeBlockChoiceContainer{
+                width:100%;
+                height:60px;
+                // background-color: rgb(238, 158, 158);
+                border-bottom: 2px solid #b2b4b4;
+                display: flex;
+                .writeBlockChoiceBlock{
+                    // width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(41, 13, 13);
+                    .writeBlockChoiceBlockTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(199, 199, 238);
+    
+                    }
+                    // .writeBlockChoiceBlockContent{
+                    //     // width:15%;
+                    //     height:58px;
+                    //     line-height: 58px;
+                    //     text-align: left;
+                    //     padding-left: 20px;
+                    //     font-weight: 600;
+                    //     font-size: 28px;
+                    //     background-color:rgb(82, 82, 243);
+    
+                    // }
+                }
+                //===================================== drop menue
+                //==================    writeReceiverDepartment
+                .menu_department_block{
+                    margin-top: 4px;
+                    width:190px;
+                    height:50px;
+                    margin-left: 2px;
+                    // background-color: #f1c18a;
+                    // position: relative;
+                    font-weight: 600;
+                    font-size: 26px;
+                    .menu_department_container{
+                    //   position:absolute;
+                      width:190px;
+                      opacity: 0.9;
+                      background-color: rgb(135, 141, 141);
+                      .menu_department_title{
+                        text-align: center;
+                        line-height: 50px;
+                        height: 50px;
+                        // background-color: rgb(176, 176, 207);
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        .button_department_icon{
+                          cursor: pointer;
+                        }
+                      }
+                      .menu_department_body{
+                        display: none;
+                        // background-color: green;
+                        div{
+                          cursor: pointer;
+                          text-align: center;
+                          line-height: 50px;
+                          height: 50px;
+                          border: 1px solid black;
+                          border-radius: 5px;
+                        }
+                        div:hover{
+                          background-color:red;
+                        }
+                      }
+                      
+                    }
+                }
+
+
+                //==================    writeReceiverCustomer
+                .menu_block{
+                    display:none;
+                    margin-top: 4px;
+                    width:190px;
+                    height:50px;
+                    margin-left: 2px;
+                    // background-color: #f1c18a;
+                    // position: relative;
+                    font-weight: 600;
+                    font-size: 26px;
+                    .menu_container{
+                    //   position:absolute;
+                      width:190px;
+                      opacity: 0.9;
+                      background-color: rgb(135, 141, 141);
+                      .menu_title{
+                        text-align: center;
+                        line-height: 50px;
+                        height: 50px;
+                        // background-color: rgb(176, 176, 207);
+                        border: 1px solid black;
+                        border-radius: 5px;
+                        .button_icon{
+                          cursor: pointer;
+                        }
+                      }
+                      .menu_body{
+                        // display: none;
+                        // background-color: green;
+                        div{
+                          cursor: pointer;
+                          text-align: center;
+                          line-height: 50px;
+                          height: 50px;
+                          border: 1px solid black;
+                          border-radius: 5px;
+                        }
+                        div:hover{
+                          background-color:red;
+                        }
+                      }
+                      
+                    }
+                }
+                
+            }
+
+            .writeBlockSubjectContainer{
+                width:100%;
+                height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(238, 158, 158);
+                display: flex;
+                .writeBlockSubjectBlock{
+                    // width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .writeBlockSubjectTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(197, 231, 231);
+    
+                    }
+                    .writeBlockSubjectContentBlock{
+                        width:803px;
+                        height:58px;
+                        line-height: 58px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        // font-weight: 600;
+                        // font-size: 28px;
+                        // background-color:rgb(82, 82, 243);
+                        .writeBlockSubjectContentInput{
+                            width:803px;
+                            height:58px;
+                            font-weight: 600;
+                            font-size: 28px;
+                            padding-left: 15px;
+                        }
+                    }
+                    
+                }
+                
+                
+                
+            }
+
+
+            .writeBlockDeadtimeAndConfirmBottonContainer{
+                width:100%;
+                height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(238, 158, 158);
+                display: flex;
+                .writeBlockDeadtimeBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .writeBlockDeadtimeBlockTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(197, 231, 231);
+    
+                    }
+                    .writeBlockDeadtimeBlockContent{
+                        // width:15%;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        // background-color:rgb(82, 82, 243);
+    
+                    }
+                }
+                
+                .writeBlockConfirmBottonBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .writeBlockConfirmBotton{
+                        width:160px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: center;
+                        // padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(203, 198, 198);
+                        cursor: pointer;
+                    }
+                }
+                
+            }
+
+            .writeBlockTextContentContainer{
+                // background-color: aqua;
+                width: 100%;
+                height: 490px;
+                .writeBlockText{
+                    padding: 20px;
+                    font-size: 26px;
+                    width: 100%;
+                    height: 100%;
+                    word-wrap: break-word;
+                    // float:top;
+                    border-radius: 0px 0px 16px 16px;
+                }
+            }
+
+            
+        }
+    }
+
+    //------------------------------
+    .historyTrackByIDSetion{
+        width:100%;
+        height:100%;
+        margin-top: 50px;
+        // background-color: #fff8f0;
+        display: none;
+        // display: flex;
+        justify-content: center;
+        align-items: center;
+        .historyTrackByIDBlock{
+            width: 1000px;;
+            height:85vh;
+            // background-color: rgb(201, 206, 206);
+            border-radius: 20px;
+            border:  3px solid #666;
+            .historyTrackByIDNav{
+                width:100%;
+                height:60px;
+                background-color: #666;
+                border-radius: 16px 16px 0px 0px;
+                display: flex;
+                .historyTrackByIDNavLeft{
+                    width:50%;
+                    height:60px;
+                    display: flex;
+                    // background-color: rgb(246, 77, 77);
+                    .historyTrackByIDNavLeftTitle{
+                        width:190px;
+                        line-height: 60px;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        color:#eef0f1;
+                        // background-color: rgb(225, 151, 151);
+                    }
+                    .historyTrackByIDNavLeftContent{
+                        line-height: 60px;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        color:#eef0f1;
+                        // background-color: rgb(243, 89, 89);
+                    }
+                }
+                .historyTrackByIDNavRight{
+                    width:50%;
+                    height:60px;
+                    // background-color: rgb(225, 151, 151);
+                    .historyTrackByIDNavRightTitle{
+                        line-height: 60px;
+                        text-align: right;
+                        margin-right: 10px;
+                        margin-top: 10px;
+                        color:#eef0f1;
+                        // font-size: 32px;
+                        .historyTrackByIdSetionCross{
+                            color:#eef0f1;
+                            width:40px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .historyTrackByIDSubjectContainer{
+                width:100%;
+                height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(197, 231, 231);
+                display: flex;
+                .historyTrackByIDSubjectTitle{
+                    width:190px;
+                    height:58px;
+                    line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    background-color:rgb(197, 231, 231);
+
+                }
+                .historyTrackByIDSubjectContent{
+                    // width:15%;
+                    height:58px;
+                    line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    // background-color:rgb(82, 82, 243);
+
+                }
+            }
+
+            .historyTrackByIDInitiatorAndStarttimeContainer{
+                width:100%;
+                height:60px;
+                // background-color: rgb(238, 158, 158);
+                border-bottom: 2px solid #b2b4b4;
+                display: flex;
+                .historyTrackByIDInitiatorBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .historyTrackByIDInitiatorTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(199, 199, 238);
+    
+                    }
+                    .historyTrackByIDInitiatorContent{
+                        // width:15%;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        // background-color:rgb(82, 82, 243);
+    
+                    }
+                }
+                
+                
+                .historyTrackByIDStarttimeBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .historyTrackByIDStarttimeTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(199, 199, 238);
+    
+                    }
+                    .historyTrackByIDStarttimeContent{
+                        // width:15%;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        // background-color:rgb(82, 82, 243);
+    
+                    }
+                }
+                
+            }
+
+            .historyTrackByIDFinalStateAndProcessingContainer{
+                width:100%;
+                height:60px;
+                // background-color: rgb(238, 158, 158);
+                border-bottom: 2px solid #b2b4b4;
+                display: flex;
+                .historyTrackByIDFinalStateBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .historyTrackByIDFinalStateTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(197, 231, 231);
+    
+                    }
+                    .historyTrackByIDFinalStateContent{
+                        // width:15%;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        // background-color:rgb(82, 82, 243);
+    
+                    }
+                }
+                
+                
+                .historyTrackByIDProcessingBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    
+                    // background-color: rgb(236, 103, 103);
+                    .historyTrackByIDProcessingTitle{
+                        background-color: rgb(197, 231, 231);
+                        width:190px;
+                        line-height: 58px;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        // visibility:hidden;
+                        // display:none;
+                    }
+                    .historyTrackByIDProcessingContent{
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        
+                    }
+                    
+                    
+                }
+                
+            }
+//正在改這裡
+
+            .historyTrackByIDResponseContainer{
+                width:100%;
+                display: block;
+                .historyTrackByIDResponseBlock{
+                    // height:116px;
+                    border-bottom: 2px solid #b2b4b4;
+                    display: flex;
+                    // background-color: #090909;
+                    .historyTrackByIDResponseTitle{
+                        width:190px;
+                        display: flex;
+                        align-items: center;
+                        // line-height: 116px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(241, 192, 192);
+
+                    }
+                    .historyTrackByIDResponseContent{
+                        // height:116px;
+                        width:800px;
+                        // background-color:rgb(82, 82, 243);
+                        
+                        .historyTrackByIDResponseText{
+                            width:800px;
+                            // height:116px;
+                            line-height: 35px;
+                            text-align: left;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            font-size: 25px;
+                            overflow-x: auto;
+                        }
+
+                    }
+                }             
+            }
+
+
+
+            // .trackByIDStarttimeAndDeadtimeContainer{
+            //     width:100%;
+            //     height:60px;
+            //     border-bottom: 2px solid #b2b4b4;
+            //     // background-color: rgb(238, 158, 158);
+            //     display: flex;
+            //     .trackByIDStarttimeBlock{
+            //         width:50%;
+            //         height:58px;
+            //         display: flex;
+            //         // background-color: rgb(236, 103, 103);
+            //         .trackByIDStarttimeTitle{
+            //             width:190px;
+            //             height:58px;
+            //             line-height: 58px;
+            //             text-align: left;
+            //             padding-left: 20px;
+            //             font-weight: 600;
+            //             font-size: 28px;
+            //             background-color:rgb(197, 231, 231);
+    
+            //         }
+            //         .trackByIDStarttimeContent{
+            //             // width:15%;
+            //             height:58px;
+            //             line-height: 58px;
+            //             text-align: left;
+            //             padding-left: 20px;
+            //             font-weight: 600;
+            //             font-size: 28px;
+            //             // background-color:rgb(82, 82, 243);
+    
+            //         }
+            //     }
+                
+            //     .trackByIDDeadtimeBlock{
+            //         width:50%;
+            //         height:58px;
+            //         display: flex;
+            //         // background-color: rgb(236, 103, 103);
+            //         .trackByIDDeadtimeTitle{
+            //             width:190px;
+            //             height:58px;
+            //             line-height: 58px;
+            //             text-align: left;
+            //             padding-left: 20px;
+            //             font-weight: 600;
+            //             font-size: 28px;
+            //             background-color:rgb(197, 231, 231);
+    
+            //         }
+            //         .trackByIDDeadtimeContent{
+            //             // width:15%;
+            //             height:58px;
+            //             line-height: 58px;
+            //             text-align: left;
+            //             padding-left: 20px;
+            //             font-weight: 600;
+            //             font-size: 28px;
+            //             // background-color:rgb(82, 82, 243);
+    
+            //         }
+            //     }
+                
+            // }
+
+
+            
+
+
+
+
+            .historyTrackByIDMapAndDownloadFileContainer{
+                width:100%;
+                height:60px;
+                border-bottom: 2px solid #b2b4b4;
+                // background-color: rgb(238, 158, 158);
+                display: flex;
+                .historyTrackByIDMapBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;
+                    // background-color: rgb(236, 103, 103);
+                    .historyTrackByIDMapTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(199, 199, 238);
+    
+                    }
+                    .historyTrackByIDMapContent{
+                        // width:15%;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        cursor: pointer;
+                        // background-color:rgb(82, 82, 243);
+                        .historyTrackByIDMapContentIcon{
+                            width: 22px;
+                            margin-left: 5px;
+                            
+                        }
+                    }
+                }
+                
+                .historyTrackByIDDownloadFileBlock{
+                    width:50%;
+                    height:58px;
+                    display: flex;    
+                    .historyTrackByIDDownloadFileTitle{
+                        width:190px;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        background-color:rgb(199, 199, 238);
+    
+                    }
+                    .historyTrackByIDDownloadFileContent{
+                        // width:15%;
+                        height:58px;
+                        line-height: 58px;
+                        text-align: left;
+                        padding-left: 20px;
+                        font-weight: 600;
+                        font-size: 28px;
+                        cursor: pointer;
+                        // background-color:rgb(82, 82, 243);
+                        .historyTrackByIDDownloadFileContentWord{
+                            font-weight: 600;
+                            font-size: 28px;
+                        }
+                        .historyTrackByIDDownloadFileContentIcon{
+                            width: 22px;
+                            margin-left: 5px;
+                            
+                        }
+                        
+                    }              
+                    
+                }
+                
+            }
+
+            .historyTrackByIDMapParticipateContainer{
+                width:100%;
+                border-bottom: 2px solid #b2b4b4;
+                // display: flex;
+                display: none;
+                .historyTrackByIDMapParticipateTitleBlock{
+                    width:190px;
+                    // height:58px;
+                    display: flex;
+                    align-items: center;
+                    // line-height: 58px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    background-color:rgb(197, 231, 231);
+
+                }
+                .historyTrackByIDMapParticipateContentBlock{
+                    width:800px;
+                    text-align: left;
+                    padding-left: 20px;
+                    font-weight: 600;
+                    font-size: 28px;
+                    // background-color:rgb(82, 82, 243);
+                    display: flex;
+                    .historyTrackByIDMapParticipateSingleAll{
+                        height:75px;
+                        // background-color: #d2d4d4;
+                        margin: 2px;
+                        .historyTrackByIDMapParticipateSingleTop{
+                            height:50px;
+                            line-height: 50px;
+                            justify-content: center;
+                            align-items: center;
+                            width:fit-content;
+                            padding-left: 20px;
+                            padding-right: 5px;
+                            background-color:rgb(197, 231, 231);
+                            border-radius: 5px;
+                            border:  1px solid #666;
+                            
+                            .historyTrackByIDMapParticipateSingleTopCheck{
+                                width: 20px;
+                                margin-left: 10px;
+                            }
+                        }
+                        .historyTrackByIDMapParticipateSingleDownContainer{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            .historyTrackByIDMapParticipateSingleDown{
+                                display: inline-flex;
+                                margin: 1px;
+                                // justify-content: center;
+                                align-items: center;
+                                width:fit-content;
+                                // padding-left: 20px;
+                                // padding-right: 5px;
+                                font-size: 19px;
+                                font-weight: 400;
+                                background-color: #d2d4d4;
+                            }
+                        }
+                        
+                    }
+                    // .historyTrackByIDMapParticipateSingleTop{
+                    //     display: inline-flex;
+                    //     // position: relative;
+                    //     height:50px;
+                    //     margin: 2px;
+                    //     justify-content: center;
+                    //     align-items: center;
+                    //     width:fit-content;
+                    //     padding-left: 20px;
+                    //     padding-right: 5px;
+                    //     background-color:rgb(197, 231, 231);
+                    //     border-radius: 5px;
+                    //     border:  1px solid #666;
+                        
+                    //     .historyTrackByIDMapParticipateSingleTopCheck{
+                    //         width: 20px;
+                    //         margin-left: 10px;
+                    //     }
+                    // }
+                }
+            }
+
+
+            
+
+
+
+
+            .historyTrackByIDMessageBoardContainer{
+                // background-color: #666;
+                width:100%;
+                height:420px;
+                .historyTrackByIDMessageBlock{
+                    height:400px;
+                    width:100%;
+                    font-weight: 600;
+                    font-size: 28px;
+                    padding-left: 20px;
+                    padding-top:20px;
+                    overflow:auto;
+                    
+                    // background:#f98383;
+                }
+            }
+        }
+    }
+
+    
+
+
+}

@@ -1,0 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgb(63, 62, 62);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #eef0f1;
+}
+body .manager_setion {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .manager_setion .manager_interface_block {
+  width: 1000px;
+  border-radius: 20px;
+  border: 3px solid #666;
+}
+body .manager_setion .manager_interface_block .manager_interface_nav {
+  width: 100%;
+  height: 60px;
+  background-color: #666;
+  border-radius: 16px 16px 0px 0px;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .manager_interface_nav .manager_interface_nav_left {
+  width: 50%;
+  height: 60px;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .manager_interface_nav .manager_interface_nav_left .manager_interface_nav_left_title {
+  width: 250px;
+  line-height: 60px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #eef0f1;
+}
+body .manager_setion .manager_interface_block .manager_interface_nav .manager_interface_nav_left .manager_interface_nav_left_content {
+  line-height: 60px;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  color: #eef0f1;
+}
+body .manager_setion .manager_interface_block .manager_interface_nav .manager_interface_nav_right {
+  width: 50%;
+  height: 60px;
+}
+body .manager_setion .manager_interface_block .manager_interface_nav .manager_interface_nav_right .manager_interface_nav_title {
+  line-height: 60px;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 10px;
+  color: #eef0f1;
+}
+body .manager_setion .manager_interface_block .manager_interface_nav .manager_interface_nav_right .manager_interface_nav_title .manager_interface_cross {
+  color: #eef0f1;
+  width: 40px;
+  cursor: pointer;
+}
+body .manager_setion .manager_interface_block .manager_interface_p1 {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .manager_interface_p1 .manager_p1_content {
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .create_company_block {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .create_company_block .create_company_title {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(199, 199, 238);
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .create_company_block .create_company_content {
+  width: 306px;
+  height: 58px;
+  background-color: rgb(82, 82, 243);
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .create_company_block .create_company_content .create_company_input {
+  width: 100%;
+  height: 100%;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 25px;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .create_company_button_block {
+  width: 190px;
+  height: 58px;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .create_company_button_block .create_company_button {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 28px;
+  margin-left: 10px;
+  background-color: rgb(244, 198, 166);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .menu_company_block {
+  margin-top: 4px;
+  width: 300px;
+  height: 50px;
+  margin-left: 2px;
+  z-index: 10;
+  font-weight: 600;
+  font-size: 26px;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .menu_company_block .menu_company_container {
+  width: 300px;
+  opacity: 0.9;
+  background-color: rgb(135, 141, 141);
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .menu_company_block .menu_company_container .menu_company_title {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .menu_company_block .menu_company_container .menu_company_title .button_company_icon {
+  cursor: pointer;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .menu_company_block .menu_company_container .menu_company_body {
+  display: none;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .menu_company_block .menu_company_container .menu_company_body div {
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .create_company_name_and_button_container .menu_company_block .menu_company_container .menu_company_body div:hover {
+  background-color: red;
+}
+body .manager_setion .manager_interface_block .create_company_message_block {
+  width: 100%;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .create_company_message_block .create_company_message_content {
+  width: 100%;
+  height: 45px;
+  display: none;
+  line-height: 45px;
+  text-align: left;
+  padding-left: 218px;
+  font-size: 22px;
+  border-bottom: 2px solid #b2b4b4;
+}
+body .manager_setion .manager_interface_block .manager_interface_p2 {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .manager_interface_p2 .manager_p2_content {
+  width: 100%;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .manager_setion .manager_interface_block .manager_interface_p2 .manager_p2_content .manager_company_name {
+  color: rgb(85, 85, 192);
+  font-size: 28px;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .create_department_block {
+  width: 50%;
+  height: 58px;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .create_department_block .create_department_title {
+  width: 190px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+  background-color: rgb(199, 199, 238);
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .create_department_block .create_department_content {
+  width: 306px;
+  height: 58px;
+  background-color: rgb(82, 82, 243);
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .create_department_block .create_department_content .create_department_input {
+  width: 100%;
+  height: 100%;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 25px;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .create_department_button_block {
+  width: 190px;
+  height: 58px;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .create_department_button_block .create_department_button {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 28px;
+  margin-left: 10px;
+  background-color: rgb(244, 198, 166);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  margin-top: 8px;
+  cursor: pointer;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .menu_department_block {
+  margin-top: 4px;
+  width: 300px;
+  height: 50px;
+  margin-left: 2px;
+  z-index: 5;
+  font-weight: 600;
+  font-size: 26px;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .menu_department_block .menu_department_container {
+  width: 300px;
+  opacity: 0.9;
+  background-color: rgb(135, 141, 141);
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .menu_department_block .menu_department_container .menu_department_title {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .menu_department_block .menu_department_container .menu_department_title .button_department_icon {
+  cursor: pointer;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .menu_department_block .menu_department_container .menu_department_body {
+  display: none;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .menu_department_block .menu_department_container .menu_department_body div {
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .create_department_name_and_button_container .menu_department_block .menu_department_container .menu_department_body div:hover {
+  background-color: red;
+}
+body .manager_setion .manager_interface_block .create_department_message_block {
+  width: 100%;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .create_department_message_block .create_department_message_content {
+  width: 100%;
+  height: 45px;
+  display: none;
+  line-height: 45px;
+  text-align: left;
+  padding-left: 218px;
+  font-size: 22px;
+  border-bottom: 2px solid #b2b4b4;
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px solid #b2b4b4;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 .manager_p3_content {
+  width: 687px;
+  height: 58px;
+  line-height: 58px;
+  text-align: left;
+  padding-left: 20px;
+  font-weight: 600;
+  font-size: 28px;
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 .manager_p3_content .manager_department_name {
+  color: rgb(85, 85, 192);
+  font-size: 28px;
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 .menu_user_block {
+  margin-top: 4px;
+  width: 300px;
+  height: 50px;
+  margin-left: 2px;
+  font-weight: 600;
+  font-size: 26px;
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 .menu_user_block .menu_user_container {
+  width: 300px;
+  opacity: 0.9;
+  background-color: rgb(135, 141, 141);
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 .menu_user_block .menu_user_container .menu_user_title {
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 .menu_user_block .menu_user_container .menu_user_title .button_user_icon {
+  cursor: pointer;
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 .menu_user_block .menu_user_container .menu_user_body {
+  display: none;
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 .menu_user_block .menu_user_container .menu_user_body div {
+  cursor: pointer;
+  text-align: center;
+  line-height: 50px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .manager_interface_p3 .menu_user_block .menu_user_container .menu_user_body div:hover {
+  background-color: red;
+}
+body .manager_setion .manager_interface_block .create_user_message_block {
+  width: 100%;
+  display: block;
+}
+body .manager_setion .manager_interface_block .create_user_message_block .create_user_message_content {
+  width: 100%;
+  height: 45px;
+  display: none;
+  line-height: 45px;
+  text-align: left;
+  padding-left: 218px;
+  font-size: 22px;
+  border-bottom: 2px solid #b2b4b4;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  display: flex;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left {
+  height: 100%;
+  width: 50%;
+  font-size: 22px;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_name_container {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_name_container .user_name_title {
+  width: 170px;
+  text-align: left;
+  padding-left: 20px;
+  line-height: 50px;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_name_container .user_name_input {
+  width: 165px;
+  height: 40px;
+  font-size: 23px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_account_container {
+  height: 45px;
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_account_container .user_account_title {
+  width: 170px;
+  text-align: left;
+  padding-left: 20px;
+  line-height: 50px;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_account_container .user_account_input {
+  width: 165px;
+  height: 40px;
+  font-size: 23px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_password_container {
+  height: 45px;
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_password_container .user_password_title {
+  width: 170px;
+  text-align: left;
+  padding-left: 20px;
+  line-height: 50px;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_password_container .user_password_input {
+  width: 165px;
+  height: 40px;
+  font-size: 23px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_email_container {
+  height: 45px;
+  width: 100%;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_email_container .user_email_title {
+  width: 170px;
+  text-align: left;
+  padding-left: 20px;
+  line-height: 50px;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_email_container .user_email_input {
+  width: 165px;
+  height: 40px;
+  font-size: 23px;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_left .user_email_container .create_user_button {
+  width: 150px;
+  background-color: rgb(244, 198, 166);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 23px;
+  margin-left: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+}
+body .manager_setion .manager_interface_block .manager_create_user_block .create_user_block_right {
+  height: 100%;
+  width: 50%;
+}/*# sourceMappingURL=manager.css.map */
