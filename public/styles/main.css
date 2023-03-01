@@ -1464,18 +1464,18 @@ body .writeSetion .writeBlock .writeBlockSubjectContainer .writeBlockSubjectBloc
   font-size: 28px;
   padding-left: 15px;
 }
-body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer {
+body .writeSetion .writeBlock .writeBlockAttachmentAndConfirmBottonContainer {
   width: 100%;
   height: 60px;
   border-bottom: 2px solid #b2b4b4;
   display: flex;
 }
-body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockDeadtimeBlock {
+body .writeSetion .writeBlock .writeBlockAttachmentAndConfirmBottonContainer .writeBlockAttachmentBlock {
   width: 50%;
   height: 58px;
   display: flex;
 }
-body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockDeadtimeBlock .writeBlockDeadtimeBlockTitle {
+body .writeSetion .writeBlock .writeBlockAttachmentAndConfirmBottonContainer .writeBlockAttachmentBlock .writeBlockAttachmentBlockTitle {
   width: 190px;
   height: 58px;
   line-height: 58px;
@@ -1483,9 +1483,9 @@ body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writ
   padding-left: 20px;
   font-weight: 600;
   font-size: 28px;
-  background-color: rgb(197, 231, 231);
+  background-color: rgb(197, 197, 248);
 }
-body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockDeadtimeBlock .writeBlockDeadtimeBlockContent {
+body .writeSetion .writeBlock .writeBlockAttachmentAndConfirmBottonContainer .writeBlockAttachmentBlock .writeBlockAttachmentBlockContent {
   height: 58px;
   line-height: 58px;
   text-align: left;
@@ -1493,12 +1493,15 @@ body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writ
   font-weight: 600;
   font-size: 28px;
 }
-body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockConfirmBottonBlock {
+body .writeSetion .writeBlock .writeBlockAttachmentAndConfirmBottonContainer .writeBlockAttachmentBlock .writeBlockAttachmentBlockContent .writeBlockAttachmentBlockInput {
+  width: 280px;
+}
+body .writeSetion .writeBlock .writeBlockAttachmentAndConfirmBottonContainer .writeBlockConfirmBottonBlock {
   width: 50%;
   height: 58px;
   display: flex;
 }
-body .writeSetion .writeBlock .writeBlockDeadtimeAndConfirmBottonContainer .writeBlockConfirmBottonBlock .writeBlockConfirmBotton {
+body .writeSetion .writeBlock .writeBlockAttachmentAndConfirmBottonContainer .writeBlockConfirmBottonBlock .writeBlockConfirmBotton {
   width: 160px;
   height: 58px;
   line-height: 58px;
@@ -1726,13 +1729,14 @@ body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDResponseCon
 }
 body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDResponseContainer .historyTrackByIDResponseBlock .historyTrackByIDResponseContent .historyTrackByIDResponseText {
   width: 800px;
+  font-weight: 600;
   line-height: 35px;
   text-align: left;
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 25px;
+  font-size: 28px;
   overflow-x: auto;
 }
 body .historyTrackByIDSetion .historyTrackByIDBlock .historyTrackByIDMapAndDownloadFileContainer {

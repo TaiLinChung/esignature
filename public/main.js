@@ -184,7 +184,8 @@ function dealSignatureTrack(userId,userName,signatureAll){
                         trackByIDSubjectContent.textContent=result.subject;
                         trackByIDInitiatorContent.textContent=result.user_name;
                         trackByIDStarttimeContent.textContent=result.start_time;
-                        trackByIDMessageBlock.textContent=result.text;
+                        // trackByIDMessageBlock.textContent=result.text;
+                        trackByIDMessageBlock.innerHTML = result.text;
                     }
                 } catch (error) {
                     console.error(error);
@@ -659,9 +660,7 @@ writeBlockConfirmBotton.addEventListener("click",function (e) {
     }else{
 
         const timeNow=getTime();
-        console.log("timeNow",timeNow);
-        const writeBlockText = document.querySelector(".writeBlockText").value;
-        // console.log(writeBlockText);
+        const writeBlockText = document.querySelector(".writeBlockText").value.replace(/\n/g, '<br>');
         const receiverAllList=[];
         for(let i=0;i<writeBlockReceiverAll.length;i++){
             receiverAllList.push(writeBlockReceiverAll[i].textContent);
@@ -840,7 +839,6 @@ menuHistory.addEventListener("click",function (e) {
                                     })
                                 });
                                 const data = await response.json();
-                                // console.log(data);
 
                                 if(data.ok==true){
                                     const sectionContainer = document.querySelector(".sectionContainer");    
@@ -848,21 +846,22 @@ menuHistory.addEventListener("click",function (e) {
                                     sectionContainer.style.display = "none";
                                     historyTrackByIDSetion.style.display = "flex";
                                     const result = data.data[0];
-                                    // console.log(result);
                                     document.querySelector(".historyTrackByIDNavLeftContent").textContent=result.signature_id;
                                     document.querySelector(".historyTrackByIDSubjectContent").textContent=result.subject;
                                     document.querySelector(".historyTrackByIDInitiatorContent").textContent=result.user_name;
                                     document.querySelector(".historyTrackByIDStarttimeContent").textContent=result.start_time;
-                                    document.querySelector(".historyTrackByIDMessageBlock").textContent=result.text;
+                                    document.querySelector(".historyTrackByIDMessageBlock").innerHTML = result.text;
                                     document.querySelector(".historyTrackByIDProcessingContent").textContent=result.end_time;
-                                    document.querySelector(".historyTrackByIDFinalStateContent").textContent=result.final_state;
-                                    
-                                    
+
+                                    if(result.final_state=="disagree"){
+                                        document.querySelector(".historyTrackByIDFinalStateContent").textContent="不通過";
+                                    }else{
+                                        document.querySelector(".historyTrackByIDFinalStateContent").textContent="通過";
+                                    }                                   
 
                                     document.querySelector(".historyTrackByIDMapParticipateContainer").style.display="none";
                                     
                                     //如果有不同意紀錄才創建
-                                    console.log(result);
                                     if(result.get_response){
                                         const historyTrackByIDResponseContainer = document.querySelector(".historyTrackByIDResponseContainer");
                                         const historyTrackByIDResponseBlock =  document.createElement("div");
@@ -1137,6 +1136,23 @@ function buildSearchMenu(doSearchSubject){
     }
 }
 
+
+// let pictureUrl="";
+// let pictureType="";
+// const attachmentInput = document.querySelector(".writeBlockAttachmentBlockInput")
+// attachmentInput.addEventListener("change", e => {
+//     // // console.log(e.target.files[0]);
+//     // // console.log(pictureInput.files[0]);
+//     //毛毛寫法
+//     const picture = e.target.files[0]; // 取得file Object
+//     const reader = new FileReader();
+//     reader.addEventListener("load", () => { // load 時可以取得 fileReader 回傳的結果
+//         pictureUrl=reader.result;
+//         console.log(pictureUrl);
+//     });
+//     reader.readAsDataURL(picture);
+    
+// });
 
 
 
