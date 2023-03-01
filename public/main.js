@@ -1137,7 +1137,7 @@ function buildSearchMenu(doSearchSubject){
 }
 
 
-// let pictureUrl="";
+let pictureUrl="";
 // let pictureType="";
 // const attachmentInput = document.querySelector(".writeBlockAttachmentBlockInput")
 // attachmentInput.addEventListener("change", e => {
