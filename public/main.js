@@ -12,7 +12,7 @@ signOutButton.addEventListener("click",function (e) {
             });
             const data = await response.json();
             if(data.ok==true){
-                window.location.href = '/login';
+                window.location.href = '/';
             }
         } catch (error) {
             console.error(error);
@@ -82,7 +82,7 @@ async function loadSignatureTrack() {
             dealSignatureTrack(userId=data.userId,userName=data.userName,signatureAll=data.data);
         }
         else if(data.error){
-            window.location.href = '/login';
+            window.location.href = '/';
         }
     } catch (error) {
         console.error(error);
@@ -1188,14 +1188,6 @@ trackByIDDownloadAttachment.addEventListener('click', (event) => {
   downloadImage(url);
 })
 
-// // //歷史紀錄下載功能
-// const historyTrackByIDDownloadFileContent = document.querySelector(".historyTrackByIDDownloadFileContent");
-// historyTrackByIDDownloadFileContent.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     const url = "https://"+historyTrackByIDDownloadFileContent.title;
-//     console.log(url);
-//     // downloadImage(url);
-//   })
 
 
 function downloadImage(url) {
@@ -1219,37 +1211,9 @@ function downloadImage(url) {
 
 
 
-
-
-
-
-
-// //下載功能
-// const btn = document.getElementById('downloadImage');
-// const url = "https://doumq0p9cu8fw.cloudfront.net/pictures/cd3f7897-5e19-4414-9088-94db479a23b2";
-
-// btn.addEventListener('click', (event) => {
-//   event.preventDefault();
-//   console.log('ABC')
-//   downloadImage(url);
-// })
-
-
-// function downloadImage(url) {
-//     fetch(url)
-//     .then(resp => resp.blob())
-//     .then(blob => {
-//       const url = window.URL.createObjectURL(blob);
-//       const a = document.createElement('a');
-//       a.style.display = 'none';
-//       a.href = url;
-//       // the filename you want
-//       a.download = 'todo-1.jpg';
-//       document.body.appendChild(a);
-//       a.click();
-//       window.URL.revokeObjectURL(url);
-//       alert('your file has downloaded!'); // or you know, something with better UX...
-//     }
-//   ).catch(() => alert('oh no!'));
-// }
-
+window.onload = function() {
+    setTimeout(function(){
+        document.querySelector(".loading-wrapper").style.display = "none";
+    },1000);
+    
+}

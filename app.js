@@ -32,7 +32,7 @@ const SECRET = process.env.SECRET;
 
 
 //登入頁面
-app.get("/login",(req,res) => {
+app.get("/",(req,res) => {
     res.render("login.ejs");
 })
 
@@ -232,7 +232,7 @@ app.get("/main/manager/company", async (req,res) => {
         const userId = decoded.user_id;
         
         const doGetManagerCompanys = await getManagerCompanys(userId);
-        // console.log("doGetManagerCompanys: ",doGetManagerCompanys);
+        console.log("doGetManagerCompanys: ",doGetManagerCompanys);
         
         res.send({
             ok:true,
@@ -331,6 +331,7 @@ app.put("/main/manager/company/insert", async (req,res) => {
         //  ===============     manager insertIntocompanyMain創建公司
         const doInserIntoCompanyMain = await inserIntoCompanyMain(companyName);
         const insertCompanyId = doInserIntoCompanyMain.insertId
+        console.log(insertCompanyId);
         //  ===============     manager insertIntocompanyManager建立管理者對應表
         const doInserIntoCompanyManager = await inserIntoCompanyManager(insertCompanyId,userId);
         res.send({
