@@ -374,12 +374,12 @@ createUserButton.addEventListener("click",function (e){
         document.querySelector(".create_user_message_content").textContent="欲新建人員請完整填寫姓名、帳號、密碼、信箱。";
     }else{
         //判定姓名
-        const namePattern = /^[\u4e00-\u9fa5A-Za-z]+$/;
+        const namePattern = /^[\u4e00-\u9fa5A-Za-z]+[\d]*$/;
         const nameIsMatch = namePattern.test(userNameInput);
         if(!nameIsMatch){
             document.querySelector(".create_user_message_content").style.display="block";
             document.querySelector(".create_user_message_content").style.color="red";
-            document.querySelector(".create_user_message_content").textContent="姓名只允許繁體中文及大小寫英文。";
+            document.querySelector(".create_user_message_content").textContent="姓名只允許繁體中文及大小寫英文，如需數字編號請放在最後。";
             return
         }
         //判定帳號密碼

@@ -172,8 +172,9 @@ function dealSignatureTrack(userId,userName,signatureAll){
                             trackByIDClickbuttonBlock.style.display="flex";
                         }
                         //=======   如果有附檔 才跳出顯示可以下載欄
-                        console.log("file:----",result.file);
+                        // console.log("file:----",result.file);
                         if(result.file!==""){
+                            document.querySelector(".trackByIDDownloadAttachment").title=result.file;
                             document.querySelector(".trackByIDAttachmentAndInitiatorMethodsContainer").style.display="flex";
                         }
 
@@ -296,6 +297,7 @@ trackByIDClickbuttonBlock.addEventListener("click",function (e){
 //點擊查看簽呈動態
 const trackByIDMapContent = document.querySelector(".trackByIDMapContent");
 trackByIDMapContent.addEventListener("click",function (e){
+    document.querySelector(".trackByIDMessageBlock").style.height="380px";
     const signatureIdClick =  document.querySelector(".trackByIDNavLeftContent").textContent;
     async function singleSignatureProcessing(signatureIdClick) {
         try {
@@ -666,6 +668,7 @@ writeBlockConfirmBotton.addEventListener("click",function (e) {
             receiverAllList.push(writeBlockReceiverAll[i].textContent);
         }
         //==================        還須取得檔案    ==================
+        console.log("fileUrl: ",fileUrl);
         async function write() {
             try {
                 const response = await fetch("/main/write", {
@@ -675,7 +678,7 @@ writeBlockConfirmBotton.addEventListener("click",function (e) {
                         map:receiverAllList,
                         startTime:timeNow,
                         text:writeBlockText,
-                        // "file":"測試用空的IMG",
+                        file:fileUrl,
                     }),         
                     headers: new Headers({
                         "content-type": "application/json"
@@ -896,6 +899,7 @@ menuHistory.addEventListener("click",function (e) {
                                         historyTrackByIDDownloadFileContent.setAttribute("class","historyTrackByIDDownloadFileContent");
                                         historyTrackByIDDownloadFileContent.appendChild(historyTrackByIDDownloadFileContentWord);
                                         historyTrackByIDDownloadFileContent.appendChild(historyTrackByIDDownloadFileContentIcon);
+                                        historyTrackByIDDownloadFileContent.title = result.file;
 
                                         const historyTrackByIDDownloadFileTitle =  document.createElement("div");
                                         historyTrackByIDDownloadFileTitle.setAttribute("class","historyTrackByIDDownloadFileTitle");
@@ -903,6 +907,16 @@ menuHistory.addEventListener("click",function (e) {
 
                                         historyTrackByIDDownloadFileBlock.appendChild(historyTrackByIDDownloadFileTitle);
                                         historyTrackByIDDownloadFileBlock.appendChild(historyTrackByIDDownloadFileContent);
+
+
+                                        // //歷史紀錄下載功能
+                                        // const historyTrackByIDDownloadFileContent = document.querySelector(".historyTrackByIDDownloadFileContent");
+                                        historyTrackByIDDownloadFileContent.addEventListener('click', (event) => {
+                                            event.preventDefault();
+                                            const url = "https://"+historyTrackByIDDownloadFileContent.title;
+                                            // console.log(url);
+                                            downloadImage(url);
+                                        })
                                     }
 
 
@@ -910,7 +924,7 @@ menuHistory.addEventListener("click",function (e) {
                                     //點擊查看簽呈動態
                                     const historyTrackByIDMapContent = document.querySelector(".historyTrackByIDMapContent");
                                     historyTrackByIDMapContent.addEventListener("click",function (e){
-                                        // console.log(e.target);
+                                        document.querySelector(".historyTrackByIDMessageBlock").style.height="300px";
                                         async function singleSignatureProcessing(signatureIdClick) {
                                             try {
                                                 const response = await fetch("/main/signature/single/dynamicHistory?signatureId="+signatureIdClick, {
@@ -1137,24 +1151,70 @@ function buildSearchMenu(doSearchSubject){
 }
 
 
-let pictureUrl="";
-// let pictureType="";
-// const attachmentInput = document.querySelector(".writeBlockAttachmentBlockInput")
-// attachmentInput.addEventListener("change", e => {
-//     // // console.log(e.target.files[0]);
-//     // // console.log(pictureInput.files[0]);
-//     //毛毛寫法
-//     const picture = e.target.files[0]; // 取得file Object
-//     const reader = new FileReader();
-//     reader.addEventListener("load", () => { // load 時可以取得 fileReader 回傳的結果
-//         pictureUrl=reader.result;
-//         console.log(pictureUrl);
-//     });
-//     reader.readAsDataURL(picture);
+let fileUrl="";
+const attachmentInput = document.querySelector(".writeBlockAttachmentBlockInput")
+attachmentInput.setAttribute('placeholder', '請選擇檔案');
+attachmentInput.addEventListener("change", e => {
+    if(e.target.files.length !== 0){
+        const picture = e.target.files[0]; // 取得file Object
+        const reader = new FileReader();
+        const fileMaxSize = 1024; //1MB
+        const fileSize = e.target.files[0].size/1024;
+
+        if(fileSize>fileMaxSize){
+            alert("附建檔案大小不可大於1MB");
+        }else{
+            reader.addEventListener("load", () => { // load 時可以取得 fileReader 回傳的結果
+                fileUrl=reader.result;
+                // console.log(pictureUrl);
+                // console.log("fileSize= ",fileSize);
+            });
+            reader.readAsDataURL(picture);
+        }
+        
+    }
     
-// });
+});
 
 
+
+
+
+// //進行中下載功能
+const trackByIDDownloadAttachment = document.querySelector('.trackByIDDownloadAttachment');
+trackByIDDownloadAttachment.addEventListener('click', (event) => {
+  event.preventDefault();
+  const url = "https://"+trackByIDDownloadAttachment.title;
+  downloadImage(url);
+})
+
+// // //歷史紀錄下載功能
+// const historyTrackByIDDownloadFileContent = document.querySelector(".historyTrackByIDDownloadFileContent");
+// historyTrackByIDDownloadFileContent.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     const url = "https://"+historyTrackByIDDownloadFileContent.title;
+//     console.log(url);
+//     // downloadImage(url);
+//   })
+
+
+function downloadImage(url) {
+    fetch(url)
+    .then(resp => resp.blob())
+    .then(blob => {
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.style.display = 'none';
+      a.href = url;
+      // the filename you want
+      a.download = 'todo-1.jpg';
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      alert('your file has downloaded!'); // or you know, something with better UX...
+    }
+  ).catch(() => alert('oh no!'));
+}
 
 
 

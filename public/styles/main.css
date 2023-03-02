@@ -208,7 +208,7 @@ body .sectionContainer .mainGuide .guideWriteBlock .menuManager .menuManagerCont
 }
 body .sectionContainer .mainText {
   width: 850px;
-  height: 900px;
+  height: 810px;
 }
 body .sectionContainer .mainText .NavBlock {
   width: 100%;
@@ -1234,7 +1234,7 @@ body .trackByIDSetion .trackByIDBlock .trackByIDMessageBoardContainer {
   height: 450px;
 }
 body .trackByIDSetion .trackByIDBlock .trackByIDMessageBoardContainer .trackByIDMessageBlock {
-  height: 100%;
+  height: 450px;
   width: 100%;
   font-weight: 600;
   font-size: 28px;

@@ -239,7 +239,7 @@ body{
         }
         .mainText{
             width:850px;
-            height: 900px;
+            height: 810px;
             // background-color: rgb(252, 190, 115);
             .NavBlock{
                 width:100%;
@@ -1506,9 +1506,11 @@ body{
             .trackByIDMessageBoardContainer{
                 // background-color: #666;
                 width:100%;
+                // height:100%;
                 height:450px;
                 .trackByIDMessageBlock{
-                    height:100%;
+                    // height:100%;
+                    height:450px;
                     width:100%;
                     font-weight: 600;
                     font-size: 28px;
@@ -2425,7 +2427,6 @@ body{
                     padding-left: 20px;
                     padding-top:20px;
                     overflow:auto;
-                    
                     // background:#f98383;
                 }
             }

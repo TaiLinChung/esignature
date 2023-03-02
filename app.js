@@ -433,7 +433,7 @@ app.put("/main/manager/private/insert", async (req,res) => {
         if(doCheckName.length==1){
             res.send({
                 error:true,
-                message:"這間公司存在重複名字的人員，可以在名字後加上部門之類的特徵!!!"
+                message:"這間公司存在重複名字的人員，可以在名字後面加上部門或編號!!!"
             });
             return
         }
@@ -551,6 +551,8 @@ app.put("/main/write", async (req,res) => {
     const userId = decoded.user_id;
     const companyId = decoded.company_id;
     const write = req.body;
+    // const fileUrl = req.body.file;
+    // console.log(fileUrl);
 
     // // =========    先取得user_id與user_name的對照，將user_name的map轉為user_id的map
     const mapOfRecipientName=write.map;
@@ -566,13 +568,20 @@ app.put("/main/write", async (req,res) => {
                 }
             }
         }
-        console.log("6666666");
+
         // =========    寫入signature_main  ==========
-        const doInsertIntoMain = await insertIntoMain(write,userId);
+        const doInsertIntoMain = await insertIntoMain(subject=write.subject,startTime=write.startTime,userId);
         const signatureId = doInsertIntoMain.insertId;
-        console.log(doInsertIntoMain.insertId);
+
+
         // =========    寫入signature_version_content  ==========
-        const doInsertIntoVersionContent = await insertIntoVersionContent(signatureId,write);
+        // =========    先取得轉換為AWS S3 cloudfront形式的檔案連結
+        let doDealAwsS3 = "";
+        if(req.body.file){
+            doDealAwsS3 = await dealAwsS3(fileUrl=req.body.file);
+        }
+        
+        const doInsertIntoVersionContent = await insertIntoVersionContent(signatureId,text=write.text,file=doDealAwsS3);
 
         // =========    寫入signatureId和turnPerson到signature_turn_person  ==========
         const turnPersonId = mapOfAllParticipantId[1];
@@ -591,6 +600,190 @@ app.put("/main/write", async (req,res) => {
         console.log(error.message);
     }
 })
+
+
+
+//==================    處理aws s3
+
+function dealAwsS3(fileUrl){
+    return new Promise((resolve, reject) => {
+        const pictureUrl = fileUrl;
+        const type = pictureUrl.match(/data:(.*);base64/)[1];
+        const imageBuffer = Buffer.from(pictureUrl.replace(/^data:image\/\w+;base64,/, ""), 'base64');
+
+        const region = process.env.AWS_region;
+        const bucketName = process.env.AWS_S3_bucketName;
+        const accessKeyId = process.env.AWS_accessKeyId;
+        const secretAccessKey = process.env.AWS_secretAccessKey;
+        AWS.config.update({
+            accessKeyId : accessKeyId,
+            secretAccessKey : secretAccessKey,
+            region : region
+        })
+        const s3 = new AWS.S3();
+        
+        function _uuid() {
+            var d = Date.now();
+            if (typeof performance !== 'undefined' && typeof performance.now === 'function'){
+              d += performance.now(); //use high-precision timer if available
+            }
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+              var r = (d + Math.random() * 16) % 16 | 0;
+              d = Math.floor(d / 16);
+                return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+            });
+        }
+
+        const s3PictureName = _uuid();
+        const params = {
+            Bucket : bucketName,
+            Key : `pictures/${s3PictureName}`,
+            Body : imageBuffer,
+            ContentEncoding : "base64",
+            ContentType : type
+        }
+
+        // 上傳的部分
+        try {
+            s3.upload(params,(err,) => {
+                if(err){
+                    console.log(err);
+                    reject("上傳s3失敗");
+                }else{
+                    // ==============  成功上傳S3轉cloudFront型式 ==============
+                    const RDSUrl = "doumq0p9cu8fw.cloudfront.net" + `/pictures/${s3PictureName}`;
+                    resolve(RDSUrl);
+                }
+                
+            })
+        } catch (err) {
+            console.log("error", err);
+            reject("上傳s3失敗");
+        }
+    });
+}
+
+
+
+
+
+
+app.put("/getData", async (req,res) => {
+    try{
+        const graphicMessage = req.body;
+        const comment = graphicMessage.comment;
+        const pictureUrl = graphicMessage.pictureUrl;
+        console.log(pictureUrl);
+        //=======   圖文缺一不可    =======
+        if(comment == "" || pictureUrl == ""){
+            res.send({"error" : true ,"message":"圖文缺一不可"})
+            return
+        }
+
+        const type = pictureUrl.match(/data:(.*);base64/)[1];
+        const imageBuffer = Buffer.from(pictureUrl.replace(/^data:image\/\w+;base64,/, ""), 'base64');
+
+
+        console.log("type",type);
+        console.log("imageBuffer",imageBuffer);
+        const region = process.env.AWS_region;
+        const bucketName = process.env.AWS_S3_bucketName;
+        const accessKeyId = process.env.AWS_accessKeyId;
+        const secretAccessKey = process.env.AWS_secretAccessKey;
+        AWS.config.update({
+            accessKeyId : accessKeyId,
+            secretAccessKey : secretAccessKey,
+            region : region
+        })
+        const s3 = new AWS.S3();
+        
+        function _uuid() {
+            var d = Date.now();
+            if (typeof performance !== 'undefined' && typeof performance.now === 'function'){
+              d += performance.now(); //use high-precision timer if available
+            }
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+              var r = (d + Math.random() * 16) % 16 | 0;
+              d = Math.floor(d / 16);
+                return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+            });
+        }
+
+
+        const s3PictureName = _uuid();
+        const params = {
+            Bucket : bucketName,
+            Key : `pictures/${s3PictureName}`,
+            Body : imageBuffer,
+            ContentEncoding : "base64",
+            ContentType : type
+        }
+
+        // 上傳的部分
+        s3.upload(params,(err,) => {
+            if(err){
+                console.log(err);
+                res.send({"error" : true, "message" : "上傳s3失敗"})
+            }else{
+                // ==============  成功上傳S3轉cloudFront型式 ==============
+                RDSUrl = "doumq0p9cu8fw.cloudfront.net" + `/pictures/${s3PictureName}`;
+                console.log(RDSUrl);
+                // ==============  RDS ==============
+                // deliverToRDS(RDSUrl,comment);
+
+                // res.send({
+                //     "response_code" : 200,
+                //     "response_message" : "Success",
+                //     "response_data" : {
+                //                         "graphic" : RDSUrl,
+                //                         "message" : comment
+                //                     },
+                //     // "response_RDSUrl" : RDSUrl,
+                //     // "response_comment" : comment
+                // })
+            }
+            
+        })
+    }
+    catch{
+        console.log("error");
+    }
+});
+
+
+//  ========    圖文上傳RDS     =======
+
+function deliverToRDS(RDSUrl,comment){
+    try{
+        const connection = mysql.createConnection({
+            host: process.env.host,
+            port : process.env.port,
+            user: process.env.user,
+            password: process.env.password,
+            database : process.env.database
+        });
+        connection.connect(function(err) {
+            if (err) throw err;
+            var sql = "INSERT INTO graphicMessageTable (graphic,message) VALUES ('"+RDSUrl+"','"+comment+"')";
+            connection.query(sql, function (err, result) {
+                if (err) throw err;
+                console.log("1 record inserted");
+            });
+            connection.end();
+        });
+    }
+    catch{
+        console.log("deliverToRDS上傳失敗");
+        res.send({"error" : true, "message" : "deliverToRDS上傳失敗"})
+    }
+}
+
+
+
+
+
+
+
 
 
 
@@ -919,7 +1112,7 @@ app.listen(3000, () => {
 
 
 
-//==================================
+// //==================================
 // const { ReplicationTimeStatus } = require("@aws-sdk/client-s3");
 
 

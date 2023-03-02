@@ -711,7 +711,7 @@ async function getAllUserIdToUserName(companyId){
 
 
 // =========    寫入signature_main  ==========
-async function insertIntoMain(write,userId){
+async function insertIntoMain(subject,startTime,userId){
     try{
         const result = await pool.query(`
         INSERT INTO signature_main
@@ -725,9 +725,9 @@ async function insertIntoMain(write,userId){
         VALUES (?,?,?,?,?);
         `,[
             userId,
-            write.subject,
+            subject,
             "",
-            write.startTime,
+            startTime,
             ""
         ])
         const rows = result[0];
@@ -740,7 +740,7 @@ async function insertIntoMain(write,userId){
 
 
 // =========    寫入signature_version_content  ==========
-async function insertIntoVersionContent(signatureId,write){
+async function insertIntoVersionContent(signatureId,text,file){
     try{
         const result = await pool.query(`
         INSERT INTO signature_version_content
@@ -753,8 +753,8 @@ async function insertIntoVersionContent(signatureId,write){
         VALUES (?,?,?,?);
         `,[
             signatureId,
-            write.text,
-            "",
+            text,
+            file,
             ""
         ])
         const rows = result[0];
