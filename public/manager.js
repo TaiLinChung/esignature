@@ -332,8 +332,9 @@ createCompanyButton.addEventListener("click",function (e){
 const createDepartmentButton = document.querySelector(".create_department_button");
 createDepartmentButton.addEventListener("click",function (e){
     const createDepartmentInput = document.querySelector(".create_department_input").value;
-    const companyName = document.querySelector(".manager_company_name").textContent;
-    if(companyName=="公司" | createDepartmentInput==""){
+    // const companyName = document.querySelector(".manager_company_name").textContent;
+    const companyName = document.querySelector(".create_company_input").value;
+    if(companyName=="" | createDepartmentInput==""){
         document.querySelector(".create_department_message_content").style.display="block";
         document.querySelector(".create_department_message_content").textContent="請下拉點選公司，且確實填寫欲創建的部門名稱";
         document.querySelector(".create_department_message_content").style.color="red";
@@ -411,8 +412,10 @@ createUserButton.addEventListener("click",function (e){
             return
         }
         //判定是否有公司
-        const companyName = document.querySelector(".manager_company_name").textContent;
-        if(companyName=="公司"){
+        // const companyName = document.querySelector(".manager_company_name").textContent;
+        const companyName = document.querySelector(".create_company_input").value;
+        // if(companyName=="公司"){
+        if(companyName==""){
             document.querySelector(".create_user_message_content").style.display="block";
             document.querySelector(".create_user_message_content").style.color="red";
             document.querySelector(".create_user_message_content").textContent="請確實點選公司才能創建。";
@@ -421,8 +424,9 @@ createUserButton.addEventListener("click",function (e){
 
 
         //判定是否有部門
-        const departmentName = document.querySelector(".manager_department_name").textContent;
-        if(departmentName=="部門"){
+        // const departmentName = document.querySelector(".manager_department_name").textContent;
+        const departmentName = document.querySelector(".create_department_input").value;
+        if(departmentName==""){
             document.querySelector(".create_user_message_content").style.display="block";
             document.querySelector(".create_user_message_content").style.color="red";
             document.querySelector(".create_user_message_content").textContent="請確實點選部門才能創建。";
