@@ -74,7 +74,24 @@ app.post("/register/confirm", async (req,res) => {
         });
         return
     }
+
+    
     //確定是否有創建過相同帳密
+
+    // //雜湊
+    // const bcrypt = require('bcrypt');
+    // const plainPassword = 'user_password';
+    // // const plainPassword = 'user_password';
+    // const saltRounds = 10;
+    // bcrypt.hash(plainPassword, saltRounds, function(err, hash) {
+    //     if (err) {
+    //         console.error(err);
+    //     } else {
+    //         console.log("hash: ",hash);
+    //     }
+    // });
+
+
     const doCheckAccountPassword = await getUser(account,password);
     if(doCheckAccountPassword){
         res.send({
@@ -595,7 +612,10 @@ app.put("/main/write", async (req,res) => {
         // =========    更新第一筆signature_participate為pass  ==========
         const timeNow=getTime()
         const doUpdateInParticipate =  await updateInParticipate(signatureId,userId,processingTime=timeNow);
-        
+        res.send({
+            ok:true,
+            message:"上傳成功"
+        });
     }
     catch(error){
         console.log(error.message);
@@ -988,6 +1008,8 @@ app.get("/main/signature/single/dynamicHistory",async(req,res) => {
         console.log(error.message);
     }
 });
+
+
 
 
 

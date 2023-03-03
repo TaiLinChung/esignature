@@ -36,6 +36,7 @@ managerJudge();
 // //============  manager獲得管理公司名單    ============
 const dropDownCompany = document.querySelector("#button_company_DoubleDown");
 dropDownCompany.addEventListener("click",function (e){
+    // console.log(e.target.className=="");
     async function getManagerCompanys() {
         if(e.target.className=="fa fa-angle-double-down"){
             e.target.className="fa fa-angle-double-up";
@@ -69,7 +70,8 @@ dropDownCompany.addEventListener("click",function (e){
 
                     chooseCompanyItemDiv.addEventListener('click', function(e) {
                         document.querySelector(".create_company_message_content").style.display="None";
-                        document.querySelector(".manager_company_name").textContent=e.target.textContent;
+                        // document.querySelector(".manager_company_name").textContent=e.target.textContent;
+                        document.querySelector(".create_company_input").value=e.target.textContent;
                     })
                 }
 
@@ -103,8 +105,10 @@ dropDownDepartment.addEventListener("click",function (e){
             e.target.className="fa fa-angle-double-down";
             document.querySelector(".menu_department_body").style.display="none";
         }
-        const companyName = document.querySelector(".manager_company_name").textContent;        
-        if(companyName=="公司"){
+        // const companyName = document.querySelector(".manager_company_name").textContent;
+        const companyName = document.querySelector(".create_company_input").value;        
+        // if(companyName=="公司"){
+        if(companyName==""){
             document.querySelectorAll(".receiverItem").forEach(e => e.remove());
             document.querySelector(".create_department_message_content").style.display="block";
             document.querySelector(".create_department_message_content").textContent="請下拉點選公司作為查詢依據";
@@ -144,7 +148,8 @@ dropDownDepartment.addEventListener("click",function (e){
                         chooseDepartmentItemDiv.addEventListener('click', function(e) {
                             document.querySelector(".create_user_message_content").style.display="None";
                             document.querySelector(".create_department_message_content").style.display="None";
-                            document.querySelector(".manager_department_name").textContent=e.target.textContent;
+                            // document.querySelector(".manager_department_name").textContent=e.target.textContent;
+                            document.querySelector(".create_department_input").value=e.target.textContent;
                         })
     
 
@@ -194,11 +199,14 @@ dropDownUser.addEventListener("click",function (e){
             e.target.className="fa fa-angle-double-down";
             document.querySelector(".menu_user_body").style.display="none";
         }
-        const companyName = document.querySelector(".manager_company_name").textContent;
-        const departmentName = document.querySelector(".manager_department_name").textContent;
+        // const companyName = document.querySelector(".manager_company_name").textContent;
+        const companyName = document.querySelector(".create_company_input").value;
+        const departmentName = document.querySelector(".create_department_input").value;
+        // const departmentName = document.querySelector(".manager_department_name").textContent;
         //刪除原有
         document.querySelectorAll(".receiverItem").forEach(e => e.remove());
-        if(departmentName=="部門" | companyName=="公司"){
+        // if(departmentName=="部門" | companyName=="公司"){
+        if(departmentName=="" | companyName==""){
             document.querySelector(".create_user_message_content").style.display="block";
             document.querySelector(".create_user_message_content").textContent="請下拉點選公司及部門作為查詢依據";
             document.querySelector(".create_user_message_content").style.color="red";
@@ -361,7 +369,7 @@ createDepartmentButton.addEventListener("click",function (e){
 })
 
 
-
+// //============  點擊 創建人員 選項    ============
 const createUserButton = document.querySelector(".create_user_button");
 createUserButton.addEventListener("click",function (e){
     const userNameInput = document.querySelector(".user_name_input").value;
@@ -457,5 +465,17 @@ createUserButton.addEventListener("click",function (e){
         inserIntoUserPrivate();
 
 
+    }
+})
+
+
+document.addEventListener("click",(e)=>{
+    if(e.target.className !== "fa fa-angle-double-down" & e.target.className !== "fa fa-angle-double-up"){
+        document.querySelector(".menu_company_body").style.display="None";
+        document.querySelector(".menu_department_body").style.display="None";
+        document.querySelector(".menu_user_body").style.display="None";
+        document.querySelector("#button_company_DoubleDown").className="fa fa-angle-double-down";
+        document.querySelector("#button_department_DoubleDown").className="fa fa-angle-double-down";
+        document.querySelector("#button_user_DoubleDown").className="fa fa-angle-double-down";
     }
 })

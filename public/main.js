@@ -571,58 +571,6 @@ writeTitle.onclick=function(event){
                 }
             })
 
-
-            // const userIdList = responseTransfer.userIdList;
-            // const menu_body=document.querySelector(".menu_body");
-            // //======    建立人員名單選項
-            // for(let i=0;i<userIdList.length;i++){
-            //     const chooseItemDiv = document.createElement("div");
-            //     chooseItemDiv.textContent=responseTransfer.userNameList[i];
-            //     chooseItemDiv.setAttribute("id","Choice"+i.toString());
-            //     chooseItemDiv.setAttribute("class","receiverItem");
-
-            //     menu_body.appendChild(chooseItemDiv);
-            //     writeBlockReceiverContentBlock=document.querySelector(".writeBlockReceiverContentBlock");
-                
-            //     chooseItemDiv.addEventListener('click', function(e) {
-            //         const writeBlockReceiverSingleCancel = document.createElement("img");
-            //         writeBlockReceiverSingleCancel.src="/styles/cancel.png";
-            //         writeBlockReceiverSingleCancel.setAttribute("class","writeBlockReceiverSingleCancel");
-            //         writeBlockReceiverSingleCancel.setAttribute("id","item"+e.target.id.replace('Choice', ''));
-            //         const writeBlockReceiverSingle = document.createElement("div");
-            //         writeBlockReceiverSingle.setAttribute("class","writeBlockReceiverSingle");
-            //         // writeBlockReceiverSingle.setAttribute("id","writeBlockReceiverSingle");
-            //         writeBlockReceiverSingle.textContent=e.target.textContent;
-            //         writeBlockReceiverSingle.appendChild(writeBlockReceiverSingleCancel);
-                    
-            //         //====================================  這裡點擊後刪除收件人Item，還給choice
-            //         e.target.style.display="none";
-            //         writeBlockReceiverSingleCancel.addEventListener('click', function(e) {
-            //             const disappearItemId=e.target.id;
-            //             // console.log(disappearItemId);
-            //             const needAppearChoiceId="Choice"+disappearItemId.replace('item', '')
-            //             document.getElementById(needAppearChoiceId).style.display="block";
-            //             e.target.parentNode.remove();
-            //         });
-            //         writeBlockReceiverContentBlock.appendChild(writeBlockReceiverSingle);
-            //     });
-
-                
-            // }
-
- 
-            // const button_icon = document.querySelector("#writeReceiverCustomerDoubleDown");
-            // button_icon.addEventListener("click",function (e) {
-            //     if(e.target.className=="fa fa-angle-double-down"){
-            //         e.target.className="fa fa-angle-double-up";
-            //         document.querySelector(".menu_body").style.display="block";
-            //     }else{
-            //         e.target.className="fa fa-angle-double-down";
-            //         document.querySelector(".menu_body").style.display="none";
-            //     }
-            // },
-            // false
-            // );  
         }catch (error) {
             console.error(error);
         }
@@ -685,13 +633,16 @@ writeBlockConfirmBotton.addEventListener("click",function (e) {
                     })
                 });
                 const data = await response.json();
+                if(data.ok){
+                    window.location.reload();
+                }
                 
             } catch (error) {
                 console.error(error);
             }
         }
         write();
-        window.location.reload();
+        
     }
 },
 false
@@ -1214,6 +1165,9 @@ function downloadImage(url) {
 window.onload = function() {
     setTimeout(function(){
         document.querySelector(".loading-wrapper").style.display = "none";
-    },1000);
+    },800);
     
 }
+
+
+
