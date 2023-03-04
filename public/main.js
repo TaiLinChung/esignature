@@ -398,6 +398,7 @@ writeTitle.onclick=function(event){
                 const chooseDepartmentDiv = document.createElement("div");
                 chooseDepartmentDiv.textContent=responseTransfer.departmentList[i];
                 chooseDepartmentDiv.setAttribute("id","Department"+i.toString());
+                chooseDepartmentDiv.setAttribute("class","departmentItem");
                 
                 
 
@@ -409,6 +410,7 @@ writeTitle.onclick=function(event){
                     console.log(e.target.textContent);
                     const departmentName=e.target.textContent;
                     document.querySelector(".menu_block").style.display="block";
+                    document.querySelector(".menu_container").style.display="block";
 
                     
                     if(departmentName=="全部"){
@@ -1170,4 +1172,22 @@ window.onload = function() {
 }
 
 
-
+document.addEventListener("click",(e)=>{
+    console.log(e.target.className);
+    if(e.target.className !== "fa fa-angle-double-down" & e.target.className !== "fa fa-angle-double-up" & e.target.className !== "departmentItem" & e.target.className !== "receiverItem"){
+        document.querySelector(".menu_body").style.display="None";
+        document.querySelector(".menu_container").style.display="None";
+        document.querySelector(".menu_department_body").style.display="None";
+        document.querySelector("#writeReceiverdepartmentDoubleDown").className="fa fa-angle-double-down";
+    }   
+    
+    
+    // if(e.target.className !== "fa fa-angle-double-down" & e.target.className !== "fa fa-angle-double-up"){
+    //     document.querySelector(".menu_company_body").style.display="None";
+    //     document.querySelector(".menu_department_body").style.display="None";
+    //     document.querySelector(".menu_user_body").style.display="None";
+    //     document.querySelector("#button_company_DoubleDown").className="fa fa-angle-double-down";
+    //     document.querySelector("#button_department_DoubleDown").className="fa fa-angle-double-down";
+    //     document.querySelector("#button_user_DoubleDown").className="fa fa-angle-double-down";
+    // }
+})

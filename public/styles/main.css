@@ -227,6 +227,7 @@ body .sectionContainer .mainText .NavBlock .searchBlock {
   margin-left: 5px;
 }
 body .sectionContainer .mainText .NavBlock .searchBlock .searchInput {
+  font-size: 20px;
   margin-top: 10px;
   padding-left: 10px;
   width: 80%;
