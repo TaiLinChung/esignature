@@ -1810,8 +1810,8 @@ body{
                         .writeBlockSubjectContentInput{
                             width:803px;
                             height:58px;
-                            font-weight: 600;
-                            font-size: 28px;
+                            // font-weight: 600;
+                            font-size: 25px;
                             padding-left: 15px;
                         }
                     }
@@ -1856,6 +1856,7 @@ body{
                         // background-color:rgb(82, 82, 243);
                         .writeBlockAttachmentBlockInput{
                             width:280px;
+                            font-size: 20px;
                         }
                     }
                 }
@@ -1886,7 +1887,7 @@ body{
                 height: 490px;
                 .writeBlockText{
                     padding: 20px;
-                    font-size: 26px;
+                    font-size: 25px;
                     width: 100%;
                     height: 100%;
                     word-wrap: break-word;

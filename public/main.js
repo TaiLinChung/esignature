@@ -606,9 +606,10 @@ writeBlockConfirmBotton.addEventListener("click",function (e) {
     subject=document.querySelector(".writeBlockSubjectContentInput").value;
     // console.log(writeBlockSubjectContentInput.value=="");
     writeBlockReceiverAll = document.querySelectorAll(".writeBlockReceiverSingle");
-    // console.log(writeBlockReceiverAll);
-    if(writeBlockReceiverAll.length==0 || subject==""){
-        alert("請確認");
+    writeBlockText = document.querySelector(".writeBlockText").value;
+    
+    if(writeBlockReceiverAll.length==0 | subject=="" | writeBlockText==""){
+        alert("請確認，參與者、主旨、以及內文皆不可為空!!!");
     }else{
 
         const timeNow=getTime();
@@ -1173,21 +1174,10 @@ window.onload = function() {
 
 
 document.addEventListener("click",(e)=>{
-    console.log(e.target.className);
     if(e.target.className !== "fa fa-angle-double-down" & e.target.className !== "fa fa-angle-double-up" & e.target.className !== "departmentItem" & e.target.className !== "receiverItem"){
         document.querySelector(".menu_body").style.display="None";
         document.querySelector(".menu_container").style.display="None";
         document.querySelector(".menu_department_body").style.display="None";
         document.querySelector("#writeReceiverdepartmentDoubleDown").className="fa fa-angle-double-down";
     }   
-    
-    
-    // if(e.target.className !== "fa fa-angle-double-down" & e.target.className !== "fa fa-angle-double-up"){
-    //     document.querySelector(".menu_company_body").style.display="None";
-    //     document.querySelector(".menu_department_body").style.display="None";
-    //     document.querySelector(".menu_user_body").style.display="None";
-    //     document.querySelector("#button_company_DoubleDown").className="fa fa-angle-double-down";
-    //     document.querySelector("#button_department_DoubleDown").className="fa fa-angle-double-down";
-    //     document.querySelector("#button_user_DoubleDown").className="fa fa-angle-double-down";
-    // }
 })
