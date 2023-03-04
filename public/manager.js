@@ -473,6 +473,18 @@ createUserButton.addEventListener("click",function (e){
 })
 
 
+
+window.onload = function() {
+    setTimeout(function(){
+        document.querySelector(".loading-wrapper").style.display = "none";
+    },800);
+    
+}
+
+
+
+
+
 document.addEventListener("click",(e)=>{
     if(e.target.className !== "fa fa-angle-double-down" & e.target.className !== "fa fa-angle-double-up"){
         document.querySelector(".menu_company_body").style.display="None";
