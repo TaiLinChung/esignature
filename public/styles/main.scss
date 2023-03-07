@@ -45,7 +45,7 @@ body{
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        border:  3px solid rgb(63, 62, 62);;
+                        border:  3px solid rgb(63, 62, 62);
                         border-radius: 60px;
                         // cursor: pointer;
                         i{
@@ -1406,18 +1406,20 @@ body{
                     padding-left: 20px;
                     font-weight: 600;
                     font-size: 28px;
-                    // background-color:rgb(82, 82, 243);
+                    // background-color:rgb(82, 82, 243);。
+                    overflow-x:auto;
                     display: flex;
                     .trackByIDMapParticipateSingleAll{
                         height:75px;
                         background-color: #d2d4d4;
                         margin: 2px;
                         .trackByIDMapParticipateSingleTop{
-                            height:50px;
+                            // height:50px;
                             line-height: 50px;
                             justify-content: center;
                             align-items: center;
-                            width:fit-content;
+                            // width:fit-content;
+                            width:150px;
                             padding-left: 20px;
                             padding-right: 5px;
                             background-color:rgb(197, 231, 231);
@@ -1433,17 +1435,15 @@ body{
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            width:150px;
+                            background-color: #d2d4d4;
                             .trackByIDMapParticipateSingleDown{
                                 display: inline-flex;
                                 margin: 1px;
-                                // justify-content: center;
                                 align-items: center;
                                 width:fit-content;
-                                // padding-left: 20px;
-                                // padding-right: 5px;
                                 font-size: 19px;
                                 font-weight: 400;
-                                background-color: #d2d4d4;
                             }
                         }
                         

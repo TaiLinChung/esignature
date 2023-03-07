@@ -5,20 +5,17 @@ const express = require("express");
 const app = express();
 const path = require("path");
 
-// const express = require('express')
+
 const cookieParser = require('cookie-parser')
-// const app = express()
 app.use(cookieParser())
 
 const bodyParser = require("body-parser");
-// middleware
 app.use(bodyParser.urlencoded({extended:true}));
 
-// app.use(bodyParser.json());
+
 app.use(bodyParser.json({limit: '5000mb'}));
 app.use(bodyParser.urlencoded({limit: '5000mb', extended: true}));
 
-//serving a static file
 app.use(express.static("public"));
 
 const dotenv = require('dotenv');
@@ -28,11 +25,14 @@ const jwt = require('jsonwebtoken')
 const SECRET = process.env.SECRET;
 
 
-
+//登入頁面
+app.get("/",(req,res) => {
+    res.render("guide.ejs");
+})
 
 
 //登入頁面
-app.get("/",(req,res) => {
+app.get("/login",(req,res) => {
     res.render("login.ejs");
 })
 
@@ -75,23 +75,7 @@ app.post("/register/confirm", async (req,res) => {
         return
     }
 
-    
     //確定是否有創建過相同帳密
-
-    // //雜湊
-    // const bcrypt = require('bcrypt');
-    // const plainPassword = 'user_password';
-    // // const plainPassword = 'user_password';
-    // const saltRounds = 10;
-    // bcrypt.hash(plainPassword, saltRounds, function(err, hash) {
-    //     if (err) {
-    //         console.error(err);
-    //     } else {
-    //         console.log("hash: ",hash);
-    //     }
-    // });
-
-
     const doCheckAccountPassword = await getUser(account,password);
     if(doCheckAccountPassword){
         res.send({
@@ -130,12 +114,6 @@ app.post("/register/confirm", async (req,res) => {
 
 
 
-
-
-
-
-
-
 app.post("/login/confirm", async (req,res) => {
     user_account = req.body.user_account;
     user_password = req.body.user_password;
@@ -143,7 +121,6 @@ app.post("/login/confirm", async (req,res) => {
     const user = await getUser(account=user_account,password=user_password);
     console.log(user);
     if(typeof(user)!=="undefined"){
-        // 建立 Token & setcookie
         const token = jwt.sign({ 
                         user_id:user.user_id, 
                         user_name:user.user_name,
@@ -162,12 +139,9 @@ app.post("/login/confirm", async (req,res) => {
             message:"帳號密碼錯誤，請再次確認"
         });
     }
-    
-    
 })
 
 
-// routing for pattern
 app.delete("/logout",(req,res) => {
     res.cookie('token', '', { maxAge: -1 });
     res.status(200).send({
@@ -176,8 +150,7 @@ app.delete("/logout",(req,res) => {
 });
 
 
-
-// // 1)============================  讀登入時的all改動loadSignatureParticipate請求，連線RDS取出跟自己相關且狀態為""的簽呈    ============================
+//============  讀登入時的all    ============
 const getMainPageSignatures = database.getMainPageSignatures;
 app.get("/main/signature/all", async (req,res) => {
     const token = req.cookies.token;
@@ -194,9 +167,7 @@ app.get("/main/signature/all", async (req,res) => {
         const userName = decoded.user_name;
         const userId = decoded.user_id;
         const companyId = decoded.company_id;
-        // console.log(decoded);
         const dealResult = await getMainPageSignatures(userId,companyId);
-        // console.log(dealResult);
         res.send({
                 userName:userName,
                 userId:userId,
@@ -211,7 +182,7 @@ app.get("/main/signature/all", async (req,res) => {
 
 
 
-// //============  manager檢查權限    ============
+//============  manager檢查權限    ============
 const getManagerJudge = database.getManagerJudge;
 app.get("/main/managerjudge", async (req,res) => {
     const token = req.cookies.token;
@@ -225,9 +196,7 @@ app.get("/main/managerjudge", async (req,res) => {
     try{
         const decoded = jwt.verify(req.cookies.token, SECRET);
         const userId = decoded.user_id;
-        const managerJudge = await getManagerJudge(userId);
-        // console.log(decoded);
-        
+        const managerJudge = await getManagerJudge(userId);      
         
         res.send({
             managerJudge:managerJudge[0]
@@ -241,7 +210,7 @@ app.get("/main/managerjudge", async (req,res) => {
 
 
 
-// //============  manager獲得管理公司名單    ============
+// ============  manager獲得管理公司名單    ============
 const getManagerCompanys = database.getManagerCompanys;
 app.get("/main/manager/company", async (req,res) => {
     try{
@@ -261,7 +230,7 @@ app.get("/main/manager/company", async (req,res) => {
     }
 });
 
-// //============  manager獲得該管理公司的部門名單    ============
+//============  manager獲得該管理公司的部門名單    ============
 const getManagerCompanyId = database.getManagerCompanyId;
 const getManagerDepartments = database.getManagerDepartments;
 app.put("/main/manager/department", async (req,res) => {
@@ -271,12 +240,10 @@ app.put("/main/manager/department", async (req,res) => {
         const companyName = req.body.companyName;
 
         //先獲得公司ID
-
         const doGetManagerCompanyId = await getManagerCompanyId(companyName);
         const managerCompanyId = doGetManagerCompanyId[0].company_id;
 
         const doGetManagerDepartments = await getManagerDepartments(managerCompanyId);
-        // console.log(doGetManagerDepartments);
         res.send({
             ok:true,
             managerDepartments:doGetManagerDepartments
@@ -288,7 +255,7 @@ app.put("/main/manager/department", async (req,res) => {
 });
 
 
-// //============  manager獲得該管理公司部門的人員名單    ============
+//============  manager獲得該管理公司部門的人員名單    ============
 const judgeCompanyNameAndDepartmentName = database.judgeCompanyNameAndDepartmentName;
 const getManagerDepartmentId = database.getManagerDepartmentId;
 const getManagerDepartmentUsers = database.getManagerDepartmentUsers;
@@ -312,11 +279,8 @@ app.put("/main/manager/user", async (req,res) => {
 
         //獲得該人員管理的部門id
         const doGetManagerDepartmentId = await getManagerDepartmentId(userId,companyName,departmentName);
-
         const managerDepartmentId = doGetManagerDepartmentId[0].department_id;
-
         const doGetManagerDepartmentUsers = await getManagerDepartmentUsers(managerDepartmentId);
-        // console.log(doGetManagerDepartmentUsers);
         res.send({
             ok:true,
             managerUsers:doGetManagerDepartmentUsers
@@ -328,7 +292,7 @@ app.put("/main/manager/user", async (req,res) => {
 });
 
 
-// //============  點擊 創建公司 選項    ============
+//============  點擊 創建公司 選項    ============
 const checkCompanyMain = database.checkCompanyMain;
 const inserIntoCompanyMain = database.inserIntoCompanyMain;
 const inserIntoCompanyManager = database.inserIntoCompanyManager;
@@ -345,11 +309,10 @@ app.put("/main/manager/company/insert", async (req,res) => {
             });
             return
         }
-        //  ===============     manager insertIntocompanyMain創建公司
+        //  manager insertIntocompanyMain創建公司
         const doInserIntoCompanyMain = await inserIntoCompanyMain(companyName);
         const insertCompanyId = doInserIntoCompanyMain.insertId
-        console.log(insertCompanyId);
-        //  ===============     manager insertIntocompanyManager建立管理者對應表
+        //  manager insertIntocompanyManager建立管理者對應表
         const doInserIntoCompanyManager = await inserIntoCompanyManager(insertCompanyId,userId);
         res.send({
             ok:true,
@@ -362,7 +325,7 @@ app.put("/main/manager/company/insert", async (req,res) => {
 });
 
 
-// //============  點擊 創建部門 選項    ============
+//============  點擊 創建部門 選項    ============
 const checkCompanyDepartment = database.checkCompanyDepartment;
 const insertIntoCompanyDepartment = database.insertIntoCompanyDepartment;
 app.put("/main/manager/department/insert", async (req,res) => {
@@ -457,7 +420,6 @@ app.put("/main/manager/private/insert", async (req,res) => {
         }
         
         // //點擊 創建人員 按鍵 寫入註冊人員
-        
         const doInserIntoUserPrivate = await inserIntoUserPrivate(
                             userName,userAccount,userPassword,
                             userEmail,companyId,departmentId
@@ -491,7 +453,6 @@ app.put("/main/search", async (req,res) => {
             endTime=":";
         }
         const doSearchSubject = await searchSubject(instantText,endTime,userId);
-        console.log(doSearchSubject);
         res.send({
             ok:true,
             doSearchSubject:doSearchSubject
@@ -569,8 +530,6 @@ app.put("/main/write", async (req,res) => {
     const userId = decoded.user_id;
     const companyId = decoded.company_id;
     const write = req.body;
-    // const fileUrl = req.body.file;
-    // console.log(fileUrl);
 
     // // =========    先取得user_id與user_name的對照，將user_name的map轉為user_id的map
     const mapOfRecipientName=write.map;
@@ -684,17 +643,11 @@ function dealAwsS3(fileUrl){
     });
 }
 
-
-
-
-
-
 app.put("/getData", async (req,res) => {
     try{
         const graphicMessage = req.body;
         const comment = graphicMessage.comment;
         const pictureUrl = graphicMessage.pictureUrl;
-        console.log(pictureUrl);
         //=======   圖文缺一不可    =======
         if(comment == "" || pictureUrl == ""){
             res.send({"error" : true ,"message":"圖文缺一不可"})
@@ -704,9 +657,6 @@ app.put("/getData", async (req,res) => {
         const type = pictureUrl.match(/data:(.*);base64/)[1];
         const imageBuffer = Buffer.from(pictureUrl.replace(/^data:image\/\w+;base64,/, ""), 'base64');
 
-
-        console.log("type",type);
-        console.log("imageBuffer",imageBuffer);
         const region = process.env.AWS_region;
         const bucketName = process.env.AWS_S3_bucketName;
         const accessKeyId = process.env.AWS_accessKeyId;
@@ -730,7 +680,6 @@ app.put("/getData", async (req,res) => {
             });
         }
 
-
         const s3PictureName = _uuid();
         const params = {
             Bucket : bucketName,
@@ -748,20 +697,6 @@ app.put("/getData", async (req,res) => {
             }else{
                 // ==============  成功上傳S3轉cloudFront型式 ==============
                 RDSUrl = "doumq0p9cu8fw.cloudfront.net" + `/pictures/${s3PictureName}`;
-                console.log(RDSUrl);
-                // ==============  RDS ==============
-                // deliverToRDS(RDSUrl,comment);
-
-                // res.send({
-                //     "response_code" : 200,
-                //     "response_message" : "Success",
-                //     "response_data" : {
-                //                         "graphic" : RDSUrl,
-                //                         "message" : comment
-                //                     },
-                //     // "response_RDSUrl" : RDSUrl,
-                //     // "response_comment" : comment
-                // })
             }
             
         })
@@ -773,7 +708,6 @@ app.put("/getData", async (req,res) => {
 
 
 //  ========    圖文上傳RDS     =======
-
 function deliverToRDS(RDSUrl,comment){
     try{
         const connection = mysql.createConnection({
@@ -818,7 +752,6 @@ app.get("/main/signature/single",async(req,res) => {
     
     try{
         const dealResult = await getContentBySignatureId(signatureId).catch(e => console.log(e.message));
-        console.log(dealResult);
         res.send({
                 userId:userId,
                 ok:true,
@@ -956,7 +889,6 @@ app.get("/main/signature/history",async(req,res) => {
         const decoded = jwt.verify(req.cookies.token, SECRET);
         const userId = decoded.user_id;
         const historys = await getAllHistoryByUserId(userId);
-        console.log(historys);
         res.send({
             ok:true,
             historys:historys,
@@ -977,9 +909,7 @@ app.get("/main/signature/historySingle",async(req,res) => {
         const decoded = jwt.verify(req.cookies.token, SECRET);
         const user_id = decoded.user_id;
         const signatureId = req.query.clickId;
-        // console.log(user_id);
         const singleSignature = await getSingleSignature(signatureId);
-        console.log(singleSignature);
         res.send({
             userId:user_id,
             ok:true,
@@ -995,7 +925,6 @@ app.get("/main/signature/historySingle",async(req,res) => {
 app.get("/main/signature/single/dynamicHistory",async(req,res) => {
     try{
         const signatureId = req.query.signatureId;
-        console.log("history1");
         const signatureDynamic = await getSignatureDynamic(signatureId);
         
         res.send({
@@ -1018,256 +947,4 @@ app.get("/main/signature/single/dynamicHistory",async(req,res) => {
 app.listen(3000, () => {
     console.log("Server is running on port 3000.");
 });
-
-
-
-
-
-
-// //  ========    RDS抓取圖文     =======
-// function selectAllGraphicMessage(){
-//     try{
-//         console.log("抓");
-//         const connection = mysql.createConnection({
-//             host: process.env.host,
-//             port : process.env.port,
-//             user: process.env.user,
-//             password: process.env.password,
-//             database : process.env.database
-//         });
-//         var sql = "SELECT * FROM graphicMessageTable";
-//         connection.query(sql,function(err,result){
-//             if(err){
-//                 console.log(err.message);
-//                 return;
-//             }
-//             console.log('--------------------------SELECT----------------------------');
-//             // console.log(result);
-//             return result
-//             console.log('------------------------------------------------------------\n\n');
-//         });
-//         connection.end();
-//     }
-//     catch{
-//         console.log("deliverToRDS上傳失敗");
-//         res.send({"error" : true, "message" : "deliverToRDS上傳失敗"})
-//     }
-// }
-
-
-
-// const mysql = require('mysql');
-// const connection = mysql.createConnection({
-//     host: process.env.host,
-//     user: process.env.user,
-//     port : 3306,
-//     password: process.env.password,
-//     database: process.env.database
-// });
-
-// connection.connect();
- 
-// connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-//   if (error) throw error;
-//   console.log('The solution is: ', results[0].solution);
-// }
-// connect.end();
-
-// );
-
-//===============
-// const mysql = require('mysql');
-
-// const connection = mysql.createConnection({
-//     host: process.env.host,
-//     user: process.env.user,
-//     password: process.env.password,
-//     port : 3306
-// });
-// connection.connect();
-// connection.connect(function(err) {
-//   if (err) throw err;
-//   console.log("Connected!");
-//   connection.query("CREATE DATABASE mydb", function (err, result) {
-//     if (err) throw err;
-//     console.log("Database created");
-//   });
-// });
-// connection.end();
-// connection.connect();
- 
-// connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
-//   if (error) throw error;
-//   console.log('The solution is: ', results[0].solution);
-// });
-
-
-// connection.end();
-
-
-
-// //============================= 以下修改
-
-
-// const connection = mysql.createConnection({
-//     host: process.env.host,
-//     user: process.env.user,
-//     password: process.env.password,
-//     port : 3306
-// });
-
-
-// const mysql = require('mysql');
-// function createConnection(){
-//     const connection = mysql.createConnection({
-//         host: process.env.host,
-//         user: process.env.user,
-//         password: process.env.password,
-//         port : 3306
-//     })
-//     return connection;
-// }
-// module.exports.createConnection = createConnection;
-
-
-
-
-
-
-
-// //==================================
-// const { ReplicationTimeStatus } = require("@aws-sdk/client-s3");
-
-
-
-
-// function uploadData(req){
-//     const data = req.body;
-//     const comment = data.comment;
-//     const pictureUrl = data.pictureUrl;
-//     // console.log(pictureUrl);
-//     const type = pictureUrl.match(/data:(.*);base64/)[1];
-//     console.log(type);
-//     // console.log(pictureUrl);
-//     const imageBuffer = Buffer.from(pictureUrl.replace(/^data:image\/\w+;base64,/, ""), 'base64');
-//     // console.log(imageBuffer);
-//     // const type = imageBuffer;
-//     // console.log(type);
-//     // console.log(imageBuffer.split(";")[0]);
-
-//     // const region = process.env.AWS_region;
-//     // const bucketName = process.env.AWS_S3_bucketName;
-//     // const accessKeyId = process.env.AWS_accessKeyId;
-//     // const secretAccessKey = process.env.AWS_secretAccessKey;
-    
-//     // const s3 = new AWS.S3({
-//     //     accessKeyId: accessKeyId,
-//     //     secretAccessKey: secretAccessKey,
-//     // });
-
-//     const time = new Date().getTime();
-//     const region = process.env.AWS_region;
-//     const bucketName = process.env.AWS_S3_bucketName;
-//     const accessKeyId = process.env.AWS_accessKeyId;
-//     const secretAccessKey = process.env.AWS_secretAccessKey;
-
-//     AWS.config.update({
-//         accessKeyId : accessKeyId,
-//         secretAccessKey : secretAccessKey,
-//         region : region
-//     })
-
-//     const s3 = new AWS.S3();
-
-//     const params = {
-//         Bucket : bucketName,
-//         Key : "pictures/123",
-//         Body : imageBuffer,
-//         ContentEncoding : "base64",
-//         ContentType : type
-//     }
-
-//     s3.upload(params,(err,data) => {
-//         if(err){
-//             res.send({"error" : true})
-//         }else{
-//             res.send({
-//                 "response_code" : 200,
-//                 "response_message" : "Success",
-//                 "response_data" : data
-//             })
-//         }
-        
-//     })
-
-
-
-//     // console.log("GoodDone");
-//     // console.log(imageBuffer);
-//     // s3.upload({
-//     //     Bucket : bucketName,
-//     //     Key : "pictures/123",
-//     //     Body : imageBuffer,
-//     //     ContentEncoding : "base64",
-//     //     ContentType : type
-//     // })
-
-
-// }
-
-
-
-
-
-
-
-
-
-// //handle diggerent request
-// app.get("/",(req,res) => {
-//     // res.sendFile(path.join(__dirname,"index.html"));
-//     let { wordInput } = req.query;
-//     console.log(wordInput);
-//     // console.log(req.files);
-//     res.render("index.ejs");
-// })
-
-// //routing for query
-// app.post("/functionForm",(req,res) => {
-//     console.log(req.body);
-//     console.log(req.files);
-//     // let formData = req.body;
-//     // res.send("Thanks for posting.");
-//     // res.sendFile(path.join(__dirname,"index.html"));
-// });
-
-
-
-
-
-// require('dotenv').config();
-// // console.log(process.env.AWS_accessKeyId);
-// // You can either "yarn add aws-sdk" or "npm i aws-sdk"
-// const AWS = require('aws-sdk');
-// // // Configure AWS with your access and secret key.
-// const { AWS_accessKeyId, AWS_secretAccessKey, AWS_region, AWS_S3_bucketName } = process.env;
-// // // Configure AWS to use promise
-// // AWS.config.setPromisesDependency(require('bluebird'));
-// AWS.config.update({ accessKeyId: process.env.AWS_accessKeyId, AWS_secretAccessKey: process.env.SECRET_ACCESS_KEY, region: process.env.AWS_region });
-// // // Create an s3 instance
-// const s3 = new AWS.S3();
-// // With this setup, each time your user uploads an image, will be overwritten.
-//   // To prevent this, use a different Key each time.
-//   // This won't be needed if they're uploading their avatar, hence the filename, userAvatar.js.
-// const params = {
-//     Bucket: AWS_S3_bucketName,
-//     Key: `${userId}.${type}`, // type is not required
-//     Body: base64Data,
-//     ACL: 'public-read',
-//     ContentEncoding: 'base64', // required
-//     ContentType: `image/${type}` // required. Notice the back ticks
-// }
-
-
-
 

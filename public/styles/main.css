@@ -1199,6 +1199,7 @@ body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackBy
   padding-left: 20px;
   font-weight: 600;
   font-size: 28px;
+  overflow-x: auto;
   display: flex;
 }
 body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateContentBlock .trackByIDMapParticipateSingleAll {
@@ -1207,12 +1208,10 @@ body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackBy
   margin: 2px;
 }
 body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateContentBlock .trackByIDMapParticipateSingleAll .trackByIDMapParticipateSingleTop {
-  height: 50px;
   line-height: 50px;
   justify-content: center;
   align-items: center;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 150px;
   padding-left: 20px;
   padding-right: 5px;
   background-color: rgb(197, 231, 231);
@@ -1227,6 +1226,8 @@ body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackBy
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 150px;
+  background-color: #d2d4d4;
 }
 body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackByIDMapParticipateContentBlock .trackByIDMapParticipateSingleAll .trackByIDMapParticipateSingleDownContainer .trackByIDMapParticipateSingleDown {
   display: inline-flex;
@@ -1236,7 +1237,6 @@ body .trackByIDSetion .trackByIDBlock .trackByIDMapParticipateContainer .trackBy
   width: fit-content;
   font-size: 19px;
   font-weight: 400;
-  background-color: #d2d4d4;
 }
 body .trackByIDSetion .trackByIDBlock .trackByIDMessageBoardContainer {
   width: 100%;

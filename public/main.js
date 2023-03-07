@@ -12,7 +12,7 @@ signOutButton.addEventListener("click",function (e) {
             });
             const data = await response.json();
             if(data.ok==true){
-                window.location.href = '/';
+                window.location.href = '/login';
             }
         } catch (error) {
             console.error(error);
@@ -82,7 +82,7 @@ async function loadSignatureTrack() {
             dealSignatureTrack(userId=data.userId,userName=data.userName,signatureAll=data.data);
         }
         else if(data.error){
-            window.location.href = '/';
+            window.location.href = '/login';
         }
     } catch (error) {
         console.error(error);
@@ -611,7 +611,8 @@ writeBlockConfirmBotton.addEventListener("click",function (e) {
     if(writeBlockReceiverAll.length==0 | subject=="" | writeBlockText==""){
         alert("請確認，參與者、主旨、以及內文皆不可為空!!!");
     }else{
-
+        writeBlockConfirmBotton.style.display="none";
+        alert("簽呈上傳中請稍後...");
         const timeNow=getTime();
         const writeBlockText = document.querySelector(".writeBlockText").value.replace(/\n/g, '<br>');
         const receiverAllList=[];
