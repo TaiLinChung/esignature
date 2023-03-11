@@ -1,9 +1,6 @@
 # e-signature 電子簽核系統專案
 ### Process sign-off system website
 
-### Operating framework
-![esignature1](https://user-images.githubusercontent.com/112619621/224506862-8bba2e08-1c65-4aec-8906-771cc025d599.PNG)
-
 ### Development Skills
 - Front-end
   - HTML
@@ -21,3 +18,6 @@
   - ubuntu
 - User Authenticate
   - JWT
+
+### Operating framework
+![esignature1](https://user-images.githubusercontent.com/112619621/224506862-8bba2e08-1c65-4aec-8906-771cc025d599.PNG)
