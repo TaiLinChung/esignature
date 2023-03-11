@@ -24,3 +24,6 @@
 
 ### Operating framework
 ![esignature1](https://user-images.githubusercontent.com/112619621/224506862-8bba2e08-1c65-4aec-8906-771cc025d599.PNG)
+
+### Permission distinction
+![esignature2](https://user-images.githubusercontent.com/112619621/224508845-8607235c-90d9-419d-b752-744d9ee97432.PNG)
