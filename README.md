@@ -1,5 +1,7 @@
 # e-signature 電子簽核系統專案
-### Process sign-off system website
+### e-signature.life is a website designed to enable companies and teams to realize the online signing process.
+Applicable to all groups that need to sign-off process, the goal is to lower the threshold for using electronic sign-off, reduce traditional paper-based processes, and make sign-off easier.
+
 ![image](https://user-images.githubusercontent.com/112619621/224507674-20ed440e-b579-468a-b65b-0a2bdda9f260.png)
 ![image](https://user-images.githubusercontent.com/112619621/224507768-b17404b3-b19a-4ec4-b42e-87df7be02fcd.png)
 
@@ -26,6 +28,4 @@
 ![esignature1](https://user-images.githubusercontent.com/112619621/224506862-8bba2e08-1c65-4aec-8906-771cc025d599.PNG)
 
 ### Permission distinction
-![esignature2](https://user-images.githubusercontent.com/112619621/224508845-8607235c-90d9-419d-b752-744d9ee97432.PNG)
 
-![esignature3](https://user-images.githubusercontent.com/112619621/224509592-9fa734a8-3256-481a-8484-1985c1cbdd56.PNG)
