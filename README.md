@@ -1,8 +1,6 @@
 # e-signature 電子簽核系統專案
 
-### e-signature.life is a website designed to enable companies and teams to realize the online signing process.
-### Applicable to all groups that need to sign-off process, the goal is to lower the threshold for using electronic sign-off, 
-### reduce traditional paper-based processes, and make sign-off easier.
+### e-signature.life is a website designed to enable companies and teams to realize the online signing process.Applicable to all groups that need to sign-off process, the goal is to lower the threshold for using electronic sign-off, reduce traditional paper-based processes, and make sign-off easier.
 
 
 ![image](https://user-images.githubusercontent.com/112619621/224507674-20ed440e-b579-468a-b65b-0a2bdda9f260.png)
