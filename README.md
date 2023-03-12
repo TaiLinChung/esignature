@@ -46,5 +46,6 @@
 ### Operating framework
 ![esignature1](https://user-images.githubusercontent.com/112619621/224506862-8bba2e08-1c65-4aec-8906-771cc025d599.PNG)
 
-### Permission distinction
+### Database
+![esignature2](https://user-images.githubusercontent.com/112619621/224530248-9032e5a2-29f8-450b-a1e0-6581f275175f.PNG)
 
