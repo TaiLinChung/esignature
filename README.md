@@ -10,8 +10,11 @@
 ### Function display
 - The manager is responsible to plan the company structure and registrate ordinary employee for his company.
 ![esignature1](https://user-images.githubusercontent.com/112619621/224521613-9a5f59e4-c4d4-4c7b-b64c-650249165f1f.gif)
-- The ordinary employee can initiate,track and sign the submission.
+- The ordinary employee can initiate,track and sign commit the signatures.
 ![esignature2](https://user-images.githubusercontent.com/112619621/224529222-6f3a8fe1-1f30-4edf-8573-1324598ed823.gif)
+- Search bar
+![esignature3](https://user-images.githubusercontent.com/112619621/224529892-e6abd2d9-d320-4a96-8ae7-ed87adbb9b0a.gif)
+
 
 ### Development Skills
 - Front-end
