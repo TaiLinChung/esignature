@@ -7,6 +7,15 @@
 ![image](https://user-images.githubusercontent.com/112619621/224507674-20ed440e-b579-468a-b65b-0a2bdda9f260.png)
 ![image](https://user-images.githubusercontent.com/112619621/224507768-b17404b3-b19a-4ec4-b42e-87df7be02fcd.png)
 
+### Test User
+- manager account
+  - Account: test
+  - Password:test
+- ordinar account
+  - Account: test1
+  - Password:test1
+
+
 ### Function display
 - The manager is responsible to plan the company structure and registrate ordinary employee for his company.
 ![esignature1](https://user-images.githubusercontent.com/112619621/224521613-9a5f59e4-c4d4-4c7b-b64c-650249165f1f.gif)
