@@ -1,7 +1,7 @@
 # e-signature 電子簽核系統專案
 
 ## Introduce
-### e-signature.life is a website designed to allow companies and teams to complete the online approval process.
+### e-signature.life is a website designed to allow companies and teams to complete the online approval process. There are two types of users, one is created by registration, the default is the manager responsible for planning the company structure, and the other is an ordinary employee created by the manager for his company, who can initiate and sign the submission.
 
 
 ![image](https://user-images.githubusercontent.com/112619621/224507674-20ed440e-b579-468a-b65b-0a2bdda9f260.png)
