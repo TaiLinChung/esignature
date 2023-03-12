@@ -8,7 +8,7 @@
 ![image](https://user-images.githubusercontent.com/112619621/224507768-b17404b3-b19a-4ec4-b42e-87df7be02fcd.png)
 
 ### Function display
-- The manager is responsible to planning the company structure and registrate ordinary employee for his company.
+- The manager is responsible to plan the company structure and registrate ordinary employee for his company.
 ![esignature1](https://user-images.githubusercontent.com/112619621/224521613-9a5f59e4-c4d4-4c7b-b64c-650249165f1f.gif)
 - The ordinary employee can initiate and sign the submission.
 
