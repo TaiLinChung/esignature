@@ -7,6 +7,11 @@
 ![image](https://user-images.githubusercontent.com/112619621/224507674-20ed440e-b579-468a-b65b-0a2bdda9f260.png)
 ![image](https://user-images.githubusercontent.com/112619621/224507768-b17404b3-b19a-4ec4-b42e-87df7be02fcd.png)
 
+### User permissions
+![擷取3](https://user-images.githubusercontent.com/112619621/224530958-e496a1d9-9420-4b91-8b7c-1988563b0cc6.PNG)
+### User permissions
+
+
 ### Test User
 - manager account
   - Account: test
